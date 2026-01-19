@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MBBS in Russia - Rabbit Educounsel</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* COUNTRY DETAILS PAGE SPECIFIC STYLES */
+        
+        .country-hero {
+            background: linear-gradient(135deg, var(--color-teal-500) 0%, var(--color-teal-700) 100%);
+            color: var(--color-cream-100);
+            padding: 80px var(--spacing-lg);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .country-hero::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        .country-hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .country-flag-large {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            border: 4px solid var(--color-cream-100);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .country-flag-large img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .country-hero h1 {
+            font-size: var(--font-size-4xl);
+            margin-bottom: 15px;
+            color: var(--color-cream-100);
+            font-weight: var(--font-weight-bold);
+        }
+
+        .country-hero p {
+            font-size: var(--font-size-lg);
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: var(--line-height-normal);
+        }
+
+        /* QUICK FACTS SECTION */
+        .quick-facts {
+            padding: var(--spacing-2xl) var(--spacing-lg);
+            background: #e07a5f;
+        }
+
+        .quick-facts h2 {
+            text-align: center;
+            margin-bottom: var(--spacing-xl);
+            font-size: var(--font-size-3xl);
+            color: #0a0a0a;
+        }
+
+        .facts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--spacing-lg);
+            max-width: var(--container-lg);
+            margin: 0 auto;
+        }
+
+        .fact-card {
+            background: white;
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            border-left: 4px solid var(--primary-color);
+            transition: all var(--transition-normal);
+        }
+
+        .fact-card:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-5px);
+        }
+
+        .fact-label {
+            font-size: var(--font-size-sm);
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: var(--font-weight-medium);
+            margin-bottom: 8px;
+        }
+
+        .fact-value {
+            font-size: var(--font-size-2xl);
+            color: var(--primary-color);
+            font-weight: var(--font-weight-bold);
+        }
+
+        /* OVERVIEW SECTION */
+        .overview-section {
+            padding: var(--spacing-2xl) var(--spacing-lg);
+            background: #e07a5f;
+        }
+
+        .overview-section h2 {
+            text-align: center;
+            margin-bottom: var(--spacing-xl);
+            font-size: var(--font-size-3xl);
+            color: #f4e285;
+        }
+
+        .overview-table {
+            max-width: var(--container-lg);
+            margin: 0 auto;
+            overflow-x: auto;
+        }
+
+        .overview-table table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #bc4b51;
+            box-shadow: var(--shadow-md);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+        }
+
+        .overview-table th {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: var(--spacing-md);
+            text-align: left;
+            font-weight: var(--font-weight-semibold);
+            text-transform: uppercase;
+            font-size: var(--font-size-sm);
+            letter-spacing: 0.5px;
+        }
+
+        .overview-table td {
+            padding: var(--spacing-md);
+            border-bottom: 1px solid var(--color-border);
+            color: var(--text-dark);
+        }
+
+        .overview-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .overview-table tr:hover {
+            background-color: var(--light-bg);
+        }
+
+        /* UNIVERSITIES SECTION */
+        .universities-section {
+            padding: var(--spacing-2xl) var(--spacing-lg);
+            background: #e07a5f;
+        }
+
+        .universities-section h2 {
+            text-align: center;
+            margin-bottom: var(--spacing-md);
+            font-size: var(--font-size-3xl);
+            color: var(--dark-bg);
+        }
+
+        .section-intro {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto var(--spacing-2xl);
+            color: var(--text-light);
+            font-size: var(--font-size-base);
+            line-height: var(--line-height-normal);
+        }
+
+        .universities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: var(--spacing-lg);
+            max-width: var(--container-lg);
+            margin: 0 auto;
+        }
+
+        .university-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-normal);
+            border-top: 4px solid var(--primary-color);
+        }
+
+        .university-card:hover {
+            box-shadow: var(--shadow-xl);
+            transform: translateY(-8px);
+            border-top-color: var(--accent-color);
+        }
+
+        .university-header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: var(--spacing-lg);
+        }
+
+        .university-header h3 {
+            margin: 0;
+            font-size: var(--font-size-xl);
+            color: white;
+        }
+
+        .university-body {
+            padding: var(--spacing-lg);
+        }
+
+        .uni-info {
+            margin-bottom: var(--spacing-md);
+        }
+
+        .uni-label {
+            font-size: var(--font-size-sm);
+            color: var(--text-light);
+            text-transform: uppercase;
+            font-weight: var(--font-weight-medium);
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+
+        .uni-value {
+            font-size: var(--font-size-base);
+            color: var(--text-dark);
+            font-weight: var(--font-weight-semibold);
+        }
+
+        .uni-highlight {
+            background: var(--color-bg-1);
+            padding: 8px 12px;
+            border-left: 3px solid var(--primary-color);
+            margin-top: var(--spacing-md);
+            border-radius: 4px;
+        }
+
+        .uni-highlight strong {
+            color: var(--primary-color);
+        }
+
+        /* BENEFITS SECTION */
+        .benefits-section {
+            padding: var(--spacing-2xl) var(--spacing-lg);
+            background: white;
+        }
+
+        .benefits-section h2 {
+            text-align: center;
+            margin-bottom: var(--spacing-2xl);
+            font-size: var(--font-size-3xl);
+            color: var(--dark-bg);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-lg);
+            max-width: var(--container-lg);
+            margin: 0 auto;
+        }
+
+        .benefit-item {
+            background: var(--light-bg);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .benefit-item h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+            margin-bottom: var(--spacing-md);
+            font-size: var(--font-size-lg);
+        }
+
+        .benefit-item p {
+            margin: 0;
+            color: var(--text-light);
+            font-size: var(--font-size-sm);
+            line-height: var(--line-height-normal);
+        }
+
+        /* COMPARISON SECTION */
+        .comparison-section {
+            padding: var(--spacing-2xl) var(--spacing-lg);
+            background: var(--light-bg);
+        }
+
+        .comparison-section h2 {
+            text-align: center;
+            margin-bottom: var(--spacing-xl);
+            font-size: var(--font-size-3xl);
+            color: var(--dark-bg);
+        }
+
+        .comparison-table {
+            max-width: var(--container-lg);
+            margin: 0 auto;
+            overflow-x: auto;
+        }
+
+        .comparison-table table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: var(--shadow-md);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: var(--spacing-md);
+            text-align: left;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .comparison-table th {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            font-weight: var(--font-weight-semibold);
+            text-transform: uppercase;
+            font-size: var(--font-size-sm);
+        }
+
+        .comparison-table tr:hover {
+            background-color: var(--light-bg);
+        }
+
+        /* ELIGIBILITY SECTION */
+        .eligibility-section {
+            padding: var(--spacing-2xl) var(--spacing-lg);
+            background: white;
+        }
+
+        .eligibility-section h2 {
+            text-align: center;
+            margin-bottom: var(--spacing-xl);
+            font-size: var(--font-size-3xl);
+            color: var(--dark-bg);
+        }
+
+        .eligibility-content {
+            max-width: var(--container-lg);
+            margin: 0 auto;
+        }
+
+        .eligibility-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-lg);
+        }
+
+        .eligibility-item {
+            background: var(--light-bg);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            display: flex;
+            gap: var(--spacing-md);
+        }
+
+        .eligibility-icon {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            flex-shrink: 0;
+            width: 30px;
+        }
+
+        .eligibility-text {
+            margin: 0;
+            color: var(--text-dark);
+            font-size: var(--font-size-base);
+            line-height: var(--line-height-normal);
+        }
+
+        /* CTA SECTION */
+        .country-cta {
+            background: linear-gradient(135deg, var(--color-teal-500) 0%, var(--color-teal-700) 100%);
+            color: var(--color-cream-100);
+            padding: var(--spacing-2xl) var(--spacing-lg);
+            text-align: center;
+            margin-top: var(--spacing-2xl);
+        }
+
+        .country-cta h2 {
+            color: var(--color-cream-100);
+            margin-bottom: var(--spacing-md);
+            font-size: var(--font-size-3xl);
+        }
+
+        .country-cta p {
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 600px;
+            margin: 0 auto var(--spacing-xl);
+            font-size: var(--font-size-base);
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: var(--spacing-md);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* RESPONSIVE */
+        @media max-width 480px {
+            .country-hero {
+                padding: 60px var(--space-16);
+            }
+
+            .country-hero h1 {
+                font-size: var(--font-size-3xl);
+            }
+
+            .country-hero p {
+                font-size: var(--font-size-base);
+            }
+
+            .facts-grid,
+            .universities-grid,
+            .benefits-grid,
+            .eligibility-list {
+                grid-template-columns: 1fr;
+            }
+
+            .overview-table table,
+            .comparison-table table {
+                font-size: var(--font-size-sm);
+            }
+
+            .overview-table th,
+            .overview-table td,
+            .comparison-table th,
+            .comparison-table td {
+                padding: var(--space-12);
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .cta-buttons .cta-button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- COUNTRY HERO SECTION -->
+    <section class="country-hero">
+        <div class="country-hero-content">
+            <div class="country-flag-large">
+                <img src="assets/images/flags/russia.png" alt="Russia Flag">
+            </div>
+            <h1>MBBS in Russia 2026-27</h1>
+            <p>Pursue world-class medical education in Russia with NMC-approved universities, affordable fees, and globally recognized degrees. Start your journey to becoming a doctor today!</p>
+        </div>
+    </section>
+
+    <!-- QUICK FACTS SECTION -->
+    <section class="quick-facts">
+        <div class="container">
+            <h2>Quick Facts About Russia</h2>
+            <div class="facts-grid">
+                <div class="fact-card">
+                    <div class="fact-label">Capital</div>
+                    <div class="fact-value">Moscow</div>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-label">Official Language</div>
+                    <div class="fact-value">Russian</div>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-label">Currency</div>
+                    <div class="fact-value">₹1.14 / RUB</div>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-label">Population</div>
+                    <div class="fact-value">14.5 Crores</div>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-label">Time Zone</div>
+                    <div class="fact-value">UTC +2:30</div>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-label">Living Cost/Month</div>
+                    <div class="fact-value">₹13,000 - 15,000</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OVERVIEW SECTION -->
+    <section class="overview-section">
+        <div class="container">
+            <h2>MBBS in Russia - Quick Overview</h2>
+            <div class="overview-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Parameter</th>
+                            <th>Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Course Duration</strong></td>
+                            <td>6 years (5 years study + 1 year internship)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Medium of Teaching</strong></td>
+                            <td>English</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Annual Intake</strong></td>
+                            <td>September</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Average Fees/Year</strong></td>
+                            <td>INR 2.5 - 6 Lakhs</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Total Course Fees</strong></td>
+                            <td>INR 15 Lakhs - 50 Lakhs</td>
+                        </tr>
+                        <tr>
+                            <td><strong>University Recognition</strong></td>
+                            <td>NMC, WDOMS, ECFMG, FAIMER</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Living Cost/Month</strong></td>
+                            <td>INR 8,000 - 15,000</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Hostel Facility</strong></td>
+                            <td>Available (₹50,000 - 1,00,000/year)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- BENEFITS SECTION -->
+    <section class="benefits-section">
+        <div class="container">
+            <h2>Why Study MBBS in Russia?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <h3>✓ NMC Approved</h3>
+                    <p>All featured universities are recognized by National Medical Commission (NMC) and eligible for FMGE/NExT exam in India.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>✓ Affordable Education</h3>
+                    <p>70% lower fees compared to private Indian medical colleges with no additional donation or hidden charges.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>✓ English-Medium Programs</h3>
+                    <p>Top universities offer fully English-medium instruction, making learning easier for Indian students.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>✓ World-Class Infrastructure</h3>
+                    <p>Modern facilities, advanced laboratories, and state-of-the-art teaching methods comparable to international standards.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>✓ Quality Clinical Training</h3>
+                    <p>Extensive practical training at affiliated government hospitals with hands-on patient exposure from day one.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>✓ Global Recognition</h3>
+                    <p>Degrees recognized by WDOMS, ECFMG, FAIMER, and qualify graduates for USMLE, PLAB, and FMGE exams worldwide.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TOP UNIVERSITIES SECTION -->
+    <section class="universities-section">
+        <div class="container">
+            <h2>Top Medical Universities in Russia</h2>
+            <p class="section-intro">Choose from 60+ NMC-approved medical universities offering world-class education and modern infrastructure</p>
+            
+            <div class="universities-grid">
+                <!-- University 1 -->
+                <div class="university-card">
+                    <div class="university-header">
+                        <h3>Perm State Medical University</h3>
+                    </div>
+                    <div class="university-body">
+                        <div class="uni-info">
+                            <div class="uni-label">Established</div>
+                            <div class="uni-value">1916</div>
+                        </div>
+                        <div class="uni-info">
+                            <div class="uni-label">Indian Students</div>
+                            <div class="uni-value">1500+</div>
+                        </div>
+                        <div class="uni-info">
+                            <div class="uni-label">Course Fees</div>
+                            <div class="uni-value">₹28,29,000 (6 years)</div>
+                        </div>
+                        <div class="uni-info">
+                            <div class="uni-label">Recognition</div>
+                            <div class="uni-value">NMC, WDOMS, ECFMG, FAIMER</div>
+                        </div>
+                        <div class="uni-highlight">
+                            <strong>FMGE Passing Rate:</strong> High
+                        </div>
+                    </div>
+                </div>
+
+                <!-- University 2 -->
+                <div class="university-card">
+                    <div class="university-header">
+                        <h3>Orenburg State Medical University</h3>
+                    </div>
+                    <div class="university-body">
+                        <div class="uni-info">
+                            <div class="uni-label">Established</div>
+                            <div class="uni-value">1944</div>
+                        </div>
+                        <div class="uni-info">
+                            <div class="uni-label">Indian Students</div>
+                            <div class="uni-value">1500+</div>
+                        </div>
+                        <div class="uni-info">
+                            <div class="uni-label">Course Fees</div>
+                            <div class="uni-value">₹30,62,000 (6 years)</div>
+                        </div>
+                        <div class="uni-info">
+                            <div class="uni-label">Recognition</div>
+                            <div class="uni-value">NMC, WDOMS, ECFMG, MCC</div>
+                        </div>
+                        <div class="uni-highlight">
+                            <strong>Forbes Ranking:</strong> 2nd Best in Russia
+                        </div>
+                    </div>
+                </div>
+
+                <!-- University 3 -->
+                <div class="university-card">
+                    <div class="university-header">
+                        <h3>Mari State University</h3>
+                    </div>
+                    <div class="university-body">
+                        <div class="uni-info">
+                            <div class="uni-label">Established</div>
+                            <div class="uni-value">1972</div>
+                        </div>
+                        <div class="uni-info">
+                            <div class="uni-label">Location</div>
+                            <div class="uni-value">Yoshkar-Ola</div>
+                        </div>
+                        <div class="uni-info">
+                            <div class="uni-label">Course Fees</div>
+                            <div class="uni-value">₹26,65,000 (6 years)</div>
+                        </div>
+                        <div class="uni-info">
+                            <div class="uni-label">Recognition</div>
+                            <div class="uni-value">NMC, WDOMS, ECFMG</div>
+                        </div>
+                        <div class="uni-highlight">
+                            <strong>Specialty:</strong> Strong research focus
+                        </div>
+                    </div>
+                </div>
+
+                <!-- University 4 -->
+                <div class="university-card">
+                    <div class="university-header">
+                        <h3>Pskov State University</h3>
+                    </div>
+                    <div class="university-body">
+                        <div class="uni-info">
+                            <div class="uni-label">Established</div>
+                            <div class="uni-value">2010</div>
+                        </div>
+                        <div class="uni-info">
+                            <div class="uni-label">Location</div>
+                            <div class="uni-value">Pskov</div>
+                        </div>
+                        <div class="uni-info">
+                            <div class="uni-label">Course Fees</div>
+                            <div class="uni-value">₹18,45,000 (6 years)</div>
+                        </div>
+                        <div class="uni-info">
+                            <div class="uni-label">Recognition</div>
+                            <div class="uni-value">NMC, WDOMS, ECFMG</div>
+                        </div>
+                        <div class="uni-highlight">
+                            <strong>Affordability:</strong> Most budget-friendly
+                        </div>
+                    </div>
+                </div>
+
+                <!-- University 5 -->
+                <div class="university-card">
+                    <div class="university-header">
+                        <h3>Siberian State Medical University</h3>
+                    </div>
+                    <div class="university-body">
+                        <div class="uni-info">
+                            <div class="uni-label">Established</div>
+                            <div class="uni-value">1878</div>
+                        </div>
+                        <div class="uni-info">
+                            <div class="uni-label">Location</div>
+                            <div class="uni-value">Tomsk</div>
+                        </div>
+                        <div class="uni-info">
+                            <div class="uni-label">Course Fees</div>
+                            <div class="uni-value">₹24,82,500 (6 years)</div>
+                        </div>
+                        <div class="uni-info">
+                            <div class="uni-label">Recognition</div>
+                            <div class="uni-value">NMC, WDOMS, ECFMG</div>
+                        </div>
+                        <div class="uni-highlight">
+                            <strong>Specialty:</strong> Own university hospital
+                        </div>
+                    </div>
+                </div>
+
+                <!-- University 6 -->
+                <div class="university-card">
+                    <div class="university-header">
+                        <h3>Kalmyk State University</h3>
+                    </div>
+                    <div class="university-body">
+                        <div class="uni-info">
+                            <div class="uni-label">Established</div>
+                            <div class="uni-value">1970</div>
+                        </div>
+                        <div class="uni-info">
+                            <div class="uni-label">Location</div>
+                            <div class="uni-value">Kalmykia</div>
+                        </div>
+                        <div class="uni-info">
+                            <div class="uni-label">Course Fees</div>
+                            <div class="uni-value">₹15,00,000 (6 years)</div>
+                        </div>
+                        <div class="uni-info">
+                            <div class="uni-label">Recognition</div>
+                            <div class="uni-value">NMC, WDOMS, ECFMG</div>
+                        </div>
+                        <div class="uni-highlight">
+                            <strong>Special Feature:</strong> Indian clinical training
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ELIGIBILITY SECTION -->
+    <section class="eligibility-section">
+        <div class="container">
+            <h2>Eligibility Criteria</h2>
+            <div class="eligibility-content">
+                <div class="eligibility-list">
+                    <div class="eligibility-item">
+                        <div class="eligibility-icon">✓</div>
+                        <p class="eligibility-text">Completed 10+2 or equivalent with Physics, Chemistry, Biology, and English</p>
+                    </div>
+                    <div class="eligibility-item">
+                        <div class="eligibility-icon">✓</div>
+                        <p class="eligibility-text">Minimum 50% aggregate in PCB subjects (40% for reserved categories)</p>
+                    </div>
+                    <div class="eligibility-item">
+                        <div class="eligibility-icon">✓</div>
+                        <p class="eligibility-text">Valid NEET score with 50th percentile (40th for reserved categories)</p>
+                    </div>
+                    <div class="eligibility-item">
+                        <div class="eligibility-icon">✓</div>
+                        <p class="eligibility-text">Minimum age of 17 years at the time of admission</p>
+                    </div>
+                    <div class="eligibility-item">
+                        <div class="eligibility-icon">✓</div>
+                        <p class="eligibility-text">Valid passport with medical fitness certificate</p>
+                    </div>
+                    <div class="eligibility-item">
+                        <div class="eligibility-icon">✓</div>
+                        <p class="eligibility-text">No donation or hidden charges - transparent admission process</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPARISON SECTION -->
+    <section class="comparison-section">
+        <div class="container">
+            <h2>MBBS in Russia vs MBBS in India</h2>
+            <div class="comparison-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Parameter</th>
+                            <th>MBBS in Russia</th>
+                            <th>MBBS in India (Private)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Total Course Cost</strong></td>
+                            <td>INR 15-50 Lakhs</td>
+                            <td>INR 25-100 Lakhs</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Medium of Teaching</strong></td>
+                            <td>English (fully)</td>
+                            <td>English + Regional</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Practical Training</strong></td>
+                            <td>From Day 1</td>
+                            <td>Later in course</td>
+                        </tr>
+                        <tr>
+                            <td><strong>International Licensing</strong></td>
+                            <td>USMLE, PLAB, FMGE coaching included</td>
+                            <td>Self-arranged coaching</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Living Cost/Month</strong></td>
+                            <td>INR 8,000-15,000</td>
+                            <td>INR 10,000-25,000</td>
+                        </tr>
+                        <tr>
+                            <td><strong>PG Eligibility</strong></td>
+                            <td>NEET-PG required (like India)</td>
+                            <td>NEET-PG required</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Global Recognition</strong></td>
+                            <td>WDOMS, ECFMG, FAIMER approved</td>
+                            <td>Limited recognition abroad</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Hostel & Mess</strong></td>
+                            <td>Included, Indian mess available</td>
+                            <td>Varies by college</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="country-cta">
+        <div class="container">
+            <h2>Ready to Start Your Medical Journey?</h2>
+            <p>Get free expert counseling and take the first step towards studying MBBS in Russia with NMC-approved universities</p>
+            <div class="cta-buttons">
+                <button class="cta-button primary">Get Free Counselling</button>
+                <button class="cta-button secondary">View All Universities</button>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
