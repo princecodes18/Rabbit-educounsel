@@ -1,8 +1,6 @@
-# Alpha Eduworld - MBBS Abroad Admissions Website
+# Rabbit-educounsel - MBBS Abroad Admissions Website
 
 ## 📋 Project Overview
-
-This is a complete, production-ready frontend for the Alpha Eduworld MBBS Abroad Admissions website. The project includes responsive design, form validation, smooth animations, and modern web development practices.
 
 ---
 
