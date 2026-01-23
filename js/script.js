@@ -514,3 +514,53 @@ tabBtns.forEach(btn => {
     });
   });
 });
+
+// Toggle dropdown menu
+function toggleDropdown(event, menuId) {
+    event.preventDefault();
+    const menu = document.getElementById(menuId);
+    const toggle = event.target.closest('.dropdown-toggle');
+    
+    // Close all other dropdowns
+    document.querySelectorAll('.dropdown-menu').forEach(m => {
+        if (m.id !== menuId) {
+            m.classList.remove('show');
+        }
+    });
+    
+    document.querySelectorAll('.dropdown-toggle').forEach(t => {
+        if (t !== toggle) {
+            t.classList.remove('active');
+        }
+    });
+    
+    // Toggle current dropdown
+    menu.classList.toggle('show');
+    toggle.classList.toggle('active');
+}
+
+// Close dropdown when clicking outside
+document.addEventListener('click', function(event) {
+    if (!event.target.closest('.dropdown')) {
+        document.querySelectorAll('.dropdown-menu').forEach(menu => {
+            menu.classList.remove('show');
+        });
+        document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+            toggle.classList.remove('active');
+        });
+    }
+});
+
+// Allow dropdown links to work normally
+document.querySelectorAll('.dropdown-menu a').forEach(link => {
+    link.addEventListener('click', function(e) {
+        // Don't prevent default - let the link navigate
+        // Close dropdown after clicking
+        setTimeout(() => {
+            document.querySelectorAll('.dropdown-menu').forEach(menu => {
+                menu.classList.remove('show');
+            });
+            document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+                toggle.classList.remove('active');
+            });
+        },
