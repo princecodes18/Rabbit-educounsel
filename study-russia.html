@@ -1,0 +1,1255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MBBS in [Country] - Educounsel</title>
+    <style>
+        /* CSS VARIABLES & DESIGN TOKENS */
+        :root {
+            --primary-color: #208294;
+            --secondary-color: #e67e22;
+            --accent-color: #f39c12;
+            --text-dark: #2c3e50;
+            --text-light: #7f8c8d;
+            --light-bg: #ecf0f1;
+            --dark-bg: #2c3e50;
+            --color-teal-500: #17a2b8;
+            --color-teal-700: #138496;
+            --color-cream-100: #fef9f3;
+            --spacing-sm: 10px;
+            --spacing-md: 15px;
+            --spacing-lg: 20px;
+            --spacing-xl: 30px;
+            --spacing-2xl: 50px;
+            --font-size-base: 14px;
+            --font-size-sm: 12px;
+            --font-size-lg: 16px;
+            --font-size-xl: 18px;
+            --font-size-2xl: 24px;
+            --font-size-3xl: 32px;
+            --font-size-4xl: 42px;
+            --font-weight-medium: 500;
+            --font-weight-semibold: 600;
+            --font-weight-bold: 700;
+            --line-height-normal: 1.5;
+            --radius-lg: 12px;
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
+            --shadow-lg: 0 8px 24px rgba(0,0,0,0.15);
+            --shadow-xl: 0 12px 32px rgba(0,0,0,0.2);
+            --transition-normal: 0.3s ease;
+            --container-lg: 1200px;
+            --color-border: #ddd;
+            --color-bg-1: rgba(59, 130, 246, 0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-dark);
+            background: white;
+        }
+
+        .container {
+            max-width: var(--container-lg);
+            margin: 0 auto;
+            padding: 0 var(--spacing-lg);
+        }
+
+        /* HERO SECTION */
+        .country-hero {
+            background: linear-gradient(135deg, var(--color-teal-500) 0%, var(--color-teal-700) 100%);
+            color: var(--color-cream-100);
+            padding: 60px var(--spacing-lg) 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .country-hero::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 50%;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--spacing-lg);
+            flex-wrap: wrap;
+        }
+
+        .country-flag {
+            width: 150px;
+            height: 100px;
+            border-radius: 5%;
+            border: 1px solid #ef3e08;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgb(235, 8, 8);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            flex-shrink: 0;
+        }
+
+        .country-flag img {
+            width: 150px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 5%;
+        }
+
+        .hero-text h1 {
+            font-size: var(--font-size-4xl);
+            margin-bottom: 10px;
+            color: var(--color-cream-100);
+            font-weight: var(--font-weight-bold);
+        }
+
+        .hero-text p {
+            font-size: var(--font-size-lg);
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 600px;
+            line-height: var(--line-height-normal);
+        }
+
+        /* WHY STUDY SECTION */
+        .why-study-section {
+            padding: var(--spacing-2xl) var(--spacing-lg);
+            background: white;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: var(--spacing-2xl);
+            font-size: var(--font-size-3xl);
+            color: var(--text-dark);
+            font-weight: var(--font-weight-bold);
+        }
+
+        .why-study-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-lg);
+            max-width: var(--container-lg);
+            margin: 0 auto;
+        }
+
+        .benefit-card {
+            background: var(--light-bg);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            border-left: 4px solid var(--primary-color);
+            transition: all var(--transition-normal);
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .benefit-card h3 {
+            color: var(--primary-color);
+            margin-bottom: var(--spacing-md);
+            font-size: var(--font-size-lg);
+        }
+
+        .benefit-card p {
+            color: var(--text-light);
+            font-size: var(--font-size-base);
+            line-height: var(--line-height-normal);
+            margin: 0;
+        }
+
+        /* BACKGROUND IMAGE SECTION */
+        .country-image-section {
+            padding: var(--spacing-2xl) var(--spacing-lg);
+            background: linear-gradient(135deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('assets/images/monuments/russia.jpg') center/cover;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .image-overlay-text h2 {
+            font-size: var(--font-size-3xl);
+            color: white;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .image-overlay-text p {
+            font-size: var(--font-size-lg);
+            color: rgba(255,255,255,0.9);
+            max-width: 600px;
+        }
+
+        /* UNIVERSITIES SECTION */
+        .universities-section {
+            padding: var(--spacing-2xl) var(--spacing-lg);
+            background: var(--light-bg);
+        }
+
+        .intro-text {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto var(--spacing-2xl);
+            color: var(--text-light);
+            font-size: var(--font-size-base);
+        }
+
+        .universities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+            gap: var(--spacing-lg);
+            max-width: var(--container-lg);
+            margin: 0 auto;
+        }
+
+        .university-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-normal);
+            border-top: 4px solid var(--primary-color);
+        }
+
+        .university-card:hover {
+            box-shadow: var(--shadow-xl);
+            transform: translateY(-8px);
+        }
+
+        .uni-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: var(--spacing-lg);
+        }
+
+        .uni-header h3 {
+            margin: 0;
+            font-size: var(--font-size-xl);
+        }
+
+        .uni-body {
+            padding: var(--spacing-lg);
+        }
+
+        .uni-info {
+            margin-bottom: var(--spacing-md);
+            padding-bottom: var(--spacing-md);
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .uni-info:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .uni-label {
+            font-size: var(--font-size-sm);
+            color: var(--text-light);
+            text-transform: uppercase;
+            font-weight: var(--font-weight-medium);
+            margin-bottom: 4px;
+        }
+
+        .uni-value {
+            font-size: var(--font-size-base);
+            color: var(--text-dark);
+            font-weight: var(--font-weight-semibold);
+        }
+
+        .uni-highlight {
+            background: var(--color-bg-1);
+            padding: var(--spacing-md);
+            border-left: 3px solid var(--primary-color);
+            margin-top: var(--spacing-md);
+            border-radius: 4px;
+        }
+
+        .uni-highlight strong {
+            color: var(--primary-color);
+        }
+
+        /* UNIVERSITY FILTER BUTTONS */
+        .university-filters {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-2xl);
+            flex-wrap: wrap;
+        }
+
+        .uni-filter-btn {
+            padding: 10px 20px;
+            border: 2px solid var(--primary-color);
+            background: white;
+            color: var(--primary-color);
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: var(--font-weight-semibold);
+            transition: all var(--transition-normal);
+            font-size: var(--font-size-base);
+        }
+
+        .uni-filter-btn:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .uni-filter-btn.active {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* KNOW MORE BUTTON */
+        .know-more-btn {
+            width: 100%;
+            padding: 10px 15px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: var(--font-weight-semibold);
+            margin-top: var(--spacing-md);
+            transition: all var(--transition-normal);
+        }
+
+        .know-more-btn:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        /* MODAL STYLES */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal.show {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: var(--spacing-2xl);
+            border-radius: var(--radius-lg);
+            width: 90%;
+            max-width: 700px;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: var(--shadow-xl);
+            animation: slideUp 0.3s ease;
+            position: relative;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: var(--spacing-lg);
+            border-bottom: 2px solid var(--light-bg);
+            padding-bottom: var(--spacing-lg);
+        }
+
+        .modal-header h2 {
+            color: var(--primary-color);
+            margin: 0;
+            font-size: var(--font-size-2xl);
+        }
+
+        .close-btn {
+            background: none;
+            border: none;
+            font-size: 28px;
+            cursor: pointer;
+            color: var(--text-light);
+            transition: color var(--transition-normal);
+        }
+
+        .close-btn:hover {
+            color: var(--text-dark);
+        }
+
+        .modal-section {
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .modal-section h3 {
+            color: var(--primary-color);
+            margin-bottom: var(--spacing-md);
+            font-size: var(--font-size-lg);
+        }
+
+        .modal-section p {
+            color: var(--text-dark);
+            line-height: var(--line-height-normal);
+            margin: 0;
+        }
+
+        .modal-links {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .modal-link-btn {
+            padding: 12px 15px;
+            border: 2px solid var(--primary-color);
+            background: white;
+            color: var(--primary-color);
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: var(--font-weight-semibold);
+            transition: all var(--transition-normal);
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .modal-link-btn:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .interest-btn {
+            width: 100%;
+            padding: 14px 20px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: var(--font-weight-bold);
+            font-size: var(--font-size-lg);
+            transition: all var(--transition-normal);
+            margin-top: var(--spacing-md);
+        }
+
+        .interest-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* COMPARISON TABLE SECTION */
+
+        .uni-highlight strong {
+            color: var(--primary-color);
+        }
+
+        /* UNIVERSITY FILTER BUTTONS */
+        .university-filters {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-2xl);
+            flex-wrap: wrap;
+        }
+
+        .uni-filter-btn {
+            padding: 10px 20px;
+            border: 2px solid var(--primary-color);
+            background: white;
+            color: var(--primary-color);
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: var(--font-weight-semibold);
+            transition: all var(--transition-normal);
+            font-size: var(--font-size-base);
+        }
+
+        .uni-filter-btn:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .uni-filter-btn.active {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* KNOW MORE BUTTON */
+        .know-more-btn {
+            width: 100%;
+            padding: 10px 15px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: var(--font-weight-semibold);
+            margin-top: var(--spacing-md);
+            transition: all var(--transition-normal);
+        }
+
+        .know-more-btn:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        /* MODAL STYLES */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal.show {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: var(--spacing-2xl);
+            border-radius: var(--radius-lg);
+            width: 100%;
+            max-width: 1350px;
+            max-height: 95vh;
+            overflow-y: auto;
+            box-shadow: var(--shadow-xl);
+            animation: slideUp 0.3s ease;
+            position: relative;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: var(--spacing-lg);
+            border-bottom: 2px solid var(--light-bg);
+            padding-bottom: var(--spacing-lg);
+        }
+
+        .modal-header h2 {
+            color: var(--primary-color);
+            margin: 0;
+            font-size: var(--font-size-2xl);
+        }
+
+        .close-btn {
+            background: none;
+            border: none;
+            font-size: 28px;
+            cursor: pointer;
+            color: var(--text-light);
+            transition: color var(--transition-normal);
+        }
+
+        .close-btn:hover {
+            color: var(--text-dark);
+        }
+
+        .modal-section {
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .modal-section h3 {
+            color: var(--primary-color);
+            margin-bottom: var(--spacing-md);
+            font-size: var(--font-size-lg);
+        }
+
+        .modal-section p {
+            color: var(--text-dark);
+            line-height: var(--line-height-normal);
+            margin: 0;
+        }
+
+        .modal-links {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .modal-link-btn {
+            padding: 12px 15px;
+            border: 2px solid var(--primary-color);
+            background: white;
+            color: var(--primary-color);
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: var(--font-weight-semibold);
+            transition: all var(--transition-normal);
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .modal-link-btn:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .interest-btn {
+            width: 100%;
+            padding: 14px 20px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: var(--font-weight-bold);
+            font-size: var(--font-size-lg);
+            transition: all var(--transition-normal);
+            margin-top: var(--spacing-md);
+        }
+
+        .interest-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* COMPARISON TABLE SECTION */
+        .comparison-section {
+            padding: var(--spacing-2xl) var(--spacing-lg);
+            background: white;
+        }
+
+        .table-wrapper {
+            max-width: var(--container-lg);
+            margin: 0 auto;
+            overflow-x: auto;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+        }
+
+        .comparison-table th {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: var(--spacing-md);
+            text-align: left;
+            font-weight: var(--font-weight-semibold);
+            text-transform: uppercase;
+            font-size: var(--font-size-sm);
+        }
+
+        .comparison-table td {
+            padding: var(--spacing-md);
+            border-bottom: 1px solid var(--color-border);
+            color: var(--text-dark);
+        }
+
+        .comparison-table tr:hover {
+            background-color: var(--light-bg);
+        }
+
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* CTA SECTION */
+        .cta-section {
+            background: linear-gradient(135deg, var(--color-teal-500), var(--color-teal-700));
+            color: var(--color-cream-100);
+            padding: var(--spacing-2xl) var(--spacing-lg);
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: var(--font-size-3xl);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .cta-section p {
+            font-size: var(--font-size-lg);
+            margin-bottom: var(--spacing-xl);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: var(--spacing-md);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            font-size: var(--font-size-base);
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all var(--transition-normal);
+            font-weight: var(--font-weight-semibold);
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--primary-color);
+        }
+        
+        .home-icon {
+           position: fixed;
+           top: 15px;
+           right: 15px;
+           z-index: 1100;
+        }
+
+        .home-icon a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: white;
+            color: var(--primary-color);
+            box-shadow: var(--shadow-md);
+            text-decoration: none;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .home-icon a:hover {
+            background: var(--primary-color);
+            color: #fff;
+            transform: translateY(-2px);
+            transition: all 0.3s ease;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: var(--font-size-3xl);
+            }
+
+            .why-study-grid,
+            .universities-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: var(--font-size-2xl);
+            }
+
+            .comparison-table {
+                font-size: var(--font-size-sm);
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Return to Home Icon -->
+     <div class="home-icon">
+    <a href="index.html" title="Home">
+        🏠
+    </a>
+     </div>
+
+
+    <!-- HERO SECTION -->
+    <section class="country-image-section">
+        <div class="hero-content">
+            <div class="country-flag">
+                <img src="assets/images/flags/russia.png" alt="Country Flag">
+            </div>
+            <div class="hero-text">
+                <h1>Pursue MBBS in Russia</h1>
+                <p>Pursue world-class medical education with NMC-approved universities, affordable fees, and globally recognized degrees</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY STUDY SECTION -->
+    <section class="why-study-section">
+        <div class="container">
+            <h2 class="section-title">Why Study MBBS in Russia?</h2>
+            <div class="why-study-grid">
+                <div class="benefit-card">
+                    <h3>✓ NMC Approved</h3>
+                    <p>All universities recognized by National Medical Commission and eligible for FMGE exam.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>✓ Affordable Fees</h3>
+                    <p>70% lower fees compared to private Indian medical colleges with no hidden charges.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>✓ English-Medium</h3>
+                    <p>Fully English-medium instruction, making learning easier for Indian students.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>✓ World-Class Infrastructure</h3>
+                    <p>Modern facilities, advanced laboratories, and state-of-the-art teaching methods.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>✓ Quality Training</h3>
+                    <p>Extensive practical training at affiliated hospitals with hands-on patient exposure.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>✓ Global Recognition</h3>
+                    <p>Degrees recognized by WDOMS, ECFMG, FAIMER, and qualify for USMLE, PLAB exams.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- TOP UNIVERSITIES SECTION -->
+    <section class="universities-section">
+        <div class="container">
+            <h2 class="section-title">Top Medical Universities in Russia</h2>
+            <p class="intro-text">Choose from NMC-approved medical universities offering world-class education and modern infrastructure</p>
+            
+            <!-- UNIVERSITY FILTER BUTTONS -->
+            <div class="university-filters" id="universityFilters"></div>
+            
+            <div class="universities-grid">
+                <!-- University 1 -->
+                <div class="university-card" id="uni-1">
+                    <div class="uni-header">
+                        <h3>Ural State medical University</h3>
+                    </div>
+                    <div class="uni-body">
+                        <div class="uni-info">
+                            <div class="uni-label">Established</div>
+                            <div class="uni-value">1930</div>
+                        </div>
+                        <div class="uni-info">
+                            <div class="uni-label">Address</div>
+                            <div class="uni-value"> Ulitsa Repina, 3, Yekaterinburg, Sverdlovsk Oblast, Russia, 620014</div>
+                        </div>
+                        <div class="uni-info">
+                            <div class="uni-label">Course Fees</div>
+                            <div class="uni-value">1,752,000 Rubles(₹21,21,507) (6 years)</div>
+                        </div>
+                        <div class="uni-info">
+                            <div class="uni-label">Recognition</div>
+                            <div class="uni-value">NMC, WHO, UNESCO</div>
+                        </div>
+                        <div class="uni-highlight">
+                            <strong>Indian Students:</strong> 100+
+                        </div>
+                        <button class="know-more-btn" onclick="openModal('modal-1', '[University 1 Name]')">Know More</button>
+                    </div>
+                </div>
+
+                <!-- University 2 -->
+                <div class="university-card" id="uni-2">
+                    <div class="uni-header">
+                        <h3>[University 2 Name]</h3>
+                    </div>
+                    <div class="uni-body">
+                        <div class="uni-info">
+                            <div class="uni-label">Established</div>
+                            <div class="uni-value">[Year]</div>
+                        </div>
+                        <div class="uni-info">
+                            <div class="uni-label">Location</div>
+                            <div class="uni-value">[City]</div>
+                        </div>
+                        <div class="uni-info">
+                            <div class="uni-label">Course Fees</div>
+                            <div class="uni-value">₹[Amount] (6 years)</div>
+                        </div>
+                        <div class="uni-info">
+                            <div class="uni-label">Recognition</div>
+                            <div class="uni-value">NMC, WDOMS, ECFMG</div>
+                        </div>
+                        <div class="uni-highlight">
+                            <strong>Indian Students:</strong> [Number]+
+                        </div>
+                        <button class="know-more-btn" onclick="openModal('modal-2', '[University 2 Name]')">Know More</button>
+                    </div>
+                </div>
+
+                <!-- University 3 -->
+                <div class="university-card" id="uni-3">
+                    <div class="uni-header">
+                        <h3>[University 3 Name]</h3>
+                    </div>
+                    <div class="uni-body">
+                        <div class="uni-info">
+                            <div class="uni-label">Established</div>
+                            <div class="uni-value">[Year]</div>
+                        </div>
+                        <div class="uni-info">
+                            <div class="uni-label">Location</div>
+                            <div class="uni-value">[City]</div>
+                        </div>
+                        <div class="uni-info">
+                            <div class="uni-label">Course Fees</div>
+                            <div class="uni-value">₹[Amount] (6 years)</div>
+                        </div>
+                        <div class="uni-info">
+                            <div class="uni-label">Recognition</div>
+                            <div class="uni-value">NMC, WDOMS, ECFMG</div>
+                        </div>
+                        <div class="uni-highlight">
+                            <strong>Indian Students:</strong> [Number]+
+                        </div>
+                        <button class="know-more-btn" onclick="openModal('modal-3', '[University 3 Name]')">Know More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPARISON TABLE -->
+    <section class="comparison-section">
+        <div class="container">
+            <h2 class="section-title">MBBS in [Country] vs India (Private)</h2>
+            <div class="table-wrapper">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Parameter</th>
+                            <th>MBBS in [Country]</th>
+                            <th>MBBS in India (Private)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Total Course Cost</strong></td>
+                            <td>INR [Amount] Lakhs</td>
+                            <td>INR 25-100 Lakhs</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Medium of Teaching</strong></td>
+                            <td>English (fully)</td>
+                            <td>English + Regional</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Practical Training</strong></td>
+                            <td>From Day 1</td>
+                            <td>Later in course</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Living Cost/Month</strong></td>
+                            <td>INR [Amount]</td>
+                            <td>INR 10,000-25,000</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Global Recognition</strong></td>
+                            <td>WDOMS, ECFMG approved</td>
+                            <td>Limited recognition</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Hostel & Mess</strong></td>
+                            <td>Included, Indian mess available</td>
+                            <td>Varies by college</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODALS FOR UNIVERSITIES -->
+    
+    <!-- Modal 1 -->
+    <div id="modal-1" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Ural State medical university</h2>
+                <button class="close-btn" onclick="closeModal('modal-1')">&times;</button>
+            </div>
+            
+            <div class="modal-section">
+                <h3>About</h3>
+                <p>Ural State Medical University was founded in 1930. Today it is a major science and education center and a home to 6000 students, both Russian and international.
+                    Our students and researchers can choose from Undergraduate, Graduate, Postgraduate and Residency programmes in General Medicine, Preventive Medicine, Clinical Medicine, Dentistry, Pharmacy, Nursing, Social Work and Clinical Psychology.</p>
+            </div>
+            
+            <div class="modal-section">
+                <h3>Facts and Figures</h3>
+                <p>Clinical AND THEORETICAL DEPARTMENTS: 52
+<br>Ural State Medical University provides a diverse range of specialized medical education.
+<br>
+<br>CLINICAL INSTITUTION: 5
+
+<br>Affiliated with five clinical institutions, students gain invaluable hands-on experience in real-world healthcare settings.
+<br>
+<br>FACULTIES: 7
+
+<br>Organized into seven faculties, the university offers comprehensive education and training programs tailored to specific areas of study within the field of medicine.
+<br>
+<br>Established in 1930
+
+<br>Over 6000 students
+
+<br>More than 300 International Students from 30 countries
+
+<br>Top-100 Russian universities according to RAEX Ranking
+
+<br>Top-3 Dentistry faculties in Russia
+
+<br>Top-10 medical universities in Russia
+
+<br>Top-5 Educational programmes of Russia
+
+<br>1400 faculty members (75% with PhD)
+
+<br>50 Honored Doctors of the Russian Federation
+
+<br>5 Members of the Russian Academy of Science
+
+<br>5 Distinguished Scholars of the Russian Federation
+
+<br>4 own peer reviewed Scientific Journals
+
+<br>Over 30 international partnership agreements</p>
+            </div>
+            
+            <div class="modal-links">
+                <a href="https://usma.ru/en/main/" class="modal-link-btn" target="_blank">Visit Website</a>
+                <a href="assets/pdf/USMU Russia.pdf" class="modal-link-btn" target="_blank">Download Brochure</a>
+            </div>
+            
+            <button class="interest-btn" onclick="openInterestForm('[University 1 Name]')">I am Interested</button>
+        </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div id="modal-2" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>[University 2 Name]</h2>
+                <button class="close-btn" onclick="closeModal('modal-2')">&times;</button>
+            </div>
+            
+            <div class="modal-section">
+                <h3>About</h3>
+                <p>Ural State Medical University was founded in 1930. Today it is a major science and education center and a home to 6000 students, both Russian and international.Our students and researchers can choose from Undergraduate, Graduate, Postgraduate and Residency programmes in General Medicine, Preventive Medicine, Clinical Medicine, Dentistry, Pharmacy, Nursing, Social Work and Clinical Psychology.</p>
+            </div>
+            
+            <div class="modal-section">
+                <h3>College Environment</h3>
+                <p>Modern infrastructure with clinical training departments and patient care facilities. Campus amenities including library, computer labs, and sports facilities. Inclusive community with strong international student support services. Regular cultural and academic events fostering peer interaction and networking.</p>
+            </div>
+            
+            <div class="modal-links">
+                <a href="https://example.com/university2" class="modal-link-btn" target="_blank">Visit Website</a>
+                <a href="https://example.com/brochure2.pdf" class="modal-link-btn" target="_blank">Download Brochure</a>
+            </div>
+            
+            <button class="interest-btn" onclick="openInterestForm('[University 2 Name]')">I am Interested</button>
+        </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div id="modal-3" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>[University 3 Name]</h2>
+                <button class="close-btn" onclick="closeModal('modal-3')">&times;</button>
+            </div>
+            
+            <div class="modal-section">
+                <h3>Faculty</h3>
+                <p>Expert medical professionals with extensive clinical experience and academic credentials. Supportive faculty fostering innovation and critical thinking among students. Emphasis on evidence-based teaching methods and continuous curriculum updates.</p>
+            </div>
+            
+            <div class="modal-section">
+                <h3>College Environment</h3>
+                <p>Advanced medical college with integrated teaching hospitals and outpatient services. Student-friendly campus with accommodation, dining, and recreational facilities. Active student organizations and professional development opportunities. Global perspective with student exchange programs and international collaborations.</p>
+            </div>
+            
+            <div class="modal-links">
+                <a href="https://example.com/university3" class="modal-link-btn" target="_blank">Visit Website</a>
+                <a href="https://example.com/brochure3.pdf" class="modal-link-btn" target="_blank">Download Brochure</a>
+            </div>
+            
+            <button class="interest-btn" onclick="openInterestForm('[University 3 Name]')">I am Interested</button>
+        </div>
+    </div>
+
+    <!-- CTA SECTION -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Start Your Medical Journey?</h2>
+            <p>Get free expert counseling and begin your path to studying MBBS in [Country] today</p>
+            <div class="cta-buttons">
+                <button class="btn btn-primary">Get Free Counselling</button>
+                <button class="btn btn-secondary">View All Universities</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // University data
+        const universities = [
+            { id: 'uni-1', name: 'Ural State Medical University' },
+            { id: 'uni-2', name: '[University 2 Name]' },
+            { id: 'uni-3', name: '[University 3 Name]' }
+        ];
+
+        // Initialize filter buttons
+        function initializeFilters() {
+            const filtersContainer = document.getElementById('universityFilters');
+            universities.forEach(uni => {
+                const btn = document.createElement('button');
+                btn.className = 'uni-filter-btn';
+                btn.textContent = uni.name;
+                btn.onclick = () => scrollToUniversity(uni.id, btn);
+                filtersContainer.appendChild(btn);
+            });
+        }
+
+        // Scroll to university card
+        function scrollToUniversity(uniId, btnElement) {
+            const uniCard = document.getElementById(uniId);
+            if (uniCard) {
+                uniCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                
+                // Update active button
+                document.querySelectorAll('.uni-filter-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                btnElement.classList.add('active');
+            }
+        }
+
+        // Open modal
+        function openModal(modalId, uniName) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        // Close modal
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // Open interest form (Google Form link)
+        function openInterestForm(uniName) {
+            // Replace with your actual Google Form URL
+            const googleFormUrl = 'https://docs.google.com/forms/d/YOUR_FORM_ID/viewform?usp=pp_url&entry.YOUR_FIELD_ID=' + encodeURIComponent(uniName);
+            window.open(googleFormUrl, '_blank');
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeFilters();
+        });
+    </script>
+
+</body>
+</html>
