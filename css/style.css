@@ -918,20 +918,42 @@ a:hover {
   }
 }
 
-/* ============================================
-   4. NAVIGATION BAR
-   ============================================ */
+/* NAVIGATION BAR - COMPLETE FIXES */
 
-/* Logo */
+/* Navbar Container */
+.navbar {
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: all var(--duration-normal) var(--ease-standard);
+    border-bottom: none; /* Remove border */
+}
+
+/* Nav Wrapper */
+.nav-wrapper {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px var(--space-32);
+    max-width: var(--container-xl);
+    margin: 0 auto;
+    height: 70px;
+}
+
+/* Logo - Make it fill the navbar height */
 .logo {
     display: flex;
     align-items: center;
     gap: 10px;
     text-decoration: none;
+    height: 100%;
 }
 
 .logo img {
-    height: 40px;
+    height: 60px;
     width: auto;
     object-fit: contain;
 }
@@ -948,16 +970,6 @@ a:hover {
     color: var(--color-orange-500);
 }
 
-@media (max-width: 480px) {
-    .logo h1 {
-        font-size: var(--font-size-lg);
-    }
-    
-    .logo img {
-        height: 30px;
-    }
-}
-
 /* Navigation Menu */
 .nav-menu {
     display: flex;
@@ -970,218 +982,161 @@ a:hover {
     position: relative;
 }
 
-@media (max-width: 768px) {
-    .nav-menu {
-        gap: 24px;
-    }
-}
-
-.navbar {
-  background-color: #ffffff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  transition: all var(--duration-normal) var(--ease-standard);
-  border-bottom: 1px solid #e0e0e0;
-}
-
-.nav-wrapper {
-  background-color: #ffffff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: var(--space-16) 0;
-  max-width: var(--container-xl);
-  margin: 0 auto;
-  padding-left: var(--space-32);
-  padding-right: var(--space-32);
-}
-
-/* Navigation Menu */
-.nav-menu {
-  display: flex;
-  list-style: none;
-  gap: 48px;
-  align-items: center;
-}
-
-.nav-menu li {
-  position: relative;
-}
-
-.nav-menu a {
-  font-weight: 500;
-  color: #2c3e50;
-  transition: color 0.3s ease;
-  padding: 8px 16px;
-  border-radius: 6px;
-  font-size: 14px;
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  text-decoration: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-.nav-menu a:hover {
-  color: var(--color-primary);
-}
-
-/* Dropdown Toggle Button */
+.nav-menu a,
 .dropdown-toggle {
-  font-weight: 500;
-  color: #2c3e50;
-  transition: color 0.3s ease;
-  padding: 8px 16px;
-  border-radius: 6px;
-  font-size: 14px;
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  text-decoration: none;
-  background: none;
-  border: none;
-  cursor: pointer;
+    font-weight: 500;
+    color: #2c3e50;
+    transition: color 0.3s ease;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
+.nav-menu a:hover,
 .dropdown-toggle:hover {
-  color: var(--color-primary);
+    color: var(--color-primary);
 }
 
+/* Dropdown Styles */
 .dropdown-arrow {
-  font-size: 12px;
-  transition: transform 0.3s ease;
+    font-size: 12px;
+    transition: transform 0.3s ease;
 }
 
 .dropdown-toggle.active .dropdown-arrow {
-  transform: rotate(180deg);
-}
-
-/* Dropdown Menu */
-.dropdown {
-  position: relative;
+    transform: rotate(180deg);
 }
 
 .dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: white;
-  min-width: 220px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  z-index: 1000;
-  list-style: none;
-  margin-top: 8px;
-  padding: 8px 0;
-  overflow: hidden;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    min-width: 220px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    list-style: none;
+    margin-top: 8px;
+    padding: 8px 0;
+    overflow: hidden;
 }
 
 .dropdown-menu.show {
-  display: block;
-  animation: slideDown 0.3s ease;
+    display: block;
+    animation: slideDown 0.3s ease;
 }
 
 @keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .dropdown-menu li {
-  margin: 0;
+    margin: 0;
 }
 
 .dropdown-menu a {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 12px 20px;
-  color: #2c3e50;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  font-size: 14px;
-  white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 20px;
+    color: #2c3e50;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    white-space: nowrap;
 }
 
 .dropdown-menu a:hover {
-  background-color: #f0f0f0;
-  color: var(--color-primary);
-  padding-left: 28px;
+    background-color: #f0f0f0;
+    color: var(--color-primary);
+    padding-left: 28px;
 }
 
 /* Flag Icon Styles */
 .flag-icon {
-  height: 24px;
-  width: 32px;
-  object-fit: cover;
-  border-radius: 3px;
+    height: 24px;
+    width: 32px;
+    object-fit: cover;
+    border-radius: 3px;
 }
 
 /* Hamburger Menu */
 .hamburger {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-  color: #2c3e50;
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #2c3e50;
 }
 
 .hamburger:hover {
-  color: var(--color-primary);
+    color: var(--color-primary);
 }
 
-/* Responsive */
+/* Responsive Styles */
 @media (max-width: 768px) {
-  .nav-wrapper {
-    padding-left: var(--space-24);
-    padding-right: var(--space-24);
-  }
-  
-  .nav-menu {
-    gap: 24px;
-  }
-  
-  .dropdown-menu {
-    position: fixed;
-    top: 60px;
-    left: 0;
-    right: 0;
-    width: 100%;
-    border-radius: 0;
-    min-width: unset;
-    margin-top: 0;
-  }
+    .nav-wrapper {
+        padding-left: var(--space-24);
+        padding-right: var(--space-24);
+    }
+    
+    .nav-menu {
+        gap: 24px;
+    }
+    
+    .dropdown-menu {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        border-radius: 0;
+        min-width: unset;
+        margin-top: 0;
+    }
 }
 
 @media (max-width: 480px) {
-  .nav-wrapper {
-    padding-left: var(--space-16);
-    padding-right: var(--space-16);
-  }
-  
-  .nav-menu {
-    gap: 16px;
-  }
-  
-  .hamburger {
-    display: block;
-  }
+    .nav-wrapper {
+        height: 60px;
+        padding: 10px var(--space-16);
+    }
+    
+    .nav-menu {
+        gap: 16px;
+    }
+    
+    .logo img {
+        height: 45px;
+    }
+    
+    .logo h1 {
+        font-size: var(--font-size-lg);
+    }
+    
+    .hamburger {
+        display: block;
+    }
 }
-
 
 /* ============================================
    5. HERO SECTION
