@@ -2105,8 +2105,8 @@ a:hover {
    ============================================ */
 
 .cta-final {
-  background: #293249 /*linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-hover) 100%)*/;
-  color: #ffffff;
+  background: /*#f0f0f2*/ linear-gradient(135deg, #d9d9d9 25%, #cce3de );
+  color: #070707;
   padding: 24px var(--space-32);
   text-align: center;
 }
@@ -2118,12 +2118,12 @@ a:hover {
 }
 
 .cta-final h2 {
-  color: #ffffff;
+  color: #000000;
   margin-bottom: var(--space-24);
 }
 
 .cta-final p {
-  color: rgba(255, 255, 255, 0.95);
+  color: #000000;
   margin-bottom: 64px;
   max-width: 600px;
   margin-left: auto;
@@ -2160,9 +2160,9 @@ a:hover {
 }
 
 .cta-button.secondary {
-  background-color: transparent;
-  border: 2px solid var(--color-cream-50);
-  color: var(--color-cream-50);
+  background-color: #94d2bd;
+  border: 2px solid #005f73;
+  color: #0a9396;
 }
 
 .cta-button.secondary:hover {
@@ -2175,8 +2175,8 @@ a:hover {
    ============================================ */
 
 .footer {
-  background-color:#282a35;
-  color: var(--color-cream-50);
+  background:linear-gradient(45deg, #d9d9d9 , #cce3de );
+  color: #0c0c0c;
   padding: 24px ;
 }
 
@@ -2211,7 +2211,7 @@ a:hover {
 }
 
 .footer-section p {
-  color: rgba(255, 255, 255, 0.7);
+  color: #000000;
   margin-bottom: var(--space-16);
   font-size: var(--font-size-sm);
 }
@@ -2225,7 +2225,7 @@ a:hover {
 }
 
 .footer-section a {
-  color: rgba(255, 255, 255, 0.7);
+  color: #000000;
   transition: color var(--duration-fast) var(--ease-standard);
   font-size: var(--font-size-sm);
 }
@@ -2235,10 +2235,18 @@ a:hover {
 }
 
 .footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-top: var(--space-32);
+  border-top: 1px solid rgba(7, 7, 7, 0.1);
+  padding-top: 10px;
   text-align: center;
-  color: rgba(221, 18, 18, 0.5);
+  color: rgba(3, 3, 3, 0.5);
+  font-size: var(--font-size-sm);
+  max-width: var(--container-xl);
+  margin: 0 auto;
+}
+
+.footer-bottom h2 {
+  color: #393434;
+  text-align: center;
   font-size: var(--font-size-sm);
   max-width: var(--container-xl);
   margin: 0 auto;
