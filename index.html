@@ -10,71 +10,71 @@
 </head>
 <body>
     <!-- Navigation -->
-<!-- Navigation -->
-<nav class="navbar">
-    <div class="container">
-        <div class="nav-wrapper">
-            <div class="logo">
-               <img src="assets/images/logo.png" alt="Rabbit Educounsel Logo">
-               <h1>Rabbit <span>Educounsel</span></h1>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="#home">Home</a></li>
-                
-                <!-- DESTINATIONS DROPDOWN -->
-                <li class="dropdown">
-                    <button class="dropdown-toggle" onclick="toggleDropdown(event, 'destinations-menu')">
-                        Destinations
-                        <span class="dropdown-arrow">▼</span>
-                    </button>
-                    <ul class="dropdown-menu" id="destinations-menu">
-                        <li>
-                            <a href="study-india.html">
-                                <img src="assets/images/flags/india.png" alt="India" class="flag-icon">
-                                India
-                            </a>
-                        </li>
-                        <li>
-                            <a href="study-russia.html">
-                                <img src="assets/images/flags/russia.png" alt="Russia" class="flag-icon">
-                                Russia
-                            </a>
-                        </li>
-                        <li>
-                            <a href="study-kazakhstan.html">
-                                <img src="assets/images/flags/kazakhstan.png" alt="Kazakhstan" class="flag-icon">
-                                Kazakhstan
-                            </a>
-                        </li>
-                        <li>
-                            <a href="study-kyrgyzstan.html">
-                                <img src="assets/images/flags/kyrgyzstan.png" alt="Kyrgyzstan" class="flag-icon">
-                                Kyrgyzstan
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                
-                <!-- SERVICES DROPDOWN -->
-                <li class="dropdown">
-                    <button class="dropdown-toggle" onclick="toggleDropdown(event, 'services-menu')">
-                        Services
-                        <span class="dropdown-arrow">▼</span>
-                    </button>
-                    <ul class="dropdown-menu" id="services-menu">
-                        <li><a href="#counselling">Counselling</a></li>
-                        <li><a href="#admission">Admission Assistance</a></li>
-                        <li><a href="#visa">Visa Guidance</a></li>
-                        <li><a href="#accommodation">Accommodation</a></li>
-                    </ul>
-                </li>
-                
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <button class="hamburger">☰</button>
+<!-- rabbit navbar: Logo, Home, Countries, Services, WhatsApp, Contact, Login -->
+<nav class="rabbit-navbar" aria-label="Main Navigation">
+  <div class="rabbit-container">
+
+    <!-- Logo (extreme left) -->
+    <a href="#" class="rabbit-logo" aria-label="Home">
+      <img src="assets/images/logo.png" alt="Rabbit Educounsel logo">
+    </a>
+
+    <!-- Central navigation list -->
+    <ul class="rabbit-nav" role="menubar">
+
+      <li role="none"><a role="menuitem" href="#home" class="rabbit-link">Home</a></li>
+
+      <!-- Countries dropdown (hover + focus-within keeps it open) -->
+      <li class="rabbit-dropdown" role="none">
+        <button class="rabbit-link rabbit-drop-btn" aria-haspopup="true" aria-expanded="false">
+          Countries <span class="caret">▾</span>
+        </button>
+
+        <div class="rabbit-drop-menu" role="menu" aria-hidden="true">
+          <!-- dummy country links -->
+          <a role="menuitem" href="study-india.html">India</a>
+          <a role="menuitem" href="study-russia.html">Russia</a>
+          <a role="menuitem" href="study-kazakhstan.html">Kazakhstan</a>
+          <a role="menuitem" href="study-kyrgyzstan.html">Kyrgyzstan</a>
         </div>
-    </div>
+      </li>
+
+      <!-- Services dropdown -->
+      <li class="rabbit-dropdown" role="none">
+        <button class="rabbit-link rabbit-drop-btn" aria-haspopup="true" aria-expanded="false">
+          Services <span class="caret">▾</span>
+        </button>
+
+        <div class="rabbit-drop-menu" role="menu" aria-hidden="true">
+          <a role="menuitem" href="#counselling">Counselling</a>
+          <a role="menuitem" href="#admission">Admission Assistance</a>
+          <a role="menuitem" href="#visa">Visa Guidance</a>
+          <a role="menuitem" href="#accommodation">Accommodation</a>
+        </div>
+      </li>
+
+      <!-- WhatsApp icon (inline with nav) -->
+      <li role="none">
+        <a class="rabbit-whatsapp rabbit-link" href="https://wa.me/0000000000" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <img src="assets/images/whatsapp.png" alt="whatsapp" class="rabbit-icon">
+        </a>
+      </li>
+
+      <!-- Contact -->
+      <li role="none">
+        <a class="rabbit-link rabbit-contact" href="#contact" aria-label="Contact">
+          <img src="assets/images/contact-icon.png" alt="contact" class="rabbit-icon">
+          <span>Contact</span>
+        </a>
+      </li>
+    </ul>
+
+    <!-- Login button pushed to far right -->
+    <a class="rabbit-login" href="#" aria-label="Login or Register">Login / Register</a>
+
+  </div>
 </nav>
+
 
 
     <!-- Hero Section -->
@@ -216,61 +216,70 @@
   </div>
 </section>
 
+<!--Form and photos section-->
+<section class="contact-section">
 
+  <h2 class="contact-title">Get in Touch Today!</h2>
 
+  <div class="contact-grid">
 
+    <!-- PHOTO 1 BIG -->
+    <div class="photo big">
+      <img src="assets/images/image1.jpg">
+    </div>
 
-    <!-- Counselling Form Section -->
- <section class="counselling-section">
-  <h2><span style="color: #141515;">Get in Touch today!</span></h2>
-
-  <div class="counselling-container">
-    <!-- LEFT SIDE: PHOTOS GRID -->
-    <div class="features-column">
-      <div class="feature-item">
-        <img src="assets/images/image1.jpg" alt="image1">
+    <!-- PHOTO 2 + 3 -->
+    <div class="photo-column">
+      <div class="photo">
+        <img src="assets/images/image2.jpg">
       </div>
-      <div class="feature-item">
-        <img src="assets/images/image2.jpg" alt="image2">
-      </div>
-      <div class="feature-item">
-        <img src="assets/images/image3.jpg" alt="image3">
+
+      <div class="photo">
+        <img src="assets/images/image3.jpg">
       </div>
     </div>
 
-    <!-- RIGHT SIDE: FORM -->
-    <form class="counselling-form">
-      <h3 class="form-title">Please Fill This Form</h3>
-      
-      <div class="form-row">
-        <div class="form-group">
-          <label for="name">Full Name</label>
-          <input type="text" id="name" name="name" required>
-        </div>
-        <div class="form-group">
-          <label for="email">Email Address</label>
-          <input type="email" id="email" name="email" required>
-        </div>
+    <!-- FORM -->
+    <form class="contact-form">
+
+      <h3>Please Fill This Form</h3>
+
+      <div class="row">
+        <input type="text" placeholder="Full Name">
+      </div>
+      <div class="row">
+        <input type="email" placeholder="Email Address">
+      </div>
+            <div class="row">
+        <input type="tel" placeholder="Phone Number">
+      </div>
+            <div class="row">
+        <input type="text" placeholder="State">
+      </div>
+      <div class="row">
+        <select>
+          <option>Select Country</option>
+          <option>India</option>
+          <option>Russia</option>
+          <option>Kazakhstan</option>
+        </select>
       </div>
 
-      <div class="form-row">
-        <div class="form-group">
-          <label for="phone">Phone Number</label>
-          <input type="tel" id="phone" name="phone" required>
-        </div>
-        <div class="form-group">
-          <label for="country">Select Country</label>
-          <select id="country" name="country" required>
-            <option value="">Choose Country</option>
-            <option value="india">India</option>
-            <option value="russia">Russia</option>
-            <option value="kazakhstan">Kazakhstan</option>
-          </select>
-        </div>
-      </div>
+      <button>Get Free Counselling</button>
 
-      <button type="submit" class="submit-btn">Get Free Counselling</button>
     </form>
+
+    <!-- PHOTO 4 + 5 -->
+    <div class="photo-column">
+      <div class="photo">
+        <img src="assets/images/image4.jpg">
+      </div>
+
+      <div class="photo">
+        <img src="assets/images/image5.jpg">
+      </div>
+    </div>
+
   </div>
 </section>
 

@@ -108,6 +108,7 @@ function initializeHamburgerMenu() {
     });
 }
 
+
 /* ============================================
    2. SMOOTH SCROLL BEHAVIOR
    ============================================ */
@@ -485,6 +486,29 @@ document.getElementById('counsellingForm')?.addEventListener('submit', function(
     });
 });
 
+/* toggle entire mobile menu */
+function toggleRabbit() {
+  document.querySelector('.rabbit-menu').classList.toggle('show');
+}
+
+/* Make dropdowns toggleable on small screens */
+document.addEventListener('click', function (e) {
+  // Close desktop dropdowns when clicking outside
+  if (!e.target.closest('.rabbit-dropdown')) {
+    document.querySelectorAll('.rabbit-dropdown').forEach(dd => dd.classList.remove('open'));
+  }
+});
+
+// Attach click handlers to dropdown buttons to open on mobile
+document.querySelectorAll('.rabbit-drop-btn').forEach(btn => {
+  btn.addEventListener('click', function (ev) {
+    // on small screen, toggle .open; on desktop the hover takes care of it
+    if (window.innerWidth < 980) {
+      const parent = btn.closest('.rabbit-dropdown');
+      parent.classList.toggle('open');
+    }
+  });
+});
 /* ============================================
    10. PERFORMANCE OPTIMIZATION
    ============================================ */
