@@ -1247,7 +1247,7 @@ a:hover {
   right: -10%;
   width: 500px;
   height: 500px;
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(246, 243, 243, 0.08);
   border-radius: 50%;
   z-index: 0;
 }
@@ -1282,7 +1282,7 @@ a:hover {
 .hero h1 {
   font-size: 48px;
   margin-bottom: var(--space-24);
-  color: var(--color-btn-primary-text);
+  color: #0ca7e0;
   animation: slideInDown 0.8s ease-out;
   font-weight: var(--font-weight-bold);
 }
@@ -1300,13 +1300,13 @@ a:hover {
 }
 
 .hero h1 .highlight {
-  color: var(--color-orange-500);
+  color: #00b500;
 }
 
 .hero-subtitle {
   font-size: var(--font-size-lg);
   margin-bottom: 48px;
-  color: rgba(255, 255, 255, 0.95);
+  color: #8f0837;
   animation: slideInUp 0.8s ease-out 0.2s both;
 }
 
@@ -1507,7 +1507,7 @@ button {
   text-align: center;
   margin-bottom: var(--space-16);
   font-size: var(--font-size-4xl);
-  color: #ecc7c7;
+  color: #0ca7e0;
 }
 
 .offers-section .section-subtitle {
@@ -1845,8 +1845,14 @@ button {
   }
 }
 
+.services h1 {
+  color:#0ca7e0;
+  text-align: center;
+  margin-bottom: var(--space-32);
+}
+
 .services h2 {
-  color:#070707;
+  color:#04b404;
   text-align: center;
   margin-bottom: var(--space-32);
 }
