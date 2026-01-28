@@ -12,103 +12,6 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeFormListeners();
 });
 
-// Toggle dropdown menu
-function toggleDropdown(event, menuId) {
-    event.preventDefault();
-    const menu = document.getElementById(menuId);
-    const toggle = event.target.closest('.dropdown-toggle');
-    
-    // Close all other dropdowns
-    document.querySelectorAll('.dropdown-menu').forEach(m => {
-        if (m.id !== menuId) {
-            m.classList.remove('show');
-        }
-    });
-    
-    document.querySelectorAll('.dropdown-toggle').forEach(t => {
-        if (t !== toggle) {
-            t.classList.remove('active');
-        }
-    });
-    
-    // Toggle current dropdown
-    menu.classList.toggle('show');
-    toggle.classList.toggle('active');
-}
-
-// Close dropdown when clicking outside
-document.addEventListener('click', function(event) {
-    if (!event.target.closest('.dropdown')) {
-        document.querySelectorAll('.dropdown-menu').forEach(menu => {
-            menu.classList.remove('show');
-        });
-        document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
-            toggle.classList.remove('active');
-        });
-    }
-});
-
-// Allow dropdown links to work normally
-document.querySelectorAll('.dropdown-menu a').forEach(link => {
-    link.addEventListener('click', function(e) {
-        // Don't prevent default - let the link navigate
-        // Close dropdown after clicking
-        setTimeout(() => {
-            document.querySelectorAll('.dropdown-menu').forEach(menu => {
-                menu.classList.remove('show');
-            });
-            document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
-                toggle.classList.remove('active');
-            });
-        }, 100);
-    });
-});
-
-
-/* ============================================
-   1. HAMBURGER MENU FUNCTIONALITY
-   ============================================ */
-
-function initializeHamburgerMenu() {
-    const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('.nav-menu');
-
-    if (!hamburger || !navMenu) return;
-
-    // Toggle menu on hamburger click
-    hamburger.addEventListener('click', function(e) {
-        e.stopPropagation();
-        navMenu.classList.toggle('active');
-        hamburger.classList.toggle('active');
-    });
-
-    // Close menu when nav link is clicked
-    const navLinks = navMenu.querySelectorAll('a');
-    navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            navMenu.classList.remove('active');
-            hamburger.classList.remove('active');
-        });
-    });
-
-    // Close menu when clicking outside
-    document.addEventListener('click', function(e) {
-        if (!e.target.closest('.navbar')) {
-            navMenu.classList.remove('active');
-            hamburger.classList.remove('active');
-        }
-    });
-
-    // Close menu on escape key
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') {
-            navMenu.classList.remove('active');
-            hamburger.classList.remove('active');
-        }
-    });
-}
-
-
 /* ============================================
    2. SMOOTH SCROLL BEHAVIOR
    ============================================ */
@@ -130,7 +33,7 @@ function initializeSmoothScroll() {
                 e.preventDefault();
                 
                 // Get navbar height to offset scroll position
-                const navbar = document.querySelector('.navbar');
+                const navbar = document.querySelector('.rabbit-navbar');
                 const navbarHeight = navbar ? navbar.offsetHeight : 0;
                 
                 const targetPosition = target.offsetTop - navbarHeight;
@@ -421,7 +324,7 @@ function initializeCTAButtons() {
                 // Scroll to counselling form
                 const counsellingSection = document.getElementById('counselling');
                 if (counsellingSection) {
-                    const navbar = document.querySelector('.navbar');
+                    const navbar = document.querySelector('.rabbit-navbar');
                     const navbarHeight = navbar ? navbar.offsetHeight : 0;
                     window.scrollTo({
                         top: counsellingSection.offsetTop - navbarHeight,
@@ -484,30 +387,6 @@ document.getElementById('counsellingForm')?.addEventListener('submit', function(
         form_type: 'counselling',
         timestamp: new Date().toISOString()
     });
-});
-
-/* toggle entire mobile menu */
-function toggleRabbit() {
-  document.querySelector('.rabbit-menu').classList.toggle('show');
-}
-
-/* Make dropdowns toggleable on small screens */
-document.addEventListener('click', function (e) {
-  // Close desktop dropdowns when clicking outside
-  if (!e.target.closest('.rabbit-dropdown')) {
-    document.querySelectorAll('.rabbit-dropdown').forEach(dd => dd.classList.remove('open'));
-  }
-});
-
-// Attach click handlers to dropdown buttons to open on mobile
-document.querySelectorAll('.rabbit-drop-btn').forEach(btn => {
-  btn.addEventListener('click', function (ev) {
-    // on small screen, toggle .open; on desktop the hover takes care of it
-    if (window.innerWidth < 980) {
-      const parent = btn.closest('.rabbit-dropdown');
-      parent.classList.toggle('open');
-    }
-  });
 });
 /* ============================================
    10. PERFORMANCE OPTIMIZATION
@@ -592,4 +471,45 @@ tabBtns.forEach(btn => {
       }
     });
   });
+});
+
+/* ============================================
+   RABBIT NAVBAR CONTROLS
+   ============================================ */
+
+// Mobile menu toggle (hamburger not shown yet – future ready)
+function toggleRabbitNav() {
+  document.querySelector('.rabbit-nav')?.classList.toggle('show');
+}
+
+/* Mobile dropdown toggling */
+document.querySelectorAll('.rabbit-drop-btn').forEach(btn => {
+  btn.addEventListener('click', function (e) {
+    if (window.innerWidth < 980) {
+      e.preventDefault();
+      const parent = this.closest('.rabbit-dropdown');
+
+      // close others
+      document.querySelectorAll('.rabbit-dropdown').forEach(dd => {
+        if (dd !== parent) dd.classList.remove('open');
+      });
+
+      parent.classList.toggle('open');
+    }
+  });
+});
+
+/* Close mobile dropdowns when clicking outside */
+document.addEventListener('click', function(e) {
+  if (!e.target.closest('.rabbit-dropdown')) {
+    document.querySelectorAll('.rabbit-dropdown').forEach(dd => dd.classList.remove('open'));
+  }
+});
+
+/* Close nav on resize back to desktop */
+window.addEventListener('resize', () => {
+  if (window.innerWidth >= 980) {
+    document.querySelectorAll('.rabbit-dropdown').forEach(dd => dd.classList.remove('open'));
+    document.querySelector('.rabbit-nav')?.classList.remove('show');
+  }
 });
