@@ -934,278 +934,80 @@ a:hover {
 /* ============================================
    4. NAVIGATION BAR
    ============================================ */
-/* ---------- Basic font & reset (navbar only) ---------- */
-/* =======================
-   RABBIT NAVBAR (FIXED)
-   ======================= */
-
-.rabbit-navbar,
-.rabbit-navbar * { 
-  box-sizing: border-box; 
-  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; 
-}
-
-/* Shell */
-.rabbit-navbar {
-  background: #fff;
-  position: sticky;
-  top: 0;
-  z-index: 1400;
-  border-bottom: 1px solid rgba(15,23,42,0.04);
-  box-shadow: 0 2px 10px rgba(8,15,30,0.03);
-}
-
-/* Container - FIXED HEIGHT */
-.rabbit-container {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 28px;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  height: 64px;
-}
-
-/* Logo */
-.rabbit-logo { 
-  display: flex; 
-  align-items: center; 
-  text-decoration: none;
-  height: 100%;
-}
-.rabbit-logo img { 
-  height: 44px; 
-  width: auto; 
-  display: block; 
-}
-
-/* NAV LIST */
-.rabbit-nav {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  height: 100%;
-}
-
-/* NAV ITEM */
-.rabbit-nav > li {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  padding: 0 2px;
-}
-
-/* BASE LINK */
-.rabbit-link {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 6px 10px;
-  height: auto;
-  font-size: 15px;
-  font-weight: 500;
-  line-height: 1.4;
-  color: #0f172a;
-  background: none;
-  border: none;
-  text-decoration: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background .14s ease, color .14s ease;
-  white-space: nowrap;
-}
-
-/* Hover state */
-.rabbit-link:hover {
-  background: rgba(6, 95, 70, 0.06);
-  color: #064e3b;
-}
-
-/* Underline effect */
-.rabbit-link::after {
-  content: '';
-  position: absolute;
-  left: 8px;
-  right: 8px;
-  bottom: 6px;
-  height: 2px;
-  width: 0;
-  background: #2563eb;
-  transition: width .22s ease;
-  border-radius: 2px;
-}
-
-.rabbit-link:hover::after,
-.rabbit-link:focus::after {
-  width: calc(100% - 16px);
-}
-
-/* Caret (dropdown arrow) */
-.caret { 
-  font-size: 12px; 
-  opacity: 0.85; 
-  margin-left: 4px;
-  display: inline-flex;
-  align-items: center;
-  line-height: 1;
-}
-
-/* Dropdown wrapper */
-.rabbit-dropdown { 
-  position: relative;
-  display: flex;
-  align-items: center;
-  height: 100%;
-}
-
-/* Dropdown menu */
-.rabbit-drop-menu {
-  position: absolute;
-  left: 0;
-  top: calc(100% + 10px);
-  min-width: 220px;
-  background: #fff;
-  padding: 8px;
-  border-radius: 10px;
-  box-shadow: 0 18px 45px rgba(11,22,50,0.12);
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(6px);
-  transition: opacity .16s ease, transform .16s ease, visibility .16s;
-  z-index: 2000;
-}
-
-.rabbit-dropdown:hover > .rabbit-drop-menu,
-.rabbit-dropdown:focus-within > .rabbit-drop-menu {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-
-/* Dropdown links */
-.rabbit-drop-menu a {
-  display: block;
-  padding: 10px 12px;
-  border-radius: 8px;
-  color: #0f172a;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 500;
-  transition: background .14s ease;
-}
-
-.rabbit-drop-menu a:hover { 
-  background: #f1f5f9; 
-}
-
-/* Icons */
-.rabbit-icon { 
-  height: 20px; 
-  width: auto; 
-  display: inline-flex;
-  align-items: center;
-  vertical-align: middle; 
-}
-
-/* Contact */
-.rabbit-contact { 
-  display: inline-flex; 
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  height: 100%;
-}
-
-/* Login button */
-.rabbit-login {
-  margin-left: auto;
-  padding: 9px 18px;
-  background: linear-gradient(135deg, #6b5bff, #6a7eff);
-  color: #fff;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 15px;
-  box-shadow: 0 8px 26px rgba(106, 94, 255, 0.14);
-  display: flex;
-  align-items: center;
-  height: auto;
-  transition: box-shadow .14s ease, transform .14s ease;
-}
-
-.rabbit-login:hover {
-  box-shadow: 0 12px 32px rgba(106, 94, 255, 0.24);
-  transform: translateY(-2px);
-}
-
-/* Mobile */
-@media (max-width: 980px) {
-
-  .rabbit-container { 
-    padding: 10px 16px;
-    height: auto;
+  nav { background: #fff; border-bottom: 1px solid #eaeaea; }
+  /* Flex container for nav items */
+  .nav-container {
+    display: flex; align-items: center; justify-content: space-between;
+    max-width: 1200px; margin: 0 auto; padding: 0 1rem;
   }
-
-  .rabbit-nav {
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 64px;
-    background: #fff;
-    flex-direction: column;
-    gap: 0;
-    padding: 12px 18px;
-    display: none;
-    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.08);
-    z-index: 1200;
-    height: auto;
+  /* Nav menu (links and dropdowns) */
+  .nav-menu, .auth-menu {
+    list-style: none; margin: 0; padding: 0; display: flex; align-items: center;
   }
-
-  .rabbit-nav.show { 
-    display: flex; 
+  .nav-menu .nav-item { position: relative; }
+  .nav-menu .nav-item button,
+  .nav-menu .nav-item a {
+    background: none; border: none; padding: 0.75rem 1rem;
+    color: #13100D; font-size: 1rem; cursor: pointer; text-decoration: none;
   }
-
-  .rabbit-nav > li { 
-    width: 100%; 
-    height: auto;
-    padding: 8px 0;
+  .nav-menu .nav-item button:focus,
+  .nav-menu .nav-item a:focus {
+    outline: 2px solid #A6C307; outline-offset: 2px; /* focus ring */
   }
-
-  .rabbit-drop-menu {
-    position: static;
-    opacity: 1;
-    visibility: visible;
-    transform: none;
-    box-shadow: none;
-    display: none;
-    margin-top: 2px;
+  /* Dropdown menu (hidden by default) */
+  .dropdown-menu {
+    display: none; position: absolute; left: 0; top: 100%;
+    background: #fff; min-width: 200px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border: 1px solid #eaeaea; z-index: 1000;
   }
-
-  .rabbit-dropdown.open > .rabbit-drop-menu { 
-    display: block; 
+  .dropdown-menu li a {
+    display: block; padding: 0.5rem 1rem; color: #13100D; white-space: nowrap;
   }
-
-  .rabbit-login { 
-    margin-left: 0; 
-    padding: 8px 12px;
-    margin-top: 12px;
+  .dropdown-menu li a:hover {
+    background: #f2f2f2;
   }
-}
-
-/* SVG alignment */
-.rabbit-link > svg,
-.rabbit-contact > svg {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
+  /* Show dropdown on hover or focus */
+  .nav-item:hover > .dropdown-menu,
+  .nav-item:focus-within > .dropdown-menu {
+    display: block; /* Reveal submenu on hover/focus for accessibility:contentReference[oaicite:6]{index=6}:contentReference[oaicite:7]{index=7} */
+  }
+  /* Auth links (Login/Signup) */
+  .auth-menu li a {
+    margin-left: 1rem; padding: 0.5rem 1rem; text-decoration: none;
+    color: #13100D; font-size: 0.95rem;
+  }
+  .auth-menu .signup {
+    background: #A6C307; color: #fff; border-radius: 4px;
+  }
+  .auth-menu .signup:hover {
+    background: #438F29;
+  }
+  /* Hamburger button (hidden on desktop) */
+  .nav-toggle {
+    display: none; background: none; border: none;
+    font-size: 1.5rem; cursor: pointer; color: #13100D;
+  }
+  /* Responsive (mobile) styles */
+  @media (max-width: 768px) {
+    /* Stack nav in column */
+    .nav-container { flex-wrap: wrap; }
+    .nav-menu, .auth-menu { 
+      flex-direction: column; width: 100%; 
+      display: none; /* hide menus by default on mobile */
+    }
+    .nav-menu.responsive, .auth-menu.responsive { display: flex; }
+    .nav-item { width: 100%; }
+    .nav-item button, .nav-item a, .auth-menu li a {
+      width: 100%; text-align: left; padding-left: 1rem;
+    }
+    /* Reset dropdown positioning for mobile */
+    .dropdown-menu {
+      position: relative; border: none; box-shadow: none;
+      width: 100%;
+    }
+    /* Show hamburger */
+    .nav-toggle { display: block; }
+  }
 
 
 /* ============================================
@@ -2505,11 +2307,11 @@ button {
 
 .social-sidebar {
   position: fixed;
-  right: 20px;
-  top: 95%;
+  left: 20px;
+  top: 45%;
   transform: translateY(-50%);
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 15px;
   z-index: 999;
 }

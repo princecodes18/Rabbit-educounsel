@@ -476,40 +476,41 @@ tabBtns.forEach(btn => {
 /* ============================================
    RABBIT NAVBAR CONTROLS
    ============================================ */
-
-// Mobile menu toggle (hamburger not shown yet – future ready)
-function toggleRabbitNav() {
-  document.querySelector('.rabbit-nav')?.classList.toggle('show');
-}
-
-/* Mobile dropdown toggling */
-document.querySelectorAll('.rabbit-drop-btn').forEach(btn => {
-  btn.addEventListener('click', function (e) {
-    if (window.innerWidth < 980) {
-      e.preventDefault();
-      const parent = this.closest('.rabbit-dropdown');
-
-      // close others
-      document.querySelectorAll('.rabbit-dropdown').forEach(dd => {
-        if (dd !== parent) dd.classList.remove('open');
-      });
-
-      parent.classList.toggle('open');
-    }
+// Toggle mobile menu on hamburger click
+  const navToggle = document.querySelector('.nav-toggle');
+  const navMenu = document.querySelector('.nav-menu');
+  const authMenu = document.querySelector('.auth-menu');
+  navToggle.addEventListener('click', function() {
+    // Toggle classes to show/hide menus
+    navMenu.classList.toggle('responsive');
+    authMenu.classList.toggle('responsive');
+    // Update aria-expanded on toggle button:contentReference[oaicite:8]{index=8}
+    const expanded = this.getAttribute('aria-expanded') === 'true';
+    this.setAttribute('aria-expanded', String(!expanded));
   });
-});
 
-/* Close mobile dropdowns when clicking outside */
-document.addEventListener('click', function(e) {
-  if (!e.target.closest('.rabbit-dropdown')) {
-    document.querySelectorAll('.rabbit-dropdown').forEach(dd => dd.classList.remove('open'));
-  }
-});
-
-/* Close nav on resize back to desktop */
-window.addEventListener('resize', () => {
-  if (window.innerWidth >= 980) {
-    document.querySelectorAll('.rabbit-dropdown').forEach(dd => dd.classList.remove('open'));
-    document.querySelector('.rabbit-nav')?.classList.remove('show');
-  }
-});
+  // Toggle each dropdown on click (for mobile)
+  document.querySelectorAll('.dropdown-toggle').forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+      // Prevent default (in case inside a link)
+      e.preventDefault();
+      const menu = document.getElementById(btn.getAttribute('aria-controls'));
+      const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+      // Hide other open submenus
+      document.querySelectorAll('.dropdown-toggle').forEach(function(otherBtn) {
+        if (otherBtn !== btn) {
+          otherBtn.setAttribute('aria-expanded', 'false');
+          const otherMenu = document.getElementById(otherBtn.getAttribute('aria-controls'));
+          otherMenu.style.display = 'none';
+        }
+      });
+      // Toggle this submenu
+      if (isExpanded) {
+        menu.style.display = 'none';
+        btn.setAttribute('aria-expanded', 'false');
+      } else {
+        menu.style.display = 'block';
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });

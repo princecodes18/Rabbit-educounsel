@@ -10,68 +10,84 @@
 </head>
 <body>
     <!-- Navigation -->
-<!-- rabbit navbar: Logo, Home, Countries, Services, WhatsApp, Contact, Login -->
-<nav class="rabbit-navbar" aria-label="Main Navigation">
-  <div class="rabbit-container">
+<nav aria-label="Main Navigation">
+  <div class="nav-container">
+    <!-- Logo (placeholder) -->
+    <a href="#" class="site-logo"><img src="assets/images/logo.png" alt="PayU Logo" style="height:40px;"></a>
 
-    <!-- Logo (extreme left) -->
-    <a href="#" class="rabbit-logo" aria-label="Home">
-      <img src="assets/images/logo.png" alt="Rabbit Educounsel logo">
-    </a>
+    <!-- Hamburger toggle for mobile -->
+    <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">
+      ☰
+    </button>
 
-    <!-- Central navigation list -->
-    <ul class="rabbit-nav" role="menubar">
-
-      <li role="none"><a role="menuitem" href="#home" class="rabbit-link">Home</a></li>
-
-      <!-- Countries dropdown (hover + focus-within keeps it open) -->
-      <li class="rabbit-dropdown" role="none">
-        <button class="rabbit-link rabbit-drop-btn" aria-haspopup="true" aria-expanded="false">
-          Countries <span class="caret">▾</span>
+    <!-- Navigation menu items -->
+    <ul class="nav-menu">
+      <li class="nav-item dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-controls="products-menu">
+          Products ▼
         </button>
-
-        <div class="rabbit-drop-menu" role="menu" aria-hidden="true">
-          <!-- dummy country links -->
-          <a role="menuitem" href="study-india.html">India</a>
-          <a role="menuitem" href="study-russia.html">Russia</a>
-          <a role="menuitem" href="study-kazakhstan.html">Kazakhstan</a>
-          <a role="menuitem" href="study-kyrgyzstan.html">Kyrgyzstan</a>
-        </div>
+        <ul class="dropdown-menu" id="products-menu">
+          <li><a href="#">Payment Gateway</a></li>
+          <li><a href="#">Subscription</a></li>
+          <li><a href="#">Native OTP</a></li>
+          <li><a href="#">International Payments</a></li>
+          <li><a href="#">Payments on WhatsApp</a></li>
+        </ul>
       </li>
-
-      <!-- Services dropdown -->
-      <li class="rabbit-dropdown" role="none">
-        <button class="rabbit-link rabbit-drop-btn" aria-haspopup="true" aria-expanded="false">
-          Services <span class="caret">▾</span>
+      <li class="nav-item dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-controls="industries-menu">
+          Industries ▼
         </button>
-
-        <div class="rabbit-drop-menu" role="menu" aria-hidden="true">
-          <a role="menuitem" href="#counselling">Counselling</a>
-          <a role="menuitem" href="#admission">Admission Assistance</a>
-          <a role="menuitem" href="#visa">Visa Guidance</a>
-          <a role="menuitem" href="#accommodation">Accommodation</a>
-        </div>
+        <ul class="dropdown-menu" id="industries-menu">
+          <li><a href="#">Hospitality & Hotels</a></li>
+          <li><a href="#">Retail & FMCG</a></li>
+          <li><a href="#">Marketplace</a></li>
+          <li><a href="#">Education</a></li>
+        </ul>
       </li>
-
-      <!-- WhatsApp icon (inline with nav) -->
-      <li role="none">
-        <a class="rabbit-whatsapp rabbit-link" href="https://wa.me/0000000000" target="_blank" rel="noopener" aria-label="WhatsApp">
-          <img src="assets/images/whatsapp.png" alt="whatsapp" class="rabbit-icon">
-        </a>
+      <li class="nav-item dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-controls="company-menu">
+          Company ▼
+        </button>
+        <ul class="dropdown-menu" id="company-menu">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Partners</a></li>
+          <li><a href="#">PayU Policies</a></li>
+        </ul>
       </li>
-
-      <!-- Contact -->
-      <li role="none">
-        <a class="rabbit-link rabbit-contact" href="#contact" aria-label="Contact">
-          <img src="assets/images/contact-icon.png" alt="contact" class="rabbit-icon">
-          <span>Contact</span>
-        </a>
+      <li class="nav-item dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-controls="partners-menu">
+          Partners ▼
+        </button>
+        <ul class="dropdown-menu" id="partners-menu">
+          <li><a href="#">Partner Program</a></li>
+          <li><a href="#">ISVs</a></li>
+          <li><a href="#">Referral Agents</a></li>
+        </ul>
       </li>
+      <li class="nav-item dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-controls="developers-menu">
+          Developers <span class="caret">▾</span>
+        </button>
+        <ul class="dropdown-menu" id="developers-menu">
+          <li><a href="#">API References</a></li>
+          <li><a href="#">API Playground</a></li>
+          <li><a href="#">Help Center</a></li>
+        </ul>
+      </li>
+      <!-- Static links -->
+      <!--
+      <li class="nav-item"><a href="#">Pricing</a></li>
+      <li class="nav-item"><a href="#">Support</a></li> 
+      -->
     </ul>
 
-    <!-- Login button pushed to far right -->
-    <a class="rabbit-login" href="#" aria-label="Login or Register">Login / Register</a>
-
+    <!-- Login/Signup -->
+    <ul class="auth-menu">
+      <li><a href="#">Login</a></li>
+      <li><a href="#" class="signup">Sign up</a></li>
+    </ul>
   </div>
 </nav>
 
@@ -104,12 +120,6 @@
 <div class="social-sidebar">
     <a href="https://www.instagram.com/rabbit_educounsel?igsh=MWJ4MWhrM2lzbWF2Yg==" target="_blank" class="social-icon instagram" title="Instagram">
   <i class="fab fa-instagram"></i>
-  </a>
-  <a href="https://www.twitter.com/your-handle" target="_blank" class="social-icon twitter" title="Twitter">
-    <i class="fab fa-twitter"></i>
-  </a>
-  <a href="https://www.linkedin.com/company/your-company" target="_blank" class="social-icon linkedin" title="LinkedIn">
-    <i class="fab fa-linkedin-in"></i>
   </a>
   <a href="https://youtube.com/@rabbiteducounsel?si=Z91piGpZ_l69DYkX" target="_blank" class="social-icon youtube" title="YouTube">
     <i class="fab fa-youtube"></i>
