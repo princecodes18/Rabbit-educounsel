@@ -960,11 +960,11 @@ a:hover {
         .rabbit-container {
             max-width: 1400px;
             margin: 0 auto;
-            padding: 0 28px;
+            padding: 0px 18px 0px 14px;
             display: flex;
             align-items: center;
-            gap: 20px;
-            height: 64px;
+            gap: 30px;
+            height: 50px;
         }
 
         .rabbit-logo {
@@ -977,6 +977,11 @@ a:hover {
             color: #6b5bff;
         }
 
+        .rabbit-logo img {
+            height: 45px;
+            width: auto;
+            object-fit: contain;
+        }
         .rabbit-nav {
             display: flex;
             align-items: center;
@@ -1001,16 +1006,16 @@ a:hover {
             align-items: center;
             justify-content: center;
             gap: 8px;
-            padding: 6px 10px;
+            padding: 10px 16px;
             height: auto;
-            font-size: 15px;
-            font-weight: 500;
-            line-height: 1.4;
-            color: #0f172a;
+            font-size: 14px;
+            font-weight: 550;
+            line-height: 1.5;
+            color: #1f4da8;
             background: none;
             border: none;
             text-decoration: none;
-            border-radius: 8px;
+            border-radius: 12px;
             cursor: pointer;
             transition: background .14s ease, color .14s ease;
             white-space: nowrap;
@@ -1054,7 +1059,7 @@ a:hover {
         }
 
         .rabbit-login:hover {
-            box-shadow: 0 12px 32px rgba(106, 94, 255, 0.24);
+            box-shadow: 0 12px 32px rgba(165, 162, 197, 0.24);
             transform: translateY(-2px);
         }
 
@@ -1170,27 +1175,35 @@ a:hover {
             position: relative;
             width: 100%;
             min-height: 85vh;
-            padding: 80px 20px;
+            padding: 5px 40px 5px 40px;
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+            background-image: url('assets/images/img2.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
 
         .hero-container {
-            max-width: 1300px;
-            width: 100%;
-            margin: 0 auto;
-            position: relative;
-            background: #ffffff;
-            border-radius: 32px;
-            padding: 60px;
-            box-shadow: 0 30px 100px rgba(0, 0, 0, 0.1);
-            border: 1px solid rgba(107, 91, 255, 0.08);
-        }
+    max-width: 1350px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
 
-        /* Image Grid */
-        .image-grid {
+    background: rgba(255, 255, 255, 0.12); /* transparent glass */
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border-radius: 32px;
+    padding: 20px;
+
+    box-shadow: 0 30px 100px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+
+.image-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(2, 280px);
@@ -1202,9 +1215,16 @@ a:hover {
             position: relative;
             border-radius: 20px;
             overflow: hidden;
-            background: linear-gradient(135deg, #e0e7ff 0%, #fef3c7 100%);
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            background: #f0f0f0;
+            box-shadow: none;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .image-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
 
         .image-card:hover {
@@ -1212,24 +1232,24 @@ a:hover {
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
         }
 
-        /* Different gradient backgrounds for each card */
+        /* Neutral backgrounds for each card to show images clearly */
         .image-card:nth-child(1) {
-            background: linear-gradient(135deg, #ddd6fe 0%, #fae8ff 100%);
+            background: #f5f5f5;
         }
 
         .image-card:nth-child(2) {
-            background: linear-gradient(135deg, #bfdbfe 0%, #dbeafe 100%);
+            background: #f5f5f5;
         }
 
         .image-card:nth-child(3) {
-            background: linear-gradient(135deg, #fecaca 0%, #fed7aa 100%);
+            background: #f5f5f5;
         }
 
         .image-card:nth-child(4) {
-            background: linear-gradient(135deg, #bbf7d0 0%, #d9f99d 100%);
+            background: #f5f5f5;
         }
 
-        /* Image overlay for welcome banner */
+        /* Image overlay for welcome banner - Removed for clear image visibility */
         .image-grid::after {
             content: '';
             position: absolute;
@@ -1237,12 +1257,12 @@ a:hover {
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(255, 255, 255, 0.5);
+            background: transparent;
             pointer-events: none;
             z-index: 1;
         }
 
-        /* Placeholder text */
+        /* Placeholder text - hidden when images load */
         .image-card-placeholder {
             position: absolute;
             top: 50%;
@@ -1252,23 +1272,46 @@ a:hover {
             font-weight: 300;
             color: rgba(15, 23, 42, 0.2);
             letter-spacing: 2px;
+            z-index: -1;
         }
 
         /* Welcome Banner */
         .welcome-banner {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: linear-gradient(135deg, #6b5bff 0%, #6a7eff 100%);
-            padding: 40px 60px;
-            border-radius: 24px;
-            box-shadow: 0 25px 80px rgba(107, 91, 255, 0.4);
-            text-align: center;
-            z-index: 10;
-            width: 85%;
-            max-width: 800px;
-        }
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.15); /* semi transparent */
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    padding: 20px 20px;
+    border-radius: 24px;
+    box-shadow: 0 25px 80px rgba(107, 91, 255, 0.25);
+    text-align: center;
+    z-index: 0;
+    width: 45%;
+    max-width: 500px;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+      .welcome-banner1 {
+    position: absolute;
+    top: 25%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.15); /* semi transparent */
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    padding: 20px 20px;
+    border-radius: 24px;
+    box-shadow: 0 25px 80px rgba(107, 91, 255, 0.25);
+    text-align: center;
+    z-index: 0;
+    width: 45%;
+    max-width: 500px;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
 
         .welcome-text {
             font-size: 44px;
@@ -1281,7 +1324,7 @@ a:hover {
         }
 
         .welcome-text .highlight {
-            color: #fef3c7;
+            color: #034a6f;
             text-shadow: 0 2px 10px rgba(254, 243, 199, 0.4);
         }
 
@@ -1290,11 +1333,11 @@ a:hover {
             position: absolute;
             top: 100%;
             left: 0;
-            margin-top: 8px;
+            margin-top: 25px;
             background: #ffffff;
             border-radius: 12px;
             box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
-            padding: 8px;
+            padding: 14px;
             min-width: 220px;
             opacity: 0;
             visibility: hidden;
@@ -1444,6 +1487,8 @@ a:hover {
         .image-card:nth-child(3) { animation-delay: 0.3s; }
         .image-card:nth-child(4) { animation-delay: 0.4s; }
         .image-card:nth-child(5) { animation-delay: 0.5s; }
+      
+
 
 /* ============================================
    MODERN 3 COLUMN COUNSELLING SECTION

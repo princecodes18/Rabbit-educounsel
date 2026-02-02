@@ -11,7 +11,9 @@
 <body>
  <nav class="rabbit-navbar">
         <div class="rabbit-container">
-            <a href="#" class="rabbit-logo">LOGO</a>
+             <a href="#home" class="rabbit-logo">
+                <img src="assets/images/logo.png" alt="Rabbit Educounsel Logo">
+            </a>
 
             <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
                 <span></span>
@@ -20,8 +22,8 @@
             </button>
             
             <ul class="rabbit-nav">
-                <li><a href="#" class="rabbit-link">Home</a></li>
-                
+                <button class="rabbit-link"><li><a href="#" class="rabbit-link">Home</a></li>
+                </button>
                 <li class="rabbit-dropdown">
                     <button class="rabbit-link">
                         Countries
@@ -51,10 +53,9 @@
                         <a href="#all-services">View All Services</a>
                     </div>
                 </li>
-                
-                <li><a href="#" class="rabbit-link">Contact</a></li>
+                <button class="rabbit-link">
+                <li><a href="#" class="rabbit-link">Contact</a></li></button>
             </ul>
-            
             <a href="#" class="rabbit-login">Get A Call</a>
         </div>
 
@@ -67,7 +68,7 @@
             <div class="mobile-menu-item">
                 <div class="mobile-menu-header" onclick="toggleDropdown('countries')">
                     <span class="mobile-menu-link">Countries</span>
-                    <span class="caret">▼</span>
+                    <span class="caret"></span>
                 </div>
                 <div class="mobile-dropdown" id="countriesDropdown" style="display: none;">
                     <a href="#russia">Russia</a>
@@ -81,7 +82,7 @@
             <div class="mobile-menu-item">
                 <div class="mobile-menu-header" onclick="toggleDropdown('services')">
                     <span class="mobile-menu-link">Services</span>
-                    <span class="caret">▼</span>
+                    <span class="caret"></span>
                 </div>
                 <div class="mobile-dropdown" id="servicesDropdown" style="display: none;">
                     <a href="#admission">Admission Guidance</a>
@@ -106,23 +107,28 @@
     <section class="hero-section">
         <div class="hero-container">
             <div class="image-grid">
-                <div class="image-card">
+                <div class="image-card"><img src="assets/images/co1.jpg" alt="Campus Life">
                     <div class="image-card-placeholder">Pic 1</div>
                 </div>
-                <div class="image-card">
+                <div class="image-card"><img src="assets/images/co2.jpg" alt="Campus Life">
                     <div class="image-card-placeholder">Pic 2</div>
                 </div>
-                <div class="image-card">
+                <div class="image-card"><img src="assets/images/co3.jpg" alt="Campus Life">
                     <div class="image-card-placeholder">Pic 3</div>
                 </div>
-                <div class="image-card">
+                <div class="image-card"><img src="assets/images/co4.jpg" alt="Campus Life">
                     <div class="image-card-placeholder">Pic 4</div>
                 </div>
             </div>
 
             <div class="welcome-banner">
                 <h1 class="welcome-text">
-                    Welcome to <span class="highlight">RABBIT EDUCOUNSEL</span>
+                    Welcome to 
+                </h1>
+            </div>
+            <div class="welcome-banner1">
+                <h1 class="welcome-text">
+                    <span class="highlight">RABBIT EDUCOUNSEL</span>
                 </h1>
             </div>
         </div>
