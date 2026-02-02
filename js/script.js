@@ -473,44 +473,34 @@ tabBtns.forEach(btn => {
   });
 });
 
-/* ============================================
-   RABBIT NAVBAR CONTROLS
-   ============================================ */
-// Toggle mobile menu on hamburger click
-  const navToggle = document.querySelector('.nav-toggle');
-  const navMenu = document.querySelector('.nav-menu');
-  const authMenu = document.querySelector('.auth-menu');
-  navToggle.addEventListener('click', function() {
-    // Toggle classes to show/hide menus
-    navMenu.classList.toggle('responsive');
-    authMenu.classList.toggle('responsive');
-    // Update aria-expanded on toggle button:contentReference[oaicite:8]{index=8}
-    const expanded = this.getAttribute('aria-expanded') === 'true';
-    this.setAttribute('aria-expanded', String(!expanded));
-  });
-
-  // Toggle each dropdown on click (for mobile)
-  document.querySelectorAll('.dropdown-toggle').forEach(function(btn) {
-    btn.addEventListener('click', function(e) {
-      // Prevent default (in case inside a link)
-      e.preventDefault();
-      const menu = document.getElementById(btn.getAttribute('aria-controls'));
-      const isExpanded = btn.getAttribute('aria-expanded') === 'true';
-      // Hide other open submenus
-      document.querySelectorAll('.dropdown-toggle').forEach(function(otherBtn) {
-        if (otherBtn !== btn) {
-          otherBtn.setAttribute('aria-expanded', 'false');
-          const otherMenu = document.getElementById(otherBtn.getAttribute('aria-controls'));
-          otherMenu.style.display = 'none';
+function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const toggle = document.querySelector('.mobile-menu-toggle');
+            menu.classList.toggle('active');
+            toggle.classList.toggle('active');
         }
-      });
-      // Toggle this submenu
-      if (isExpanded) {
-        menu.style.display = 'none';
-        btn.setAttribute('aria-expanded', 'false');
-      } else {
-        menu.style.display = 'block';
-        btn.setAttribute('aria-expanded', 'true');
-      }
-    });
-  });
+
+        function toggleDropdown(id) {
+            const dropdown = document.getElementById(id + 'Dropdown');
+            const header = event.currentTarget;
+            
+            if (dropdown.style.display === 'none' || dropdown.style.display === '') {
+                dropdown.style.display = 'block';
+                header.classList.add('active');
+            } else {
+                dropdown.style.display = 'none';
+                header.classList.remove('active');
+            }
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('mobileMenu');
+            const toggle = document.querySelector('.mobile-menu-toggle');
+            const navbar = document.querySelector('.rabbit-navbar');
+            
+            if (menu.classList.contains('active') && !navbar.contains(event.target)) {
+                menu.classList.remove('active');
+                toggle.classList.remove('active');
+            }
+        });
