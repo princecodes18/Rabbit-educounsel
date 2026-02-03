@@ -445,33 +445,64 @@ if (showMoreOffersBtn && hiddenOffers.length > 0) {
   });
 }
 
-// Meet Our Stars - Filter Functionality
-const tabBtns = document.querySelectorAll('.tab-btn');
-const studentCards = document.querySelectorAll('.student-card');
+const carousel = document.querySelector(".stars-carousel");
+const wrapper = document.querySelector(".stars-carousel-wrapper");
 
-tabBtns.forEach(btn => {
-  btn.addEventListener('click', function() {
-    // Remove active class from all buttons
-    tabBtns.forEach(b => b.classList.remove('active'));
-    // Add active class to clicked button
-    this.classList.add('active');
+let pos = 0;
+let raf;
+let paused = false;
+const speed = 0.6;
 
-    const filter = this.getAttribute('data-filter');
+// Build infinite loop
+function setupCarousel() {
+  cancelAnimationFrame(raf);
+  pos = 0;
 
-    // Show/hide cards based on filter
-    studentCards.forEach(card => {
-      if (filter === 'all') {
-        card.classList.remove('hidden');
-      } else {
-        if (card.getAttribute('data-category') === filter) {
-          card.classList.remove('hidden');
-        } else {
-          card.classList.add('hidden');
-        }
-      }
-    });
+  // Remove old clones
+  carousel.querySelectorAll(".clone").forEach(c => c.remove());
+
+  // Only visible cards
+  const cards = [...carousel.querySelectorAll(".student-card:not(.hidden)")];
+
+  // Clone visible cards
+  cards.forEach(card => {
+    const clone = card.cloneNode(true);
+    clone.classList.add("clone");
+    carousel.appendChild(clone);
+  });
+
+  const resetPoint = carousel.scrollWidth / 2;
+
+  function animate() {
+    if (!paused) {
+      pos += speed;
+
+      if (pos >= resetPoint) pos = 0;
+
+      carousel.style.transform = `translateX(-${pos}px)`;
+    }
+
+    raf = requestAnimationFrame(animate);
+  }
+
+  animate();
+}
+
+// Initial run
+setupCarousel();
+
+/* Hover pause */
+wrapper.addEventListener("mouseenter", () => paused = true);
+wrapper.addEventListener("mouseleave", () => paused = false);
+
+/* If you already have tabs, hook into them */
+document.querySelectorAll(".tab-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    setTimeout(setupCarousel, 50); // rebuild after filtering
   });
 });
+
+
 
 function toggleMobileMenu() {
             const menu = document.getElementById('mobileMenu');
