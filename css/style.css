@@ -1389,7 +1389,7 @@ a:hover {
             }
 
             .welcome-banner {
-                 position: relative;        /* remove absolute on mobile */
+                 position: absolute;        /* remove absolute on mobile */
                  top: 25%;
                  left: 25%;
                  transform: none;
@@ -1404,7 +1404,7 @@ a:hover {
              }
 
              .welcome-banner1 {
-                 position: relative;        /* remove absolute on mobile */
+                 position: absolute;        /* remove absolute on mobile */
                  top: 50%;
                  left: 25%;
                  transform: none;
