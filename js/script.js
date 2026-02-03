@@ -445,6 +445,7 @@ if (showMoreOffersBtn && hiddenOffers.length > 0) {
   });
 }
 
+const tabBtns = document.querySelectorAll(".tab-btn");
 const carousel = document.querySelector(".stars-carousel");
 const wrapper = document.querySelector(".stars-carousel-wrapper");
 
@@ -453,7 +454,7 @@ let raf;
 let paused = false;
 const speed = 0.6;
 
-// Build infinite loop
+// Build infinite carousel from visible cards
 function setupCarousel() {
   cancelAnimationFrame(raf);
   pos = 0;
@@ -461,7 +462,7 @@ function setupCarousel() {
   // Remove old clones
   carousel.querySelectorAll(".clone").forEach(c => c.remove());
 
-  // Only visible cards
+  // Get only visible original cards
   const cards = [...carousel.querySelectorAll(".student-card:not(.hidden)")];
 
   // Clone visible cards
@@ -488,19 +489,38 @@ function setupCarousel() {
   animate();
 }
 
-// Initial run
+// Initial build
 setupCarousel();
 
 /* Hover pause */
 wrapper.addEventListener("mouseenter", () => paused = true);
 wrapper.addEventListener("mouseleave", () => paused = false);
 
-/* If you already have tabs, hook into them */
-document.querySelectorAll(".tab-btn").forEach(btn => {
-  btn.addEventListener("click", () => {
-    setTimeout(setupCarousel, 50); // rebuild after filtering
+/* Filter Tabs */
+tabBtns.forEach(btn => {
+  btn.addEventListener("click", function () {
+    tabBtns.forEach(b => b.classList.remove("active"));
+    this.classList.add("active");
+
+    const filter = this.getAttribute("data-filter");
+
+    carousel.querySelectorAll(".student-card").forEach(card => {
+      if (card.classList.contains("clone")) return;
+
+      if (filter === "all") {
+        card.classList.remove("hidden");
+      } else {
+        card.dataset.category === filter
+          ? card.classList.remove("hidden")
+          : card.classList.add("hidden");
+      }
+    });
+
+    // Rebuild infinite loop after filtering
+    setTimeout(setupCarousel, 50);
   });
 });
+
 
 
 
