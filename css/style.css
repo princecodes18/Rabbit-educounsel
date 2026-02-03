@@ -2376,6 +2376,11 @@ button {
   flex: 0 0 auto;
 }
 
+.stars-carousel {
+  touch-action: pan-y;
+}
+
+
 /* Responsive gaps */
 @media (max-width: 768px) {
   .stars-carousel {

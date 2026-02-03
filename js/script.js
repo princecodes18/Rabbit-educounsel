@@ -521,6 +521,62 @@ tabBtns.forEach(btn => {
   });
 });
 
+let isDragging = false;
+let startX = 0;
+let currentX = 0;
+let lastMove = 0;
+
+// Mouse + Touch start
+function dragStart(e) {
+  isDragging = true;
+  paused = true;
+
+  startX = e.type.includes("mouse") ? e.pageX : e.touches[0].pageX;
+  currentX = startX;
+  lastMove = 0;
+
+  carousel.style.cursor = "grabbing";
+}
+
+// Move
+function dragMove(e) {
+  if (!isDragging) return;
+
+  const x = e.type.includes("mouse") ? e.pageX : e.touches[0].pageX;
+  const delta = x - currentX;
+
+  pos -= delta;
+  lastMove = delta;
+
+  carousel.style.transform = `translateX(-${pos}px)`;
+  currentX = x;
+}
+
+// End
+function dragEnd() {
+  if (!isDragging) return;
+
+  isDragging = false;
+  carousel.style.cursor = "grab";
+
+  // small momentum
+  pos -= lastMove * 8;
+
+  paused = false;
+}
+
+// Events
+carousel.style.cursor = "grab";
+
+carousel.addEventListener("mousedown", dragStart);
+carousel.addEventListener("mousemove", dragMove);
+carousel.addEventListener("mouseup", dragEnd);
+carousel.addEventListener("mouseleave", dragEnd);
+
+carousel.addEventListener("touchstart", dragStart, { passive: true });
+carousel.addEventListener("touchmove", dragMove, { passive: true });
+carousel.addEventListener("touchend", dragEnd);
+
 
 
 
