@@ -1390,12 +1390,12 @@ a:hover {
 
             .welcome-banner {
                  position: absolute;        /* remove absolute on mobile */
-                 top: 15%;
-                 left: 5%;
+                 top: 8%;
+                 left: 25%;
                  transform: none;
 
                  width: 55%;                /* almost full width */
-                 max-width: 100%;
+                 max-width: 55%;
 
                  margin: 20px auto;         /* center + spacing */
 
@@ -1405,8 +1405,8 @@ a:hover {
 
              .welcome-banner1 {
                  position: absolute;        /* remove absolute on mobile */
-                 top: 30%;
-                 left: 5%;
+                 top: 32%;
+                 left: 25%;
                  transform: none;
 
                  width: 55%;                /* almost full width */
