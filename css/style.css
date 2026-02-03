@@ -1388,10 +1388,22 @@ a:hover {
                 gap: 16px;
             }
 
-            .welcome-banner {
-                padding: 32px 40px;
-                width: 90%;
-            }
+            .welcome-banner,
+             .welcome-banner1 {
+                 position: relative;        /* remove absolute on mobile */
+                 top: auto;
+                 left: auto;
+                 transform: none;
+
+                width: 90%;                /* almost full width */
+                max-width: 100%;
+
+                margin: 20px auto;         /* center + spacing */
+
+                 padding: 16px;
+                 border-radius: 20px;
+             }
+
 
             .welcome-text {
                 font-size: 36px;
