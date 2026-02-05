@@ -131,10 +131,10 @@
 
 /* BACKGROUND IMAGE SECTION */
 .country-image-section {
-    padding: 100px 20px;
+    padding: 80px 10px;
     background: linear-gradient(135deg, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
                 url('https://via.placeholder.com/1600x600/21808d/ffffff?text=Country+Landscape') center/cover;
-    min-height: 450px;
+    min-height: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -159,16 +159,16 @@
 
 /* UNIVERSITIES SECTION */
 .universities-section {
-    padding: 80px 20px;
+    padding: 20px;
     background: #f8f9fa;
 }
 
 .university-filters {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 2px;
     justify-content: center;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
 }
 
 .uni-filter-btn {
@@ -194,7 +194,7 @@
 .universities-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 30px;
+    gap: 10px;
     max-width: 1200px;
     margin: 0 auto;
 }
