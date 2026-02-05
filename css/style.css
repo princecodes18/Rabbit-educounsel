@@ -1670,12 +1670,12 @@ button {
 
   /* Inputs tighter */
   .row {
-    gap: 24px;
+    gap: 44px;
   }
 
   input,
   select {
-    padding: 12px;
+    padding: 16px;
   }
 
   button {
