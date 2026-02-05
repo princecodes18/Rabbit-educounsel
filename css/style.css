@@ -1630,19 +1630,49 @@ button {
 
 /* MOBILE */
 
-@media(max-width:1000px) {
+@media (max-width:1000px) {
 
   .contact-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
 
-  .row {
-    grid-template-columns: 1fr;
+  /* Put form first */
+  .contact-form {
+    order: -1;
+    padding: 28px 22px;
   }
 
+  /* Photos become 2-column grid */
+  .photo,
+  .photo-column {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  /* Normalize all images */
   .big,
   .photo-column .photo {
-    height: 240px;
+    height: 180px;
+  }
+
+  .photo img {
+    border-radius: 14px;
+  }
+
+  /* Inputs tighter */
+  .row {
+    gap: 14px;
+  }
+
+  input, select {
+    padding: 12px;
+  }
+
+  button {
+    padding: 13px;
+    border-radius: 10px;
   }
 }
 
