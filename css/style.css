@@ -1678,6 +1678,23 @@ button {
     padding: 16px;
   }
 
+  .contact-grid {
+    column-gap: 16px;
+    row-gap: 18px;
+    padding-inline: 10px;
+  }
+
+  /* Force visible separation */
+  .photo {
+    margin: 0;
+  }
+
+  /* Last photo spans full width if odd count */
+  .contact-grid .photo:last-child {
+    grid-column: 1 / -1;
+    aspect-ratio: 16 / 9;
+  }
+
   button {
     padding: 13px;
     border-radius: 10px;
