@@ -10,7 +10,7 @@ const COUNTRY_DATA = {
     heroTitle: "MBBS in Russia",
     heroDescription: "Your Gateway to Quality Medical Education with Affordable Fees and Global Recognition",
 
-    backgroundImage: "assets/images/countries/russia-bg.jpg",
+    backgroundImage: "assets/images/monuments/russia.jpg",
     backgroundTitle: "Experience Excellence in Russia",
     backgroundDescription:
       "Study in world-renowned medical universities with state-of-the-art facilities and comprehensive clinical training",
@@ -28,30 +28,8 @@ const COUNTRY_DATA = {
         description:
           "Complete MBBS degree at just 15-25 Lakhs INR for the entire course, much lower than private Indian colleges"
       },
-      {
-        icon: "🌍",
-        title: "Global Recognition",
-        description:
-          "Degrees recognized worldwide by WHO, WDOMS, ECFMG, and eligible for FMGE/NMC screening test"
-      },
-      {
-        icon: "🏥",
-        title: "Clinical Exposure",
-        description:
-          "Extensive hands-on clinical training from day one with access to advanced medical facilities and hospitals"
-      },
-      {
-        icon: "🍽️",
-        title: "Indian Food Available",
-        description:
-          "Indian mess facilities available in most universities, along with comfortable hostel accommodation"
-      },
-      {
-        icon: "✈️",
-        title: "Easy Admission",
-        description:
-          "No entrance exam required, simple admission process with direct university admission letters"
-      }
+      
+      
     ],
 
     universities: [
