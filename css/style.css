@@ -1653,7 +1653,7 @@ button {
   /* Each photo becomes card */
   .photo {
     height: auto;
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 3 / 4;
   }
 
   .photo img {
@@ -1670,29 +1670,12 @@ button {
 
   /* Inputs tighter */
   .row {
-    gap: 44px;
+    gap: 24px;
   }
 
   input,
   select {
-    padding: 16px;
-  }
-
-  .contact-grid {
-    column-gap: 16px;
-    row-gap: 18px;
-    padding-inline: 10px;
-  }
-
-  /* Force visible separation */
-  .photo {
-    margin: 0;
-  }
-
-  /* Last photo spans full width if odd count */
-  .contact-grid .photo:last-child {
-    grid-column: 1 / -1;
-    aspect-ratio: 16 / 9;
+    padding: 22px;
   }
 
   button {
@@ -1700,6 +1683,7 @@ button {
     border-radius: 10px;
   }
 }
+
 
 
 
