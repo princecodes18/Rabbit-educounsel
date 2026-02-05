@@ -1632,33 +1632,40 @@ button {
 
 @media (max-width:1000px) {
 
+  /* Main layout becomes 2-column */
   .contact-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  /* Put form first */
-  .contact-form {
-    order: -1;
-    padding: 28px 22px;
-  }
-
-  /* Photos become 2-column grid */
-  .photo,
-  .photo-column {
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+    gap: 14px;
   }
 
-  /* Normalize all images */
-  .big,
-  .photo-column .photo {
-    height: 180px;
+  /* Form spans full width on top */
+  .contact-form {
+    grid-column: 1 / -1;
+    order: -1;
+    padding: 26px 20px;
+  }
+
+  /* Remove column nesting */
+  .photo-column {
+    display: contents;
+  }
+
+  /* Each photo becomes card */
+  .photo {
+    height: auto;
+    aspect-ratio: 4 / 5;
   }
 
   .photo img {
-    border-radius: 14px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Big images no longer big */
+  .big {
+    height: auto;
+    aspect-ratio: 4 / 5;
   }
 
   /* Inputs tighter */
@@ -1666,7 +1673,8 @@ button {
     gap: 14px;
   }
 
-  input, select {
+  input,
+  select {
     padding: 12px;
   }
 
@@ -1675,6 +1683,7 @@ button {
     border-radius: 10px;
   }
 }
+
 
 
 
