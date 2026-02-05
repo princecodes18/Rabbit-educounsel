@@ -6,7 +6,7 @@
 const COUNTRY_DATA = {
   russia: {
     name: "Russia",
-    flag: "assets/images/flags/russia-flag.png",
+    flag: "assets/images/flags/russia.png",
     heroTitle: "MBBS in Russia",
     heroDescription: "Your Gateway to Quality Medical Education with Affordable Fees and Global Recognition",
 
@@ -58,7 +58,7 @@ const COUNTRY_DATA = {
       {
         id: "uni-1",
         name: "Kazan Federal University",
-        logo: "assets/images/universities/kazan-logo.png",
+        logo: "assets/images/logo.png",
         location: "Kazan, Russia",
         fees: "18-22",
         duration: "6 Years",
@@ -73,7 +73,7 @@ const COUNTRY_DATA = {
       {
         id: "uni-2",
         name: "Bashkir State Medical University",
-        logo: "assets/images/universities/bashkir-logo.png",
+        logo: "assets/images/logo.png",
         location: "Ufa, Russia",
         fees: "16-20",
         duration: "6 Years",
@@ -88,7 +88,7 @@ const COUNTRY_DATA = {
       {
         id: "uni-3",
         name: "Crimea Federal University",
-        logo: "assets/images/universities/crimea-logo.png",
+        logo: "assets/images/logo.png",
         location: "Simferopol, Russia",
         fees: "15-19",
         duration: "6 Years",
@@ -1324,7 +1324,3 @@ const COUNTRY_DATA = {
 // Make accessible in browser
 window.COUNTRY_DATA = COUNTRY_DATA;
 
-// Export for use in country.html
-if (typeof module !== 'undefined' && module.exports) {
-  module.exports = COUNTRY_DATA;
-}
