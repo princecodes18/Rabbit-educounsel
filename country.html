@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MBBS in [Country Name] - Rabbit Educounsel</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/country-page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="js/country-data.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar (Same as index.html) -->
+    <nav class="rabbit-navbar">
+        <div class="rabbit-container">
+            <a href="index.html" class="rabbit-logo">
+                <img src="assets/images/logo.png" alt="Rabbit Educounsel Logo">
+            </a>
+
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="rabbit-nav">
+                <button class="rabbit-link"><li><a href="index.html" class="rabbit-link">Home</a></li></button>
+                
+                <li class="rabbit-dropdown">
+                    <button class="rabbit-link">
+                        Countries
+                        <span class="caret">▼</span>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a href="country-russia.html">Russia</a>
+                        <a href="country-china.html">China</a>
+                        <a href="country-kazakhstan.html">Kazakhstan</a>
+                        <a href="country-kyrgyzstan.html">Kyrgyzstan</a>
+                        <a href="country-uzbekistan.html">Uzbekistan</a>
+                        <a href="country-nepal.html">Nepal</a>
+                        <a href="country-bangladesh.html">Bangladesh</a>
+                        <a href="country-india.html">India</a>
+                        <hr>
+                        <a href="#offers">View All Countries</a>
+                    </div>
+                </li>
+                
+                <li class="rabbit-dropdown">
+                    <button class="rabbit-link">
+                        Services
+                        <span class="caret">▼</span>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a href="#admission">Admission Guidance</a>
+                        <a href="#visa">Visa Assistance</a>
+                        <a href="#scholarship">Scholarship Support</a>
+                        <a href="#accommodation">Accommodation Help</a>
+                        <hr>
+                        <a href="#services">View All Services</a>
+                    </div>
+                </li>
+                <button class="rabbit-link">
+                <li><a href="#contact" class="rabbit-link">Contact</a></li></button>
+            </ul>
+            <a href="#" class="rabbit-login">Get A Call</a>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu-item">
+                <a href="index.html" class="mobile-menu-link">Home</a>
+            </div>
+            
+            <div class="mobile-menu-item">
+                <div class="mobile-menu-header" onclick="toggleDropdown('countries')">
+                    <span class="mobile-menu-link">Countries</span>
+                    <span class="caret"></span>
+                </div>
+                <div class="mobile-dropdown" id="countriesDropdown" style="display: none;">
+                    <a href="country-russia.html">Russia</a>
+                    <a href="country-china.html">China</a>
+                    <a href="country-kazakhstan.html">Kazakhstan</a>
+                    <a href="country-kyrgyzstan.html">Kyrgyzstan</a>
+                    <a href="country-uzbekistan.html">Uzbekistan</a>
+                    <a href="country-nepal.html">Nepal</a>
+                    <a href="country-bangladesh.html">Bangladesh</a>
+                    <a href="country-india.html">India</a>
+                    <a href="#offers">View All Countries</a>
+                </div>
+            </div>
+            
+            <div class="mobile-menu-item">
+                <div class="mobile-menu-header" onclick="toggleDropdown('services')">
+                    <span class="mobile-menu-link">Services</span>
+                    <span class="caret"></span>
+                </div>
+                <div class="mobile-dropdown" id="servicesDropdown" style="display: none;">
+                    <a href="#admission">Admission Guidance</a>
+                    <a href="#visa">Visa Assistance</a>
+                    <a href="#scholarship">Scholarship Support</a>
+                    <a href="#accommodation">Accommodation Help</a>
+                    <a href="#services">View All Services</a>
+                </div>
+            </div>
+            
+            <div class="mobile-menu-item">
+                <a href="#contact" class="mobile-menu-link">Contact</a>
+            </div>
+            
+            <div class="mobile-menu-item">
+                <a href="#" class="mobile-menu-link" style="color: #6b5bff; font-weight: 600;">Get A Call</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="country-hero">
+        <div class="hero-content">
+            <div class="country-flag">
+                <img id="country-flag-img" src="" alt="Country Flag">
+            </div>
+            <div class="hero-text">
+                <h1 id="hero-title"></h1>
+                <p id="hero-description"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Study in [Country] Section -->
+    <section class="why-study-section">
+        <div class="container">
+            <h2 class="section-title" id="why-study-title"></h2>
+            <div class="why-study-grid" id="benefits-container">
+                <!-- Benefits will be dynamically loaded -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Country Background Image Section -->
+    <section class="country-image-section" id="country-bg-section">
+        <div class="image-overlay-text">
+            <h2 id="bg-title"></h2>
+            <p id="bg-description"></p>
+        </div>
+    </section>
+
+    <!-- Top Universities Section -->
+    <section class="universities-section">
+        <div class="container">
+            <h2 class="section-title" id="universities-title"></h2>
+            
+            <!-- University Filter Buttons -->
+            <div class="university-filters" id="universityFilters">
+                <!-- Buttons will be dynamically generated by JavaScript -->
+            </div>
+
+            <!-- University Cards -->
+            <div class="universities-grid" id="universities-container">
+                <!-- University cards will be dynamically loaded -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Eligibility Section -->
+    <section class="eligibility-section">
+        <div class="container">
+            <h2 class="section-title">Eligibility Criteria</h2>
+            <div class="eligibility-content">
+                <ul class="eligibility-list" id="eligibility-list">
+                    <!-- Eligibility items will be dynamically loaded -->
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Document Requirements Section -->
+    <section class="documents-section">
+        <div class="container">
+            <h2 class="section-title">Documents Required</h2>
+            <div class="documents-grid" id="documents-container">
+                <!-- Document cards will be dynamically loaded -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Admission Process Section -->
+    <section class="process-section">
+        <div class="container">
+            <h2 class="section-title">Admission Process</h2>
+            <div class="process-timeline" id="process-container">
+                <!-- Process steps will be dynamically loaded -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Fee Structure Section -->
+    <section class="fee-structure-section">
+        <div class="container">
+            <h2 class="section-title" id="fee-title"></h2>
+            <div class="fee-comparison">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Parameters</th>
+                            <th id="country-column-header"></th>
+                            <th>MBBS in India</th>
+                        </tr>
+                    </thead>
+                    <tbody id="fee-comparison-body">
+                        <!-- Fee comparison rows will be dynamically loaded -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modals for Universities -->
+    <div id="modals-container">
+        <!-- Modals will be dynamically generated -->
+    </div>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Start Your Medical Journey?</h2>
+            <p id="cta-description"></p>
+            <div class="cta-buttons">
+                <button class="btn btn-primary">Get Free Counselling</button>
+                <button class="btn btn-secondary">Download Brochure</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (You can add your footer here) -->
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+    <script src="js/country-page.js"></script>
+</body>
+</html>
