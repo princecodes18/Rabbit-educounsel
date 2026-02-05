@@ -806,3 +806,11 @@
         padding: 20px;
     }
 }
+.university-card,
+.benefit-card,
+.process-step,
+.document-card {
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}

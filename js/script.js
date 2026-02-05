@@ -79,55 +79,66 @@ function initializeLazyLoad() {
 }
 
 /* ============================================
-   4. SCROLL ANIMATIONS
+   4. SCROLL ANIMATIONS (FIXED)
    ============================================ */
 
 function initializeScrollAnimations() {
-    if (!('IntersectionObserver' in window)) {
-        // Fallback for older browsers
-        return;
-    }
 
-    const scrollElements = document.querySelectorAll(
-        '.destination-card, .service-card, .form-group'
-    );
+  const scrollElements = document.querySelectorAll(
+    '.destination-card, .service-card, .form-group, .university-card'
+  );
 
-    const elementInView = (el, dividend = 1) => {
-        const elementTop = el.getBoundingClientRect().top;
-        return (
-            elementTop <=
-            (window.innerHeight || document.documentElement.clientHeight) / dividend
-        );
-    };
+  if (!scrollElements.length) return;
 
-    const displayScrollElements = () => {
-        scrollElements.forEach((element) => {
-            if (elementInView(element, 1.25)) {
-                element.classList.add('animate-in');
-                // Remove class to allow re-animation if scrolling back
-                // Or keep it for one-time animation
-            }
-        });
-    };
+  /* Modern browsers: IntersectionObserver */
+  if ('IntersectionObserver' in window) {
 
-    // Use Intersection Observer for better performance
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animate-in');
-                observer.unobserve(entry.target);
-            }
-        });
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-in');
+          obs.unobserve(entry.target); // animate ONCE
+        }
+      });
     }, {
-        threshold: 0.1,
-        rootMargin: '0px 0px -100px 0px'
+      threshold: 0.15,
+      rootMargin: '0px 0px -80px 0px'
     });
 
     scrollElements.forEach(el => observer.observe(el));
+    return; // IMPORTANT: prevents scroll fallback
 
-    // Fallback for browsers without IntersectionObserver
-    window.addEventListener('scroll', displayScrollElements);
+  }
+
+  /* Legacy fallback (only if IntersectionObserver not supported) */
+
+  let scrollTicking = false;
+
+  function legacyReveal() {
+    scrollElements.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight * 0.85) {
+        el.classList.add('animate-in');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', () => {
+    if (!scrollTicking) {
+      requestAnimationFrame(() => {
+        legacyReveal();
+        scrollTicking = false;
+      });
+      scrollTicking = true;
+    }
+  });
+
+  legacyReveal();
 }
+
+/* Initialize once */
+document.addEventListener("DOMContentLoaded", initializeScrollAnimations);
+
 
 /* ============================================
    5. FORM FUNCTIONALITY
@@ -491,6 +502,14 @@ function setupCarousel() {
 
 // Initial build
 setupCarousel();
+const carouselObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    paused = !entry.isIntersecting;
+  });
+}, { threshold: 0.1 });
+
+carouselObserver.observe(wrapper);
+
 
 /* Hover pause */
 wrapper.addEventListener("mouseenter", () => paused = true);
@@ -548,7 +567,7 @@ function dragMove(e) {
   pos -= delta;
   lastMove = delta;
 
-  carousel.style.transform = `translateX(-${pos}px)`;
+  carousel.style.transform = `translate3d(-${pos}px,0,0)`;
   currentX = x;
 }
 
