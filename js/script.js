@@ -636,8 +636,7 @@ form.addEventListener("submit", () => {
 
     // Auto open WhatsApp
     window.open(
-      "https://wa.me/91XXXXXXXXXX?text=Hi%20I%20just%20submitted%20the%20counselling%20form",
-      "_blank"
+      "https://wa.me/message/TSIR7MA7456RI1"
     );
 
   }, 1200);
