@@ -9,7 +9,7 @@ const COUNTRY_DATA = {
     flag: "assets/images/flags/russia.png",
     heroTitle: "MBBS in Russia",
     heroDescription: "Your Gateway to Quality Medical Education with Affordable Fees and Global Recognition",
-
+    
     backgroundImage: "assets/images/monuments/russia.jpg",
     backgroundTitle: "Experience Excellence in Russia",
     backgroundDescription:
@@ -313,6 +313,7 @@ const COUNTRY_DATA = {
       globalRecognition: "MCI/NMC approved, limited international recognition",
       hostelMess: "Varies by college, usually available"
     }
+    
   },
 
   kazakhstan: {

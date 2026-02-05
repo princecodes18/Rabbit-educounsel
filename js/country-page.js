@@ -62,6 +62,13 @@ function loadHeroSection() {
     document.getElementById('hero-description').textContent = currentCountryData.heroDescription;
 }
 
+const heroSection = document.querySelector(".country-hero");
+
+heroSection.style.backgroundImage = `
+  linear-gradient(135deg, rgba(0,0,0,0.6), rgba(190,47,47,0.6)),
+  url('${data.backgroundImage}')
+`;
+
 /* ============================================
    BENEFITS SECTION
    ============================================ */
