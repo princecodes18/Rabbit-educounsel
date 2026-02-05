@@ -1628,6 +1628,42 @@ button {
   cursor: pointer;
 }
 
+/* Button spinner */
+#submitBtn {
+  position: relative;
+  overflow: hidden;
+}
+
+.spinner {
+  display: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255,255,255,.4);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin .8s linear infinite;
+  margin-left: 8px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Success message */
+.form-success {
+  text-align: center;
+  margin-top: 16px;
+  color: #16a34a;
+  font-weight: 600;
+}
+
+/* Disabled state */
+#submitBtn:disabled {
+  opacity: .7;
+  cursor: not-allowed;
+}
+
+
 /* MOBILE */
 
 @media (max-width:1000px) {

@@ -612,10 +612,33 @@ function toggleMobileMenu() {
             }
         });
 
-        let submitted = false;
+const form = document.querySelector(".contact-form");
+const btn = document.getElementById("submitBtn");
+const spinner = btn.querySelector(".spinner");
+const btnText = btn.querySelector(".btn-text");
+const successMsg = document.querySelector(".form-success");
 
-document.querySelector(".contact-form").addEventListener("submit", () => {
+form.addEventListener("submit", () => {
+
+  // Disable button
+  btn.disabled = true;
+
+  // Show spinner
+  spinner.style.display = "inline-block";
+  btnText.textContent = "Submitting...";
+
+  // Show success + WhatsApp after Google submission
   setTimeout(() => {
-    alert("Form submitted successfully!");
-  }, 800);
+    spinner.style.display = "none";
+    btnText.textContent = "Submitted";
+
+    successMsg.style.display = "block";
+
+    // Auto open WhatsApp
+    window.open(
+      "https://wa.me/91XXXXXXXXXX?text=Hi%20I%20just%20submitted%20the%20counselling%20form",
+      "_blank"
+    );
+
+  }, 1200);
 });
