@@ -611,3 +611,11 @@ function toggleMobileMenu() {
                 toggle.classList.remove('active');
             }
         });
+
+        let submitted = false;
+
+document.querySelector(".contact-form").addEventListener("submit", () => {
+  setTimeout(() => {
+    alert("Form submitted successfully!");
+  }, 800);
+});

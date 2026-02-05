@@ -268,34 +268,45 @@
     </div>
 
     <!-- FORM -->
-    <form class="contact-form">
+    <form class="contact-form"
+  action="https://docs.google.com/forms/d/e/1FAIpQLScBu19-76kV5sC2HLGUJEoxe1iuWIj-wbrmdCU_SeVqlu8aQQ/formResponse"
+  method="POST"
+  target="hidden_iframe"
+  onsubmit="submitted=true;">
 
-      <h3>Please Fill This Form</h3>
+  <h3>Please Fill This Form</h3>
 
-      <div class="row">
-        <input type="text" placeholder="Full Name">
-      </div>
-      <div class="row">
-        <input type="email" placeholder="Email Address">
-      </div>
-            <div class="row">
-        <input type="tel" placeholder="Phone Number">
-      </div>
-            <div class="row">
-        <input type="text" placeholder="State">
-      </div>
-      <div class="row">
-        <select>
-          <option>Select Country</option>
-          <option>India</option>
-          <option>Russia</option>
-          <option>Kazakhstan</option>
-        </select>
-      </div>
+  <div class="row">
+    <input name="entry.953866310" type="text" placeholder="Full Name" required>
+  </div>
 
-      <button>Get Free Counselling</button>
+  <div class="row">
+    <input name="entry.28216252" type="email" placeholder="Email Address" required>
+  </div>
 
-    </form>
+  <div class="row">
+    <input name="entry.937573374" type="tel" placeholder="Phone Number" required>
+  </div>
+
+  <div class="row">
+    <input name="entry.1323731689" type="text" placeholder="State">
+  </div>
+
+  <div class="row">
+    <select name="entry.2076563172">
+      <option value="">Select Country</option>
+      <option>India</option>
+      <option>Russia</option>
+      <option>Kazakhstan</option>
+    </select>
+  </div>
+
+  <button type="submit">Get Free Counselling</button>
+
+</form>
+
+<iframe name="hidden_iframe" style="display:none;"></iframe>
+
 
     <!-- PHOTO 4 + 5 -->
     <div class="photo-column">
