@@ -1970,10 +1970,29 @@ button {
 
 @media (max-width: 480px) {
   .know-more-btn {
-    font-size: 11px;
-    padding: var(--space-6) var(--space-12);
+    font-size: 12.5px;
+    padding: 10px 18px;
+    border-radius: 999px;
+
+    /* modern depth */
+    box-shadow: 0 6px 16px rgba(0, 53, 102, 0.25);
+
+    /* premium feel */
+    letter-spacing: 0.3px;
+
+    /* better tap area */
+    min-height: 36px;
+
+    /* smoother interaction */
+    transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease;
+  }
+
+  .know-more-btn:active {
+    transform: scale(0.96);
+    box-shadow: 0 3px 8px rgba(0, 53, 102, 0.2);
   }
 }
+
 
 /* Update offer card to include button */
 .offer-card {
