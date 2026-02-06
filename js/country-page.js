@@ -454,20 +454,50 @@ function closeAllModals() {
 /* ============================================
    OPEN INTEREST FORM (GOOGLE FORM)
    ============================================ */
-
 function openInterestForm(uniName) {
-    // Replace with your actual Google Form URL
-    const googleFormUrl = 'https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform?usp=pp_url&entry.YOUR_FIELD_ID=' + encodeURIComponent(uniName);
-    
-    window.open(googleFormUrl, '_blank');
-    
-    if (typeof gtag !== 'undefined') {
-        gtag('event', 'interest_form_click', {
-            'university_name': uniName,
-            'country': currentCountryData.name
-        });
-    }
+  const modal = document.getElementById("interestModal");
+  modal.classList.add("show");
+  document.getElementById("uniField").value = uniName;
+
+  if (typeof gtag !== 'undefined') {
+    gtag('event', 'interest_form_click', {
+      university_name: uniName,
+      country: currentCountryData.name
+    });
+  }
 }
+
+function closeInterestForm() {
+  document.getElementById("interestModal").classList.remove("show");
+}
+
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape") closeInterestForm();
+});
+
+document.getElementById("interestForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const btn = document.getElementById("interestSubmit");
+  const success = document.querySelector(".form-success");
+
+  btn.classList.add("loading");
+  btn.disabled = true;
+
+  fetch("https://docs.google.com/forms/d/e/YOUR_FORM_ID/formResponse", {
+    method: "POST",
+    mode: "no-cors",
+    body: new FormData(this)
+  });
+
+  setTimeout(() => {
+    success.style.display = "block";
+    this.reset();
+    btn.classList.remove("loading");
+
+    setTimeout(closeInterestForm, 2000);
+  }, 1200);
+});
 
 /* ============================================
    MOBILE MENU TOGGLE

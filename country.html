@@ -231,6 +231,64 @@
         </div>
     </section>
 
+<div id="interestModal" class="interest-modal">
+
+  <div class="interest-modal-box">
+
+    <span class="interest-close" onclick="closeInterestForm()">×</span>
+
+    <h3>Get Free Counselling</h3>
+
+    <form id="interestForm">
+
+      <input type="hidden" name="entry.UNIVERSITY_ID" id="uniField">
+
+      <div class="row">
+        <input name="entry.NAME_ID" placeholder="Full Name" required>
+      </div>
+
+      <div class="row">
+        <input name="entry.EMAIL_ID" placeholder="Email" required>
+      </div>
+
+      <div class="row">
+        <input name="entry.PHONE_ID" placeholder="Phone Number" required>
+      </div>
+
+      <div class="row">
+        <input name="entry.STATE_ID" placeholder="State">
+      </div>
+
+      <div class="row">
+        <select name="entry.COUNTRY_ID">
+          <option>Select Country</option>
+          <option>India</option>
+          <option>Russia</option>
+          <option>Kazakhstan</option>
+          <option>Kyrgyzstan</option>
+          <option>Uzbekistan</option>
+          <option>Nepal</option>
+          <option>Bangladesh</option>
+          <option>China</option>
+        </select>
+      </div>
+
+      <button id="interestSubmit" type="submit">
+        <span class="btn-text">Get Free Counselling</span>
+        <span class="spinner"></span>
+      </button>
+
+      <div class="form-success">
+        ✅ Thank you! Your form has been submitted.
+      </div>
+
+    </form>
+
+  </div>
+</div>
+
+
+
     <!-- Footer (You can add your footer here) -->
          <!-- Footer -->
     <footer id="contact" class="footer">

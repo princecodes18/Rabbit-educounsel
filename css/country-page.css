@@ -869,3 +869,65 @@
   backface-visibility: hidden;
   transform: translateZ(0);
 }
+
+.interest-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 6000;
+}
+
+.interest-modal.show {
+  display: flex;
+}
+
+.interest-modal-box {
+  background: white;
+  width: 90%;
+  max-width: 420px;
+  padding: 30px;
+  border-radius: 18px;
+  position: relative;
+  animation: pop .25s ease;
+}
+
+@keyframes pop {
+  from { transform: scale(.9); opacity: 0 }
+  to { transform: scale(1); opacity: 1 }
+}
+
+.spinner {
+  display: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid white;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin .7s linear infinite;
+  margin-left: 8px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+#interestSubmit.loading .btn-text {
+  display: none;
+}
+
+#interestSubmit.loading .spinner {
+  display: inline-block;
+}
+
+.form-success {
+  display: none;
+  margin-top: 15px;
+  text-align: center;
+  color: green;
+  font-weight: 600;
+}
+
+
