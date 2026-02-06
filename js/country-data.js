@@ -555,20 +555,20 @@ const COUNTRY_DATA = {
 
     universities: [
       {
-        id: "uni-1",
-        name: "Kyrgyz State Medical Academy",
-        logo: "assets/images/universities/ksma-logo.png",
-        location: "Bishkek, Kyrgyzstan",
-        fees: "13-16",
-        duration: "6 Years",
-        recognition: "WHO, MCI approved",
-        about: "Kyrgyz State Medical Academy is the premier medical institution in Kyrgyzstan with over 1,500 Indian students and excellent academic track record.",
-        faculty: "Experienced faculty members with international credentials providing quality education through English medium instruction.",
-        campus: "Modern infrastructure with well-equipped laboratories, digital library, simulation centers, and comfortable hostels with Indian mess.",
-        studentLife: "Strong Indian student community with cultural events, festivals celebration, sports facilities, and 24/7 student support services.",
-        website: "https://kgma.kg/en/",
-        brochure: "assets/brochures/ksma-brochure.pdf"
-      },
+  id: "uni-11",
+  name: "International University of Science and Medicine (IUSM)",
+  logo: "assets/images/colleges/iusm-uzbek.jpeg",
+  location: "Bishkek, Kyrgyzstan",
+  fees: "13-16",
+  duration: "6 Years (5 Years + 1 Year Internship)",
+  recognition: "WHO, WDOMS, FAIMER, WFME, NMC approved, Ministry of Justice of Kyrgyz Republic",
+  about: "International University of Science and Medicine (IUSM) was established in 2020 in the capital city Bishkek under the National Development Strategy of the Kyrgyz Republic and UN's Sustainable Development Goals. Despite being a new institution, IUSM has quickly established itself with a mission to reform the Kyrgyz education system and create competitive atmosphere among regional universities. The 5-year English Language MD program (equivalent to MBBS in India) is ranked among the best in the nation. IUSM has already produced 3 graduation batches (Feb 2022, July 2022, Feb 2023) with impressive FMGE results - 6 students qualified out of 40 who appeared in 1st attempt. The university combines innovative teaching approaches with latest technology in medical education.",
+  faculty: "Highly qualified academic faculty comprising teachers, scientists, and physicians who are leading experts in their fields. Faculty includes both local and international professors with expertise in various medical disciplines. The teaching staff includes Dr. Alim Khan (Rector), Dr. Saurabh Kumar, Dr. Vivek Kumar Singh, Dr. SM Alam Sarmad, and Dr. Muhammad Zarshad among others. Excellent student-teacher ratio of 1:10 ensuring personalized attention and quality learning. Faculty uses innovative teaching strategies and has scope for incorporating novel educational methodologies. All lectures and practical classes conducted in English language with experienced educators dedicated to producing successful medical professionals.",
+  campus: "Modern educational institution with state-of-the-art infrastructure established in 2020. Campus features well-equipped practical center with modern equipment and relevant teaching aids for mastering primary practical skills. Advanced laboratories, lecture halls, and simulation facilities for comprehensive medical training. University has 1,200 bed super specialty hospital equipped with sophisticated medical equipment providing extensive clinical exposure. Total capacity of 650 seats for medical program. Campus designed to provide high-quality training environment with focus on both theoretical and practical applications. Library with comprehensive medical literature and digital resources. All facilities meet international standards for medical education.",
+  studentLife: "Vibrant multicultural campus with students from many countries including India, Nepal, Afghanistan, Bangladesh, Vietnam, Moldavia, Belarus, Syria, and others. Comfortable hostel accommodation with separate facilities for boys and girls. Hostel and mess fees: USD 500 and USD 1,200 per year respectively. Vegetarian and non-vegetarian food similar to Indian cuisines available in hostels ensuring easy adaptation. Kyrgyz people are warm, friendly, and hospitable with culture of tolerance and open-mindedness. Affordable cost of living comparable to India. Students encouraged to participate in sports and extracurricular activities ensuring holistic personality development. Opportunities to participate in international conferences and seminars. Safe and secure environment for international students. Academic sessions start in September with fall and winter semester intakes (until October 30 and January 30 respectively).",
+  website: "https://www.iusm.edu.kg",
+  brochure: "assets/brochures/iusm-brochure.pdf"
+},
       {
         id: "uni-2",
         name: "Osh State University",
@@ -774,21 +774,6 @@ const COUNTRY_DATA = {
   studentLife: "Fully separate Indian hostel with Indian food facilities ensuring comfortable stay for Indian students. Hostel fee USD 750 for 1st year, optional from 2nd year onwards. Food charges USD 1,200 for 1st year. Medical assistance and administrative support provided. NMC NEXT coaching available at USD 200 per year from 2nd year to help students prepare for licensing exams. Strong Indian student community with cultural programs and festivals. Safe and supportive environment with dedicated student services. Visa extension and police registration fees approximately USD 300 each per year from 2nd year as government fees.",
   website: "https://www.ferganamedical.uz",
   brochure: "assets/brochures/fmiph-brochure.pdf"
-},
-{
-  id: "uni-11",
-  name: "International University of Science and Medicine (IUSM)",
-  logo: "assets/images/colleges/iusm-uzbek.jpeg",
-  location: "Bishkek, Kyrgyzstan",
-  fees: "13-16",
-  duration: "6 Years (5 Years + 1 Year Internship)",
-  recognition: "WHO, WDOMS, FAIMER, WFME, NMC approved, Ministry of Justice of Kyrgyz Republic",
-  about: "International University of Science and Medicine (IUSM) was established in 2020 in the capital city Bishkek under the National Development Strategy of the Kyrgyz Republic and UN's Sustainable Development Goals. Despite being a new institution, IUSM has quickly established itself with a mission to reform the Kyrgyz education system and create competitive atmosphere among regional universities. The 5-year English Language MD program (equivalent to MBBS in India) is ranked among the best in the nation. IUSM has already produced 3 graduation batches (Feb 2022, July 2022, Feb 2023) with impressive FMGE results - 6 students qualified out of 40 who appeared in 1st attempt. The university combines innovative teaching approaches with latest technology in medical education.",
-  faculty: "Highly qualified academic faculty comprising teachers, scientists, and physicians who are leading experts in their fields. Faculty includes both local and international professors with expertise in various medical disciplines. The teaching staff includes Dr. Alim Khan (Rector), Dr. Saurabh Kumar, Dr. Vivek Kumar Singh, Dr. SM Alam Sarmad, and Dr. Muhammad Zarshad among others. Excellent student-teacher ratio of 1:10 ensuring personalized attention and quality learning. Faculty uses innovative teaching strategies and has scope for incorporating novel educational methodologies. All lectures and practical classes conducted in English language with experienced educators dedicated to producing successful medical professionals.",
-  campus: "Modern educational institution with state-of-the-art infrastructure established in 2020. Campus features well-equipped practical center with modern equipment and relevant teaching aids for mastering primary practical skills. Advanced laboratories, lecture halls, and simulation facilities for comprehensive medical training. University has 1,200 bed super specialty hospital equipped with sophisticated medical equipment providing extensive clinical exposure. Total capacity of 650 seats for medical program. Campus designed to provide high-quality training environment with focus on both theoretical and practical applications. Library with comprehensive medical literature and digital resources. All facilities meet international standards for medical education.",
-  studentLife: "Vibrant multicultural campus with students from many countries including India, Nepal, Afghanistan, Bangladesh, Vietnam, Moldavia, Belarus, Syria, and others. Comfortable hostel accommodation with separate facilities for boys and girls. Hostel and mess fees: USD 500 and USD 1,200 per year respectively. Vegetarian and non-vegetarian food similar to Indian cuisines available in hostels ensuring easy adaptation. Kyrgyz people are warm, friendly, and hospitable with culture of tolerance and open-mindedness. Affordable cost of living comparable to India. Students encouraged to participate in sports and extracurricular activities ensuring holistic personality development. Opportunities to participate in international conferences and seminars. Safe and secure environment for international students. Academic sessions start in September with fall and winter semester intakes (until October 30 and January 30 respectively).",
-  website: "https://www.iusm.edu.kg",
-  brochure: "assets/brochures/iusm-brochure.pdf"
 },
 {
   id: "uni-12",
