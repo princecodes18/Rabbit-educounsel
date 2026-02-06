@@ -36,7 +36,7 @@ const COUNTRY_DATA = {
        {
     id: "uni-nosma",
     name: "North Ossetian State Medical Academy",
-    logo: "assets/images/colleges/nosma-russia.jpg",
+    logo: "assets/images/colleges/nosma-russia.webp",
     location: "Vladikavkaz, North Ossetia–Alania, Russia",
     fees: "Not specified",
     duration: "6 Years",
@@ -676,11 +676,11 @@ const COUNTRY_DATA = {
 
   uzbekistan: {
     name: "Uzbekistan",
-    flag: "assets/images/flags/uzbekistan-flag.png",
+    flag: "assets/images/flags/uzbekistan.jpg",
     heroTitle: "MBBS in Uzbekistan",
     heroDescription: "Quality Medical Education in Central Asia with Modern Facilities and Affordable Fees",
 
-    backgroundImage: "assets/images/countries/uzbekistan-bg.jpg",
+    backgroundImage: "assets/images/monuments/uzbekistan.jpg",
     backgroundTitle: "Medical Excellence in Uzbekistan",
     backgroundDescription: "Discover affordable MBBS programs in historic Uzbekistan with WHO-approved universities and English medium teaching",
 
@@ -694,75 +694,117 @@ const COUNTRY_DATA = {
         icon: "💰",
         title: "Cost-Effective",
         description: "Complete MBBS degree at 12-22 Lakhs INR with low living costs and no capitation fees"
-      },
-      {
-        icon: "🌍",
-        title: "Global Standards",
-        description: "International curriculum with degrees recognized globally, eligible for USMLE and PLAB examinations"
-      },
-      {
-        icon: "🏥",
-        title: "Clinical Excellence",
-        description: "Comprehensive clinical training with modern simulation labs and well-equipped teaching hospitals"
-      },
-      {
-        icon: "🍽️",
-        title: "Comfortable Living",
-        description: "Indian mess facilities available, safe environment, and affordable accommodation in modern hostels"
-      },
-      {
-        icon: "✈️",
-        title: "Smooth Admission",
-        description: "Direct admission without donation, simplified visa process, and complete support from application to departure"
       }
     ],
 
     universities: [
       {
-        id: "uni-1",
-        name: "Tashkent Medical Academy",
-        logo: "assets/images/universities/tma-logo.png",
-        location: "Tashkent, Uzbekistan",
-        fees: "16-20",
-        duration: "6 Years",
-        recognition: "WHO, MCI approved",
-        about: "Tashkent Medical Academy is the oldest and most prestigious medical institution in Uzbekistan, offering world-class medical education since 1919.",
-        faculty: "Highly qualified faculty with international experience, research publications, and expertise in various medical specializations.",
-        campus: "State-of-the-art infrastructure with modern laboratories, digital library, simulation centers, and affiliated multi-specialty hospitals.",
-        studentLife: "Vibrant student community with cultural diversity, active Indian student association, sports facilities, and comfortable hostel living.",
-        website: "https://tma.uz/en",
-        brochure: "assets/brochures/tma-brochure.pdf"
-      },
+  id: "uni-6",
+  name: "Tashkent State Medical University",
+  logo: "assets/images/colleges/uzbek1.jpeg",
+  location: "Tashkent, Uzbekistan",
+  fees: "16-20",
+  duration: "6 Years",
+  recognition: "WFME, FAIMER, ECFMG, General Medical Council approved",
+  about: "Tashkent State Medical University was established in 1920 and is formed by merging TMA (Tashkent Medical Academy), TDMI (Tashkent Dental Medical Institute), and TPMI (Tashkent Pediatric Medical Institute). As one of the oldest medical institutions in Central Asia, it offers comprehensive medical education with modern facilities and English medium instruction. The university provides quality medical education with international recognition and has trained thousands of successful medical professionals over the past century.",
+  faculty: "Highly qualified teaching staff with extensive experience in medical education and clinical practice. Faculty members include professors, associate professors, and experienced clinicians who provide comprehensive training in all medical disciplines. The university maintains high academic standards with faculty trained from leading medical institutions across the region.",
+  campus: "Modern educational infrastructure with well-equipped lecture halls, advanced laboratories, and clinical training facilities. The campus features state-of-the-art medical equipment for practical training and research. University provides comprehensive library facilities with extensive medical literature. Students have access to modern teaching hospitals for clinical exposure and hands-on training in various medical specialties.",
+  studentLife: "Separate hostels available for boys and girls within campus premises with Indian mess facilities. Students enjoy comfortable accommodation with all necessary amenities including Wi-Fi, study rooms, and recreational facilities. Active student community with cultural programs and extracurricular activities. International students receive dedicated support services for smooth adaptation. Food expenses approximately USD 1,200 per year with semester-wise payment options available.",
+  website: "https://www.tashmedun.uz",
+  brochure: "assets/brochures/tsmu-brochure.pdf"
+}
+,
       {
-        id: "uni-2",
-        name: "Samarkand State Medical University",
-        logo: "assets/images/universities/ssmu-logo.png",
-        location: "Samarkand, Uzbekistan",
-        fees: "14-18",
-        duration: "6 Years",
-        recognition: "WHO, MCI approved",
-        about: "Located in the historic city of Samarkand, this university combines traditional values with modern medical education standards.",
-        faculty: "Experienced medical educators committed to excellence in teaching with focus on practical skills and clinical competence.",
-        campus: "Well-equipped campus with modern teaching facilities, research laboratories, teaching hospitals, and student-friendly accommodation.",
-        studentLife: "Safe and peaceful environment ideal for studies, with good Indian student presence and availability of Indian food options.",
-        website: "https://sammi.uz/en",
-        brochure: "assets/brochures/ssmu-brochure.pdf"
-      },
-      {
-        id: "uni-3",
-        name: "Andijan State Medical Institute",
-        logo: "assets/images/universities/asmi-logo.png",
-        location: "Andijan, Uzbekistan",
-        fees: "12-16",
-        duration: "6 Years",
-        recognition: "WHO, MCI approved",
-        about: "Andijan State Medical Institute offers quality medical education with emphasis on clinical training and affordable fees structure.",
-        faculty: "Dedicated teaching staff with good academic credentials, providing personalized attention and comprehensive medical training.",
-        campus: "Modern facilities with well-maintained laboratories, library resources, clinical training centers, and comfortable hostel facilities.",
-        studentLife: "Growing international student community with supportive environment, cultural activities, and focus on academic excellence.",
-        website: "https://andmi.uz",
-        brochure: "assets/brochures/asmi-brochure.pdf"
-      }
+  id: "uni-7",
+  name: "Bukhara State Medical Institute",
+  logo: "assets/images/colleges/bukhara-uzbek.jpeg",
+  location: "Bukhara, Uzbekistan",
+  fees: "14-18",
+  duration: "6 Years",
+  recognition: "WFME, FAIMER, ECFMG, General Medical Council approved",
+  about: "Bukhara State Medical Institute was established in 1990 and is recognized as Uzbekistan's No. 1 Medical University with the highest FMGE passing ratio. In FMGE 2024, the university achieved an impressive 48% passing ratio - the highest among all abroad universities. This outstanding achievement demonstrates the university's commitment to quality medical education and excellent preparation for licensing examinations. The institute provides English medium MBBS education with strong focus on practical clinical training and exam preparation.",
+  faculty: "Experienced faculty members dedicated to student success with proven track record in producing high FMGE pass rates. Teaching staff includes qualified professors and clinicians with expertise across all medical disciplines. Faculty provides personalized attention and mentorship to ensure students excel in both academics and clinical practice. Regular workshops and training sessions conducted to keep students updated with latest medical developments.",
+  campus: "Well-maintained campus with modern infrastructure including advanced laboratories, simulation centers, and well-equipped classrooms. The institute has tie-ups with leading hospitals providing extensive clinical exposure to students. Library facilities with comprehensive medical literature and digital resources. Campus features comfortable hostel accommodation with separate facilities for boys and girls.",
+  studentLife: "Separate hostels for boys and girls within campus with Indian mess facilities. Hostel and mess mandatory for 1st year students with optional arrangements from 2nd year onwards. Food expenses approximately USD 1,200 per year (mandatory 1st year), with self-cooking option available at 50-60 USD per month. Comfortable living conditions with all modern amenities. Strong Indian student community providing home-like environment. Students can focus on studies in peaceful and secure campus atmosphere.",
+  website: "https://www.buxdu.uz",
+  brochure: "assets/brochures/bsmi-brochure.pdf"
+}
+,
+     {
+  id: "uni-8",
+  name: "Samarkand State Medical University",
+  logo: "assets/images/colleges/samarkand-uzbek.jpeg",
+  location: "Samarkand, Uzbekistan",
+  fees: "14-18",
+  duration: "6 Years",
+  recognition: "WFME, FAIMER, ECFMG, General Medical Council approved",
+  about: "Samarkand State Medical University was established in 1930, making it one of the oldest and most prestigious medical institutions in Uzbekistan with over 90 years of excellence in medical education. Located in the historic city of Samarkand, the university combines rich educational traditions with modern teaching methodologies. The university offers comprehensive MBBS program in English medium with strong emphasis on clinical training and research. Known for producing competent medical professionals who excel globally.",
+  faculty: "Distinguished faculty with extensive academic and clinical experience spanning decades. Teaching staff includes professors, doctors of sciences, and experienced clinicians from various specialties. Faculty members are committed to providing quality education through modern teaching techniques and hands-on training. Regular faculty development programs ensure updated curriculum delivery aligned with international standards.",
+  campus: "Historic campus with modern facilities including well-equipped laboratories, digital classrooms, and comprehensive library resources. The university has established clinical training centers and partnerships with leading hospitals in Samarkand region. Advanced medical equipment and simulation labs for practical training. Campus provides excellent infrastructure for both academic and research activities with focus on student learning experience.",
+  studentLife: "Comfortable hostel facilities with modern amenities and Indian mess services available. Food expenses approximately USD 1,200 per year with mess charges payable monthly. Safe and peaceful environment ideal for focused studies. Strong support system for international students including Indian student associations. Cultural events and festivals celebrated regularly. Students enjoy the rich historical and cultural heritage of Samarkand city. Medical insurance and contract fees arrangements available as per requirements.",
+  website: "https://www.sammi.uz",
+  brochure: "assets/brochures/ssmu-uzbekistan-brochure.pdf"
+},
+{
+  id: "uni-9",
+  name: "Andijan State Medical Institute",
+  logo: "assets/images/colleges/davlat-uzbek.jpeg",
+  location: "Andijan, Uzbekistan",
+  fees: "12-16",
+  duration: "6 Years",
+  recognition: "WFME, FAIMER, ECFMG, General Medical Council approved",
+  about: "Andijan State Medical Institute was established in 1955 and has over 65 years of experience in providing quality medical education. The institute offers comprehensive MBBS program in English medium with focus on practical clinical training. Known for affordable fee structure and quality education standards. The institute maintains strong academic reputation with emphasis on producing competent doctors who can practice globally.",
+  faculty: "Qualified teaching faculty with good academic credentials and clinical experience. Faculty provides comprehensive medical education across all disciplines with emphasis on practical skills development. Teachers are dedicated to student success through personalized attention and mentorship. Regular training programs and workshops conducted for continuous faculty development.",
+  campus: "Modern campus infrastructure with well-equipped laboratories, classrooms, and clinical training facilities. The institute provides access to teaching hospitals for hands-on clinical experience. Library with essential medical literature and study resources. Campus features comfortable hostel accommodation with all necessary facilities for students.",
+  studentLife: "Separate hostel facilities for boys and girls within campus with Indian mess available. Hostel fee USD 600 per year with activity service fee of USD 350 annually. Mess charges approximately USD 1,200 per year (extra charges). 1st year package includes tuition fee, hostel fee, visa extension, registration, activity service fee, and one-time charges. Supportive environment for international students with focus on academics and cultural activities. Visa extension and government registration fees applicable from 2nd year onwards.",
+  website: "https://www.andmi.uz",
+  brochure: "assets/brochures/asmi-brochure.pdf"
+},
+{
+  id: "uni-10",
+  name: "Fergana Medical Institute of Public Health",
+  logo: "assets/images/colleges/frag-uzbek.jpeg",
+  location: "Fergana, Uzbekistan",
+  fees: "16-20",
+  duration: "6 Years",
+  recognition: "WFME, FAIMER, ECFMG, General Medical Council, NMC approved",
+  about: "Fergana Medical Institute of Public Health offers 6-year MD (General Medicine) program in English medium as per new NMC rules. The institute boasts a combined total of 19 hospitals with over 4,000 beds providing extensive clinical training opportunities. Known for excellent infrastructure and comprehensive medical education. The institute provides fully separate Indian hostel with Indian food facilities and Indian teachers available from 1st year ensuring comfortable learning environment for Indian students.",
+  faculty: "Experienced faculty with specialization across medical disciplines. Indian teachers available from 1st year providing additional support and guidance to students. Teaching staff includes qualified professors and clinicians dedicated to quality medical education. Faculty provides comprehensive training through modern teaching methodologies and extensive clinical exposure. Regular NMC NEXT coaching provided to prepare students for licensing examinations.",
+  campus: "Extensive clinical infrastructure with 19 associated hospitals totaling over 4,000 beds for hands-on training. Modern campus with well-equipped laboratories, lecture halls, and simulation centers. Comprehensive library facilities with medical literature and digital resources. Advanced medical equipment for practical training in various specialties. Campus designed to provide holistic learning experience for medical students.",
+  studentLife: "Fully separate Indian hostel with Indian food facilities ensuring comfortable stay for Indian students. Hostel fee USD 750 for 1st year, optional from 2nd year onwards. Food charges USD 1,200 for 1st year. Medical assistance and administrative support provided. NMC NEXT coaching available at USD 200 per year from 2nd year to help students prepare for licensing exams. Strong Indian student community with cultural programs and festivals. Safe and supportive environment with dedicated student services. Visa extension and police registration fees approximately USD 300 each per year from 2nd year as government fees.",
+  website: "https://www.ferganamedical.uz",
+  brochure: "assets/brochures/fmiph-brochure.pdf"
+},
+{
+  id: "uni-11",
+  name: "International University of Science and Medicine (IUSM)",
+  logo: "assets/images/colleges/iusm-uzbek.jpeg",
+  location: "Bishkek, Kyrgyzstan",
+  fees: "13-16",
+  duration: "6 Years (5 Years + 1 Year Internship)",
+  recognition: "WHO, WDOMS, FAIMER, WFME, NMC approved, Ministry of Justice of Kyrgyz Republic",
+  about: "International University of Science and Medicine (IUSM) was established in 2020 in the capital city Bishkek under the National Development Strategy of the Kyrgyz Republic and UN's Sustainable Development Goals. Despite being a new institution, IUSM has quickly established itself with a mission to reform the Kyrgyz education system and create competitive atmosphere among regional universities. The 5-year English Language MD program (equivalent to MBBS in India) is ranked among the best in the nation. IUSM has already produced 3 graduation batches (Feb 2022, July 2022, Feb 2023) with impressive FMGE results - 6 students qualified out of 40 who appeared in 1st attempt. The university combines innovative teaching approaches with latest technology in medical education.",
+  faculty: "Highly qualified academic faculty comprising teachers, scientists, and physicians who are leading experts in their fields. Faculty includes both local and international professors with expertise in various medical disciplines. The teaching staff includes Dr. Alim Khan (Rector), Dr. Saurabh Kumar, Dr. Vivek Kumar Singh, Dr. SM Alam Sarmad, and Dr. Muhammad Zarshad among others. Excellent student-teacher ratio of 1:10 ensuring personalized attention and quality learning. Faculty uses innovative teaching strategies and has scope for incorporating novel educational methodologies. All lectures and practical classes conducted in English language with experienced educators dedicated to producing successful medical professionals.",
+  campus: "Modern educational institution with state-of-the-art infrastructure established in 2020. Campus features well-equipped practical center with modern equipment and relevant teaching aids for mastering primary practical skills. Advanced laboratories, lecture halls, and simulation facilities for comprehensive medical training. University has 1,200 bed super specialty hospital equipped with sophisticated medical equipment providing extensive clinical exposure. Total capacity of 650 seats for medical program. Campus designed to provide high-quality training environment with focus on both theoretical and practical applications. Library with comprehensive medical literature and digital resources. All facilities meet international standards for medical education.",
+  studentLife: "Vibrant multicultural campus with students from many countries including India, Nepal, Afghanistan, Bangladesh, Vietnam, Moldavia, Belarus, Syria, and others. Comfortable hostel accommodation with separate facilities for boys and girls. Hostel and mess fees: USD 500 and USD 1,200 per year respectively. Vegetarian and non-vegetarian food similar to Indian cuisines available in hostels ensuring easy adaptation. Kyrgyz people are warm, friendly, and hospitable with culture of tolerance and open-mindedness. Affordable cost of living comparable to India. Students encouraged to participate in sports and extracurricular activities ensuring holistic personality development. Opportunities to participate in international conferences and seminars. Safe and secure environment for international students. Academic sessions start in September with fall and winter semester intakes (until October 30 and January 30 respectively).",
+  website: "https://www.iusm.edu.kg",
+  brochure: "assets/brochures/iusm-brochure.pdf"
+},
+{
+  id: "uni-12",
+  name: "Angren University - Faculty of Medicine",
+  logo: "assets/images/colleges/angren-uzbek.jpeg",
+  location: "Angren City, Tashkent Region, Uzbekistan",
+  fees: "12-16",
+  duration: "6 Years (5 Years + 1 Year Internship)",
+  recognition: "WHO-listed, NMC-approved",
+  about: "Angren University is a public institution established in 2021, with the Faculty of Medicine starting in 2023. Despite being one of the newest medical universities in Uzbekistan, it has quickly gained recognition for its commitment to delivering quality education. The university offers a 6-year full-time bachelor's degree program in Medicine (5+1 year internship) taught in English medium, focusing on practical training and research to prepare students for the evolving healthcare landscape. Located in serene Angren City surrounded by scenic mountains with cool, pleasant weather, the university provides an ideal environment for studies. In 2024, Angren University ranked 807th among 1,477 universities globally in UI GreenMetric World University Rankings, improving from 1028th position in 2023.",
+  faculty: "Over 90 qualified professors with expertise across medical disciplines. Led by Rector Dr. Mutalov Shukhrat Ahmadjonovich (Doctor of Chemical Sciences, Professor). Faculty is committed to shaping future doctors with global knowledge and strong values. Teaching staff provides expert guidance with emphasis on practical training and research-based learning. Faculty actively participates in international collaborations and student development programs. The university emphasizes holistic approach to education ensuring students are well-equipped to meet professional challenges.",
+  campus: "Modern campus infrastructure spread across three buildings with total area of 13,834 sq meters (8,000 + 1,434 + 4,400 sq meters) with capacity for 10,000+ students. Facilities include well-equipped classrooms, advanced laboratories, comprehensive library with 1,220 educational literature, 23 types of newspapers and 16 kinds of magazines. Campus features Angren Medical Center located in front of main administrative building with X-ray and MCT (Multislice Computed Tomography), operating rooms for student practices. Sports facilities include students gym with necessary equipment. Internet room equipped with modern computers. Campus fosters vibrant student life with cultural events, sports competitions, and extracurricular activities promoting inclusive and supportive environment.",
+  studentLife: "Comfortable hostel accommodation with 170+ rooms. Well-furnished rooms with centralized heating system, hot and cold water facilities. Each dormitory has own kitchen, restrooms, study rooms and computer rooms. Modern amenities include LCD televisions, washing machines, furniture. Kitchens equipped with gas stoves and refrigerators for self-cooking. Domestic service house with sewing room, barbershop and photographic salon. Reading room available in hostel. Students gym with necessary facilities. Numerous extracurricular activities including Reading Club, Green Ecology Club, Zakovat Intellectual Club, Leaders Academy, Sports Club, Girls Club, Young Doctors Club. Students achieve remarkable success in competitions - 3rd place among 62 universities in DOTA 2 tournament, 1st place in French boxing. International internship opportunities - students began one-year internship at central hospital in Okinawa, Japan (February 2025) as part of partnership with Japanese company Azibiz. Cultural programs and international cooperation events regularly organized.",
+  website: "https://www.angrenuniversity.uz",
+  brochure: "assets/brochures/angren-brochure.pdf"
+},
     ],
 
     eligibility: [
