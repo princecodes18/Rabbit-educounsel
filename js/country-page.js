@@ -470,6 +470,10 @@ function openInterestForm(uniName) {
 function closeInterestForm() {
   document.getElementById("interestModal").classList.remove("show");
 }
+document.getElementById("interestModal").addEventListener("click", e => {
+  if (e.target.id === "interestModal") closeInterestForm();
+});
+
 
 document.addEventListener("keydown", e => {
   if (e.key === "Escape") closeInterestForm();
@@ -491,13 +495,19 @@ document.getElementById("interestForm").addEventListener("submit", function(e) {
   });
 
   setTimeout(() => {
+    btn.classList.remove("loading");
     success.style.display = "block";
     this.reset();
-    btn.classList.remove("loading");
 
-    setTimeout(closeInterestForm, 2000);
+    setTimeout(() => {
+      closeInterestForm();
+      success.style.display = "none";
+      btn.disabled = false;
+    }, 2000);
+
   }, 1200);
 });
+
 
 /* ============================================
    MOBILE MENU TOGGLE
