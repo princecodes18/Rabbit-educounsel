@@ -712,3 +712,67 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const form = document.getElementById('heroContactForm');
+  const submitBtn = document.getElementById('heroSubmitBtn');
+  const spinner = submitBtn?.querySelector('.spinner');
+  const successMsg = document.querySelector('.form-success');
+  const iframe = document.querySelector('iframe[name="hidden_iframe"]');
+
+  if (!form || !submitBtn || !iframe) return;
+
+  let submitting = false;
+
+  /* --------- On Submit --------- */
+  form.addEventListener('submit', function () {
+    if (submitting) return;
+    submitting = true;
+
+    submitBtn.disabled = true;
+    form.classList.add('form-disabled');
+
+    const btnText = submitBtn.querySelector('.btn-text');
+    if (btnText) btnText.textContent = 'Submitting...';
+
+    if (spinner) spinner.style.display = 'inline-block';
+  });
+
+  /* --------- On Successful Google Form Submit --------- */
+  iframe.addEventListener('load', function () {
+    if (!submitting) return;
+
+    submitting = false;
+
+    // Disable everything permanently
+    form.querySelectorAll('input, select, textarea, button')
+      .forEach(el => el.disabled = true);
+
+    if (spinner) spinner.style.display = 'none';
+
+    if (successMsg) {
+      successMsg.style.display = 'block';
+      successMsg.textContent = '✅ Thank you! Your form has been submitted successfully.';
+    }
+
+    // Store submission state (prevents re-submit on refresh)
+    localStorage.setItem('heroFormSubmitted', 'true');
+  });
+
+  /* --------- Prevent Refill on Page Reload --------- */
+  if (localStorage.getItem('heroFormSubmitted') === 'true') {
+    form.querySelectorAll('input, select, textarea, button')
+      .forEach(el => el.disabled = true);
+
+    form.classList.add('form-disabled');
+
+    if (successMsg) {
+      successMsg.style.display = 'block';
+      successMsg.textContent = '✅ You have already submitted this form.';
+    }
+  }
+
+});
+
+

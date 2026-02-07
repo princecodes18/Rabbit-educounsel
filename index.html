@@ -112,36 +112,75 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="hero-container">
-            <div class="image-grid">
-                <div class="image-card"><img src="assets/images/co1.jpg" alt="Campus Life">
-                    <div class="image-card-placeholder">Pic 1</div>
-                </div>
-                <div class="image-card"><img src="assets/images/co2.jpg" alt="Campus Life">
-                    <div class="image-card-placeholder">Pic 2</div>
-                </div>
-                <div class="image-card"><img src="assets/images/co3.jpg" alt="Campus Life">
-                    <div class="image-card-placeholder">Pic 3</div>
-                </div>
-                <div class="image-card"><img src="assets/images/co4.jpg" alt="Campus Life">
-                    <div class="image-card-placeholder">Pic 4</div>
-                </div>
-            </div>
+    <!-- HERO SECTION (REPLACEMENT) -->
+<section class="hero-section">
+  <div class="hero-inner container">
+    <!-- LEFT: headline + CTA -->
+    <div class="hero-left">
+      <div class="kicker">Trusted by 10,000+ students</div>
+      <h1 class="hero-heading">
+        Specializing in <span class="accent">MBBS Abroad</span> Admissions.
+      </h1>
+      <p class="hero-sub">
+        Secure your dream education abroad with expert guidance and proven success.
+      </p>
 
-            <div class="welcome-banner">
-                <h1 class="welcome-text">
-                    Welcome to 
-                </h1>
-            </div>
-            <div class="welcome-banner1">
-                <h1 class="welcome-text">
-                    <span class="highlight">RABBIT EDUCOUNSEL</span>
-                </h1>
-            </div>
+      <div class="hero-ctas">
+        <a href="#offers" class="btn btn--primary btn--lg">Contact →</a>
+        <a href="#services" class="btn btn--outline btn--lg">View Services</a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat"><strong>100+</strong><span>Partner Universities</span></div>
+        <div class="stat"><strong>30+</strong><span>Countries</span></div>
+        <div class="stat"><strong>98%</strong><span>Success Rate</span></div>
+      </div>
+    </div>
+
+    <!-- RIGHT: floating form card -->
+    <aside class="hero-form-wrapper" aria-label="Free counselling form">
+      <form class="hero-form" id="heroContactForm" action="https://docs.google.com/forms/d/e/1FAIpQLScN69bIZzetFXwM7BORhLQ7qWyrc1wCIBFrt9FffF_QpapBEg/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
+        <div class="hero-form-header">
+          <h3>Get Free Counselling</h3>
+          <p>Fill the form below to get started</p>
         </div>
-    </section>
+
+        <div class="form-body">
+          <label class="sr-only" for="name">Full name</label>
+          <input id="name" name="entry.525221255" class="form-control" placeholder="Full Name" required>
+
+          <label class="sr-only" for="contact">Mobile / Email</label>
+          <input id="contact" name="entry.895727355" class="form-control" placeholder="Mobile / Email" required>
+
+          <label class="sr-only" for="state">State</label>
+          <input id="state" name="entry.1569258537" class="form-control" placeholder="State">
+
+          <select name="entry.XXXX_COUNTRY" class="form-control" aria-label="Preferred country">
+            <option value="">Preferred Country</option>
+            <option>Russia</option>
+            <option>India</option>
+            <option>Kazakhstan</option>
+            <option>Kyrgyzstan</option>
+            <option>Uzbekistan</option>
+            <option>Nepal</option>
+            <option>Bangladesh</option>
+            <option>China</option>
+          </select>
+
+          <button id="heroSubmitBtn" type="submit" class="btn btn--primary btn--full-width">
+            <span class="btn-text">Submit Inquiry</span>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
+
+          <p class="form-success" style="display:none;">✅ Thank you — We will contact you shortly.</p>
+        </div>
+      </form>
+      <iframe name="hidden_iframe" style="display:none;"></iframe>
+    </aside>
+  </div>
+</section>
+<!-- END HERO SECTION -->
+
 
 <!-- Floating Social Sidebar -->
 <div class="social-sidebar">
