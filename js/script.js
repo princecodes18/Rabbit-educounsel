@@ -761,7 +761,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   /* --------- Prevent Refill on Page Reload --------- */
-  if (localStorage.getItem('heroFormSubmitted') === 'true') {
+  if (sessionStorage.getItem('heroFormSubmitted') === 'true') {
     form.querySelectorAll('input, select, textarea, button')
       .forEach(el => el.disabled = true);
 

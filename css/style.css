@@ -1178,7 +1178,7 @@ a:hover {
   display: flex;
   align-items: center;
   /* fallback hero image, keep your existing one if you prefer */
-  background-image: linear-gradient(180deg, rgba(7,18,22,0.35), rgba(7,18,22,0.35)), url('assets/images/bg-counselling.jpeg');
+  background-image: linear-gradient(180deg, rgba(7,18,22,0.35), rgba(7,18,22,0.35)), url('assets/images/monuments/russia.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1633,12 +1633,14 @@ a:hover {
   margin-bottom: 18px;
 }
 
-input, select {
+.contact-form input,
+.contact-form select {
   padding: 14px;
   border-radius: 10px;
   border: 1px solid #ddd;
   background: #f7f7f7;
 }
+
 
 input:focus, select:focus {
   outline: none;
@@ -3036,5 +3038,88 @@ button {
   display: flex !important;
   opacity: 1 !important;
   visibility: visible !important;
+}
+
+/* ============================
+   FORCE HERO FORM STYLE
+============================ */
+
+.hero-form *,
+.hero-form input,
+.hero-form select,
+.hero-form button {
+  box-sizing: border-box;
+  font-family: var(--font-family-base);
+}
+
+/* FORM CARD */
+.hero-form {
+  background: #ffffff !important;
+  border-radius: 18px !important;
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.25) !important;
+  overflow: hidden;
+}
+
+/* HEADER */
+.hero-form-header {
+  background: linear-gradient(135deg, #1e90ff, #009dff) !important;
+  color: #fff !important;
+  text-align: center;
+  padding: 22px 20px;
+}
+
+.hero-form-header h3 {
+  color: #fff !important;
+  font-size: 20px;
+}
+
+.hero-form-header p {
+  color: rgba(255,255,255,0.9) !important;
+  font-size: 13px;
+}
+
+/* BODY */
+.hero-form .form-body {
+  background: #ffffff !important;
+  padding: 20px !important;
+}
+
+/* INPUTS – FORCE WHITE */
+.hero-form .form-control {
+  background: #f8fafc !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 10px !important;
+  padding: 14px 16px !important;
+  font-size: 14px !important;
+  color: #0f172a !important;
+}
+
+.hero-form .form-control::placeholder {
+  color: #94a3b8 !important;
+}
+
+/* FOCUS */
+.hero-form .form-control:focus {
+  border-color: #1e90ff !important;
+  box-shadow: 0 0 0 3px rgba(30,144,255,.25) !important;
+}
+
+/* SUBMIT BUTTON */
+.hero-form button,
+#heroSubmitBtn {
+  background: linear-gradient(135deg, #1e90ff, #009dff) !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  border-radius: 12px !important;
+  padding: 14px !important;
+}
+
+/* DISABLED STATE */
+#heroSubmitBtn:disabled {
+  opacity: 0.7 !important;
+  cursor: not-allowed !important;
+}
+.contact-form button {
+  background: linear-gradient(135deg,#28c7ff,#009dff);
 }
 
