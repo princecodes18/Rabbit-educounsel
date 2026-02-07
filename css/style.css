@@ -943,6 +943,21 @@ a:hover {
   color: var(--color-primary-hover);
 }
 
+.caret-icon {
+  width: 14px;
+  height: 14px;
+  margin-left: 6px;
+  stroke: currentColor;
+  stroke-width: 2;
+  fill: none;
+  transition: transform 0.25s ease;
+}
+
+.menu-item:hover .caret-icon {
+  transform: rotate(180deg);
+}
+
+
 /* ============================================
    3. CONTAINER & LAYOUT
    ============================================ */
@@ -2391,8 +2406,8 @@ body {
 
 .footer-section ul {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 1px 2px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 6px 12px;
   /* row gap | column gap */
   padding: 0;
   margin: 0;
