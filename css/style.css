@@ -1559,7 +1559,7 @@ a:hover {
 
 .student-life-section {
   background: #ffffff; /* force white */
-  padding: 80px 20px;
+  padding: 40px 10px;
 }
 
 .section-title {
@@ -1567,7 +1567,7 @@ a:hover {
   font-size: 32px;
   font-weight: 700;
   margin-bottom: 48px;
-  color: #0f172a;
+  color: #0ca7e0;
 }
 
 /* DESKTOP GRID */
