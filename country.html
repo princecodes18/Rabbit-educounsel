@@ -250,52 +250,42 @@
 
     <span class="interest-close" onclick="closeInterestForm()"><b>X</b></span>
 
-    <h3>Get Free Counselling</h3>
+    <form class="hero-form" id="heroContactForm" action="https://docs.google.com/forms/d/e/1FAIpQLScN69bIZzetFXwM7BORhLQ7qWyrc1wCIBFrt9FffF_QpapBEg/formResponse" method="POST">
+        <div class="hero-form-header">
+          <h3>Get Free Counselling</h3>
+          <p>Fill the form below to get started</p>
+        </div>
 
-    <form id="interestForm">
+        <div class="form-body">
+          <label class="sr-only" for="name">Full name</label>
+          <input id="name" name="entry.525221255" class="form-control" placeholder="Full Name" required>
 
-      <input type="hidden" name="entry.UNIVERSITY_ID" id="uniField">
+          <label class="sr-only" for="contact">Mobile / Email</label>
+          <input id="contact" name="entry.895727355" class="form-control" placeholder="Mobile / Email" required>
 
-      <div class="row">
-        <input name="entry.NAME_ID" placeholder="Full Name" required>
-      </div>
+          <label class="sr-only" for="state">State</label>
+          <input id="state" name="entry.1569258537" class="form-control" placeholder="State">
 
-      <div class="row">
-        <input name="entry.EMAIL_ID" placeholder="Email" required>
-      </div>
+          <select name="entry.1314939498" class="form-control" aria-label="Preferred country">
+            <option value="">Preferred Country</option>
+            <option>Russia</option>
+            <option>India</option>
+            <option>Kazakhstan</option>
+            <option>Kyrgyzstan</option>
+            <option>Uzbekistan</option>
+            <option>Nepal</option>
+            <option>Bangladesh</option>
+            <option>China</option>
+          </select>
 
-      <div class="row">
-        <input name="entry.PHONE_ID" placeholder="Phone Number" required>
-      </div>
+          <button id="heroSubmitBtn" type="submit" class="btn btn--primary btn--full-width">
+            <span class="btn-text">Submit Inquiry</span>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
 
-      <div class="row">
-        <input name="entry.STATE_ID" placeholder="State">
-      </div>
-
-      <div class="row">
-        <select name="entry.COUNTRY_ID">
-          <option>Select Country</option>
-          <option>India</option>
-          <option>Russia</option>
-          <option>Kazakhstan</option>
-          <option>Kyrgyzstan</option>
-          <option>Uzbekistan</option>
-          <option>Nepal</option>
-          <option>Bangladesh</option>
-          <option>Georgia</option>
-        </select>
-      </div>
-
-      <button id="interestSubmit" type="submit">
-        <span class="btn-text">Get Free Counselling</span>
-        <span class="spinner"></span>
-      </button>
-
-      <div class="form-success">
-        ✅ Thank you! Your form has been submitted.
-      </div>
-
-    </form>
+          <p class="form-success" style="display:none;">✅ Thank you — We will contact you shortly.</p>
+        </div>
+      </form>
 
   </div>
 </div>

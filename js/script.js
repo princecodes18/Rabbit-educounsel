@@ -655,124 +655,118 @@ function toggleMobileMenu() {
             }
         });
 
-const form = document.querySelector(".contact-form");
-const btn = document.getElementById("submitBtn");
-const spinner = btn.querySelector(".spinner");
-const btnText = btn.querySelector(".btn-text");
-const successMsg = document.querySelector(".form-success");
-
-form.addEventListener("submit", () => {
-
-  // Disable button
-  btn.disabled = true;
-
-  // Show spinner
-  spinner.style.display = "inline-block";
-  btnText.textContent = "Submitting...";
-
-  // Show success + WhatsApp after Google submission
-  setTimeout(() => {
-    spinner.style.display = "none";
-    btnText.textContent = "Submitted";
-
-    successMsg.style.display = "block";
-
-    // Auto open WhatsApp
-    window.open(
-      "https://wa.me/message/TSIR7MA7456RI1"
-    );
-
-  }, 1200);
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  const studentCards = document.querySelectorAll(".student-card");
-  const tabBtns = document.querySelectorAll(".tab-btn");
-
-  // Get country from URL hash
-  const countryFromURL = window.location.hash.replace("#", "");
-
-  if (!countryFromURL) return;
-
-  // Activate correct tab if exists
-  tabBtns.forEach(btn => {
-    btn.classList.remove("active");
-    if (btn.dataset.filter === countryFromURL) {
-      btn.classList.add("active");
-    }
-  });
-
-  // Filter cards
-  studentCards.forEach(card => {
-    const category = card.dataset.category;
-    if (category === countryFromURL) {
-      card.classList.remove("hidden");
-    } else {
-      card.classList.add("hidden");
-    }
-  });
-});
-
-
-document.addEventListener('DOMContentLoaded', function () {
+// Hero Form Submission Handler
+document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('heroContactForm');
   const submitBtn = document.getElementById('heroSubmitBtn');
-  const spinner = submitBtn?.querySelector('.spinner');
+  const spinner = submitBtn ? submitBtn.querySelector('.spinner') : null;
+  const btnText = submitBtn ? submitBtn.querySelector('.btn-text') : null;
   const successMsg = document.querySelector('.form-success');
-  const iframe = document.querySelector('iframe[name="hidden_iframe"]');
 
-  if (!form || !submitBtn || !iframe) return;
+  if (!form || !submitBtn) {
+    console.error('Form or submit button not found');
+    return;
+  }
 
   let submitting = false;
 
-  /* --------- On Submit --------- */
-  form.addEventListener('submit', function () {
-    if (submitting) return;
+  form.addEventListener('submit', (e) => {
+    e.preventDefault(); // Always prevent default first
+
+    // Prevent double submission
+    if (submitting) {
+      return;
+    }
+
+    // Validate form before submitting
+    const name = form.querySelector('[name="entry.525221255"]');
+    const contact = form.querySelector('[name="entry.895727355"]');
+    
+    if (!name || !name.value.trim()) {
+      alert('Please enter your full name');
+      return;
+    }
+    
+    if (!contact || !contact.value.trim()) {
+      alert('Please enter your mobile or email');
+      return;
+    }
+
+    // Set submitting state
     submitting = true;
-
     submitBtn.disabled = true;
-    form.classList.add('form-disabled');
-
-    const btnText = submitBtn.querySelector('.btn-text');
-    if (btnText) btnText.textContent = 'Submitting...';
-
-    if (spinner) spinner.style.display = 'inline-block';
-  });
-
-  /* --------- On Successful Google Form Submit --------- */
-  iframe.addEventListener('load', function () {
-    if (!submitting) return;
-
-    submitting = false;
-
-    // Disable everything permanently
-    form.querySelectorAll('input, select, textarea, button')
-      .forEach(el => el.disabled = true);
-
-    if (spinner) spinner.style.display = 'none';
-
-    if (successMsg) {
-      successMsg.style.display = 'block';
-      successMsg.textContent = '✅ Thank you! Your form has been submitted successfully.';
+    
+    if (spinner) {
+      spinner.style.display = 'inline-block';
+    }
+    
+    if (btnText) {
+      btnText.textContent = 'Submitting...';
     }
 
-    // Store submission state (prevents re-submit on refresh)
-    localStorage.setItem('heroFormSubmitted', 'true');
+    // Submit form data to Google Forms
+    const formData = new FormData(form);
+    const formAction = form.getAttribute('action');
+
+    fetch(formAction, {
+      method: 'POST',
+      mode: 'no-cors',
+      body: formData
+    })
+    .then(() => {
+      // Success - form submitted
+      submitting = false;
+      
+      // Hide spinner
+      if (spinner) {
+        spinner.style.display = 'none';
+      }
+      
+      // Update button
+      if (btnText) {
+        btnText.textContent = 'Submitted ✓';
+      }
+      submitBtn.style.background = '#4caf50';
+      
+      // Show success message
+      if (successMsg) {
+        successMsg.style.display = 'block';
+      }
+
+      // Clear form fields immediately
+      form.reset();
+
+      // Reset button after 3 seconds
+      setTimeout(() => {
+        if (btnText) {
+          btnText.textContent = 'Submit Inquiry';
+        }
+        submitBtn.disabled = false;
+        submitBtn.style.background = '';
+        
+        if (successMsg) {
+          successMsg.style.display = 'none';
+        }
+      }, 3000);
+    })
+    .catch((error) => {
+      // Error handling
+      console.error('Form submission error:', error);
+      submitting = false;
+      
+      if (spinner) {
+        spinner.style.display = 'none';
+      }
+      
+      if (btnText) {
+        btnText.textContent = 'Submit Inquiry';
+      }
+      
+      submitBtn.disabled = false;
+      alert('Something went wrong. Please try again.');
+    });
   });
-
-  /* --------- Prevent Refill on Page Reload --------- */
-  if (sessionStorage.getItem('heroFormSubmitted') === 'true') {
-    form.querySelectorAll('input, select, textarea, button')
-      .forEach(el => el.disabled = true);
-
-    form.classList.add('form-disabled');
-
-    if (successMsg) {
-      successMsg.style.display = 'block';
-      successMsg.textContent = '✅ You have already submitted this form.';
-    }
-  }
-
 });
+
 
 
