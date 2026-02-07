@@ -147,13 +147,13 @@ function loadUniversityCards() {
             </div>
             <div class="university-info">
                 <p><strong>📍 Location:</strong> ${uni.location}</p>
-                <p><strong>💵 Fees:</strong> INR ${uni.fees} Lakhs (Total)</p>
+                <p><strong>💵 Fees:</strong>${uni.fees}</p>
                 <p><strong>⏱️ Duration:</strong> ${uni.duration}</p>
                 <p><strong>🌐 Recognition:</strong> ${uni.recognition}</p>
             </div>
             <div class="university-actions">
                 <button class="btn-details" onclick="openModal('modal-${index}')">View Details</button>
-                <button class="btn-interest" onclick="openInterestForm('${uni.name}')">I'm Interested</button>
+                <button class="btn-interest" onclick="openInterestForm('${uni.name}')">Get Free Counselling</button>
             </div>
         `;
         container.appendChild(card);
@@ -200,7 +200,7 @@ function loadUniversityModals() {
                     <a href="${uni.brochure}" class="modal-link-btn" target="_blank">Download Brochure</a>
                 </div>
                 
-                <button class="interest-btn" onclick="openInterestForm('${uni.name}')">I am Interested</button>
+                <button class="interest-btn" onclick="openInterestForm('${uni.name}')">Interested? Fill the form</button>
             </div>
         `;
         container.appendChild(modal);
