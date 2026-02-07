@@ -1176,7 +1176,7 @@
 /* Student Card */
 .student-card {
   flex: 0 0 280px;
-  background: rgb(196, 165, 111);
+  background:linear-gradient(90deg, #3b0000 0.000%, #00001e 50.000%, #085b63 100.000%);
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-md);
