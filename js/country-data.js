@@ -348,11 +348,11 @@ const COUNTRY_DATA = {
 
   kazakhstan: {
     name: "Kazakhstan",
-    flag: "assets/images/flags/kazakhstan-flag.png",
+    flag: "assets/images/flags/kazakhstan.png",
     heroTitle: "MBBS in Kazakhstan",
     heroDescription: "Affordable Medical Education with International Standards and Modern Infrastructure",
 
-    backgroundImage: "assets/images/countries/kazakhstan-bg.jpg",
+    backgroundImage: "assets/images/monuments/kazakhstan.jpg",
     backgroundTitle: "Study Medicine in Kazakhstan",
     backgroundDescription: "Experience quality medical education in Central Asia's most developed economy with modern facilities and English medium teaching",
 
@@ -373,7 +373,7 @@ universities: [
   {
     id: "uni-13",
     name: "West Kazakhstan Marat Ospanov Medical University",
-    logo: "assets/images/universities/zkmu-logo.png",
+    logo: "assets/images/colleges/kazak1.jpeg",
     location: "Aktobe, Kazakhstan",
     fees: "20-24",
     duration: "5 Years + 1 Year Internship",
@@ -388,7 +388,7 @@ universities: [
   {
     id: "uni-14",
     name: "Sh. Ualikhanov Kokshetau State University",
-    logo: "assets/images/universities/kgu-logo.png",
+    logo: "assets/images/colleges/kazak2.jpeg",
     location: "Kokshetau, Kazakhstan",
     fees: "18-22",
     duration: "5 Years + 1 Year Internship",
@@ -403,7 +403,7 @@ universities: [
   {
     id: "uni-15",
     name: "Kazakh-Russian Medical University",
-    logo: "assets/images/universities/krmu-logo.png",
+    logo: "assets/images/colleges/kazak3.jpeg",
     location: "Almaty, Kazakhstan",
     fees: "22-28",
     duration: "5 Years + 1 Year Internship",
@@ -416,24 +416,9 @@ universities: [
     brochure: "assets/brochures/krmu-brochure.pdf"
   },
   {
-    id: "uni-16",
-    name: "West Kazakhstan Marat Ospanov Medical University (Fee Structure)",
-    logo: "assets/images/universities/zkmu-logo.png",
-    location: "Aktobe, Kazakhstan",
-    fees: "20-24",
-    duration: "5 Years + 1 Year Internship",
-    recognition: "WHO, NMC approved",
-    about: "According to the 2025–26 international MBBS fee plan, West Kazakhstan State Medical University offers a consistent tuition fee of 4,100 USD per year (about 30,00,000 Tenge) across the 5 academic years of the MBBS course.[file:7] The programme follows the new NMC guideline which mandates one year of internship in the same institution where the student is pursuing MBBS, with fees applicable for internship as well.[file:7]",
-    faculty: "Teaching is delivered by qualified medical faculty in multiple departments as per Kazakh standards, with instruction in English for international MBBS students and structured clinical training integrated in later years.[file:7][file:10]",
-    campus: "International students stay in university hostels (around 350 USD per year) and study in main academic buildings and affiliated hospitals of the university.[file:7][file:10] Services included via the consultancy arrangement cover visa extension, admission and invitation letters, medical insurance, police registration, medical check-up, translation, apostille of documents and airport pickup.[file:7]",
-    studentLife: "Students can opt for mess facilities at about 120 USD per month, and live in shared hostel rooms with basic amenities.[file:7] The fee package also includes support services over the study period, making it easier for Indian students to settle and focus on academics.[file:7]",
-    website: "https://www.zkmu.kz",
-    brochure: "assets/brochures/zkmu-fee-2025-brochure.pdf"
-  },
-  {
     id: "uni-17",
     name: "Kazakh National Medical University",
-    logo: "assets/images/universities/kaznmu-logo.png",
+    logo: "assets/images/colleges/kazak4.jpeg",
     location: "Almaty, Kazakhstan",
     fees: "28-34",
     duration: "5 Years + 1 Year Internship",
@@ -448,7 +433,7 @@ universities: [
   {
     id: "uni-18",
     name: "Astana Medical University",
-    logo: "assets/images/universities/amu-logo.png",
+    logo: "assets/images/colleges/kazak5.png",
     location: "Astana, Kazakhstan",
     fees: "24-30",
     duration: "5 Years + 1 Year Internship",
@@ -463,7 +448,7 @@ universities: [
   {
     id: "uni-19",
     name: "Al-Farabi Kazakh National University (Faculty of Medicine & Health Care)",
-    logo: "assets/images/universities/alfarabi-kaznu-logo.png",
+    logo: "assets/images/colleges/kazak6.jpeg",
     location: "Almaty, Kazakhstan",
     fees: "22-28",
     duration: "5 Years + 1 Year Internship",
@@ -478,7 +463,7 @@ universities: [
   {
     id: "uni-20",
     name: "Semey Medical University",
-    logo: "assets/images/universities/semey-logo.png",
+    logo: "assets/images/colleges/kazak7.jpeg",
     location: "Semey, Kazakhstan",
     fees: "20-24",
     duration: "5 Years + 1 Year Internship",
@@ -493,7 +478,7 @@ universities: [
   {
     id: "uni-21",
     name: "South Kazakhstan Medical Academy",
-    logo: "assets/images/universities/skma-kz-logo.png",
+    logo: "assets/images/colleges/kazak8.jpeg",
     location: "Shymkent, Kazakhstan",
     fees: "20-24",
     duration: "5 Years + 1 Year Internship",
