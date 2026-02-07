@@ -1298,3 +1298,43 @@
   visibility: hidden;
   pointer-events: none;
 }
+
+/* ================================
+   BREADCRUMB (Hero)
+   ================================ */
+
+.breadcrumb {
+  position: absolute;
+  top: 24px;
+  left: 32px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: rgba(255,255,255,0.85);
+  z-index: 5;
+}
+
+.breadcrumb a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+.breadcrumb a:hover {
+  opacity: 0.75;
+}
+
+.breadcrumb span {
+  color: rgba(255,255,255,0.6);
+}
+
+/* Mobile adjustment */
+@media (max-width: 768px) {
+  .breadcrumb {
+    right: 16px;
+    top: 16px;
+    font-size: 13px;
+  }
+}

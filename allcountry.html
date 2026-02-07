@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rabbit educounsel - MBBS Abroad Admissionss</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="js/country-data.js"></script>
+</head>
+<body class="allcountry-page">
+ <nav class="rabbit-navbar">
+        <div class="rabbit-container">
+             <a href="#home" class="rabbit-logo">
+                <img src="assets/images/logo.png" alt="Rabbit Educounsel Logo">
+            </a>
+
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="rabbit-nav">
+                <button class="rabbit-link"><li><a href="#" class="rabbit-link">Home</a></li>
+                </button>
+                <li class="rabbit-dropdown">
+                    <button class="rabbit-link">
+                        Countries
+                        <span class="caret">▼</span>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a href="country.html?country=russia">Russia</a>
+                        <a href="country.html?country=georgia">Georgia</a>
+                        <a href="country.html?country=kazakhstan">Kazakhstan</a>
+                        <a href="country.html?country=kyrgyzstan">Kyrgyzstan</a>
+                        <a href="country.html?country=uzbekistan">Uzbekistan</a>
+                        <a href="country.html?country=nepal">Nepal</a>
+                        <a href="country.html?country=bangladesh">Bangladesh</a>
+                        <a href="country.html?country=india">India</a>
+                        <hr>
+                        <a href="#offers">View All Countries</a>
+                    </div>
+                </li>
+                
+                <li class="rabbit-dropdown">
+                    <button class="rabbit-link">
+                        Services
+                        <span class="caret">▼</span>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a href="#admission">Admission Guidance</a>
+                        <a href="#visa">Visa Assistance</a>
+                        <a href="#scholarship">Scholarship Support</a>
+                        <a href="#accommodation">Accommodation Help</a>
+                        <hr>
+                        <a href="#services">View All Services</a>
+                    </div>
+                </li>
+                <button class="rabbit-link">
+                <li><a href="#" class="rabbit-link">Contact</a></li></button>
+            </ul>
+            <a href="#" class="rabbit-login">Get A Call</a>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu-item">
+                <a href="#" class="mobile-menu-link">Home</a>
+            </div>
+            
+            <div class="mobile-menu-item">
+                <div class="mobile-menu-header" onclick="toggleDropdown('countries')">
+                    <span class="mobile-menu-link">Countries</span>
+                    <span class="caret"></span>
+                </div>
+                <div class="mobile-dropdown" id="countriesDropdown" style="display: none;">
+                        <a href="country.html?country=russia">Russia</a>
+                        <a href="country.html?country=georgia">Georgia</a>
+                        <a href="country.html?country=kazakhstan">Kazakhstan</a>
+                        <a href="country.html?country=kyrgyzstan">Kyrgyzstan</a>
+                        <a href="country.html?country=uzbekistan">Uzbekistan</a>
+                        <a href="country.html?country=nepal">Nepal</a>
+                        <a href="country.html?country=bangladesh">Bangladesh</a>
+                        <a href="country.html?country=india">India</a>
+                        <a href="#offers">View All Countries</a>
+                </div>
+            </div>
+            
+            <div class="mobile-menu-item">
+                <div class="mobile-menu-header" onclick="toggleDropdown('services')">
+                    <span class="mobile-menu-link">Services</span>
+                    <span class="caret"></span>
+                </div>
+                <div class="mobile-dropdown" id="servicesDropdown" style="display: none;">
+                    <a href="#admission">Admission Guidance</a>
+                    <a href="#visa">Visa Assistance</a>
+                    <a href="#scholarship">Scholarship Support</a>
+                    <a href="#accommodation">Accommodation Help</a>
+                    <a href="#services">View All Services</a>
+                </div>
+            </div>
+            
+            <div class="mobile-menu-item">
+                <a href="#" class="mobile-menu-link">Contact</a>
+            </div>
+            
+            <div class="mobile-menu-item">
+                <a href="#" class="mobile-menu-link" style="color: #6b5bff; font-weight: 600;">Get A Call</a>
+            </div>
+        </div>
+    </nav>
+
+
+<!-- Floating Social Sidebar -->
+<div class="social-sidebar">
+    <a href="https://www.instagram.com/rabbit_educounsel?igsh=MWJ4MWhrM2lzbWF2Yg==" target="_blank" class="social-icon instagram" title="Instagram">
+  <i class="fab fa-instagram"></i>
+  </a>
+  <a href="https://youtube.com/@rabbiteducounsel?si=Z91piGpZ_l69DYkX" target="_blank" class="social-icon youtube" title="YouTube">
+    <i class="fab fa-youtube"></i>
+  </a>
+  <a href="https://wa.me/message/TSIR7MA7456RI1" target="_blank" class="social-icon whatsapp" title="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+</div>
+
+<!-- ============================================
+     SPECIAL OFFERS SECTION (9 Cards with Show More)
+     ============================================ -->
+<section id="offers" class="offers-section">
+  <div class="container">
+    <h2>Explore MBBS Destinations</h2>
+    <p class="section-subtitle">Choose from top medical universities across 10+ countries with affordable fees and world-class education</p>
+
+    <!-- Offers Grid -->
+    <div class="offers-grid">
+      <!-- Card 1: India -->
+      <div class="offer-card">
+        <div class="offer-flag">
+          <img src="assets/images/flags/india.png" alt="India Flag">
+        </div>
+        <h3>India</h3>
+        <p class="offer-text">Explore India</p>
+        <a href="country.html?country=india" class="know-more-btn">Know More →</a>
+      </div>
+
+      <!-- Card 2: Russia -->
+      <div class="offer-card">
+        <div class="offer-flag">
+          <img src="assets/images/flags/russia.png" alt="Russia Flag">
+        </div>
+        <h3>Russia</h3>
+        <p class="offer-text">The most affordable place for your MBBS option</p>
+        <a href="country.html?country=russia" class="know-more-btn">Know More →</a>
+      </div>
+
+      <!-- Card 3: Kazakhstan -->
+      <div class="offer-card">
+        <div class="offer-flag">
+          <img src="assets/images/flags/kazakhstan.png" alt="Kazakhstan Flag">
+        </div>
+        <h3>Kazakhstan</h3>
+        <p class="offer-text">Explore Kazakhstan</p>
+        <a href="country.html?country=kazakhstan" class="know-more-btn">Know More →</a>
+      </div>
+
+      <!-- Hidden Cards (shown on "Show More") -->
+      <!-- Card 4: Kyrgyzstan -->
+      <div class="offer-card">
+        <div class="offer-flag">
+          <img src="assets/images/flags/kyrgyzstan.jpg" alt="Kyrgyzstan Flag">
+        </div>
+        <h3>Kyrgyzstan</h3>
+        <p class="offer-text">Explore Kyrgyzstan</p>
+        <a href="country.html?country=kyrgyzstan" class="know-more-btn">Know More →</a>
+      </div>
+
+      <!-- Card 5: Uzbekistan -->
+      <div class="offer-card hidden-offer">
+        <div class="offer-flag">
+          <img src="assets/images/flags/uzbekistan.jpg" alt="Uzbekistan Flag">
+        </div>
+        <h3>Uzbekistan</h3>
+        <p class="offer-text">Explore Uzbekistan</p>
+        <a href="country.html?country=uzbekistan" class="know-more-btn">Know More →</a>
+      </div>
+
+      <!-- Card 6: Nepal -->
+      <div class="offer-card hidden-offer">
+        <div class="offer-flag">
+          <img src="assets/images/flags/nepal.jpg" alt="Nepal Flag">
+        </div>
+        <h3>Nepal</h3>
+        <p class="offer-text">Explore Nepal</p>
+        <a href="country.html?country=nepal" class="know-more-btn">Know More →</a>
+      </div>
+
+      <!-- Card 7: Bangladesh -->
+      <div class="offer-card hidden-offer">
+        <div class="offer-flag">
+          <img src="assets/images/flags/bangladesh.jpg" alt="Bangladesh Flag">
+        </div>
+        <h3>Bangladesh</h3>
+        <p class="offer-text">Explore Bangladesh</p>
+        <a href="country.html?country=bangladesh" class="know-more-btn">Know More →</a>
+      </div>
+
+      <!-- Card 8: Georgia -->
+      <div class="offer-card hidden-offer">
+        <div class="offer-flag">
+          <img src="assets/images/flags/georgia.jpg" alt="georgia Flag">
+        </div>
+        <h3>georgia</h3>
+        <p class="offer-text">Explore Georgia</p>
+        <a href="country.html?country=georgia" class="know-more-btn">Know More →</a>
+      </div>
+  </div>
+</section>
+
+
+
+    <!-- CTA Section -->
+    <section class="cta-final">
+        <div class="container">
+            <h2>Ready to Start Your Medical Journey?</h2>
+            <p>Get free counseling from our experts and take the first step towards your dream of becoming a doctor.</p>
+            <div class="cta-buttons">
+                <button class="cta-button primary">Get Free Counselling</button>
+                <button class="cta-button secondary">View All Services</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Rabbit educounsel</h4>
+                    <p>Your partner in MBBS abroad admissions</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#offers">Destinations</a></li>
+                        <li><a href="#services">Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <p>Email: rabbiteducounsel@gmail.com</p>
+                    <p>Phone: +91 9773650085</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p><h2>&copy; 2026 Rabbit educounsel. All rights reserved.</h2></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/form-validation.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>

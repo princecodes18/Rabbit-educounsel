@@ -15,11 +15,16 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (countryKey && COUNTRY_DATA[countryKey]) {
         currentCountryData = COUNTRY_DATA[countryKey];
+        // Breadcrumb update
+const breadcrumbCountry = document.getElementById('breadcrumb-country');
+if (breadcrumbCountry && currentCountryData) {
+  breadcrumbCountry.textContent = currentCountryData.name;
+}
+
         loadCountryPage();
     } else {
-        // Default to Russia if no country specified
-        currentCountryData = COUNTRY_DATA['russia'];
-        loadCountryPage();
+        // No country specified → go to all countries page
+    window.location.href = "allcountry.html";
     }
     
     // Initialize other features
@@ -579,6 +584,8 @@ document.addEventListener("DOMContentLoaded", () => {
 const clone = card.cloneNode(true);
 clone.dataset.clone = "true";
 carousel.appendChild(clone);
+
+
 
 
 /* ============================================
