@@ -5,9 +5,8 @@
 
 /* HERO SECTION */
 .country-hero {
-  background:
-    linear-gradient(135deg, rgba(0,0,0,0.6), rgba(190,47,47,0.6));
-  color: var(--color-cream-100);
+  background:conic-gradient(from 90deg, #283015 0.000deg, #283015 120.000deg, #130a1e calc(120.000deg + 0.1deg),
+   #130a1e 240.000deg, #4f4a65 calc(240.000deg + 0.1deg) 360.000deg);
   padding: 80px var(--spacing-lg, 20px) 60px;
   text-align: center;
   position: relative;
@@ -45,14 +44,38 @@
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    border: 5px solid var(--color-cream-100);
+    border: 2px solid rgba(7, 7, 7, 0.45);
     display: flex;
     align-items: center;
     justify-content: center;
-    background: white;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+
+    /* Glass background */
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.4);
+
     flex-shrink: 0;
 }
+.country-flag {
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.country-flag:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.35),
+        inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+@supports not ((backdrop-filter: blur(10px))) {
+    .country-flag {
+        background: rgba(255, 255, 255, 0.85);
+    }
+}
+
 
 .country-flag img {
     width: 100px;
