@@ -1039,3 +1039,262 @@
   z-index: 9999; /* force on top */
 }
 
+/* ============================================
+   MEET OUR STARS SECTION (Infinite Carousel)
+   ============================================ */
+
+.stars-section {
+  padding: 80px var(--space-32);
+  background: #ffffff /*linear-gradient(135deg, #03045e 0%, #0096c7 100%)*/;
+}
+
+@media (max-width: 480px) {
+  .stars-section {
+    padding: 60px var(--space-16);
+  }
+}
+
+.stars-section h2 {
+  text-align: center;
+  margin-bottom: 48px;
+  font-size: var(--font-size-4xl);
+  color: #070707;
+  font-weight: var(--font-weight-bold);
+}
+
+/* Tabs/Filter Buttons */
+.stars-tabs {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-16);
+  margin-bottom: 64px;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  padding: var(--space-10) var(--space-24);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-full);
+  background: rgb(242, 46, 46);
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: all var(--duration-normal) var(--ease-standard);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.tab-btn:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.tab-btn.active {
+  background: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+}
+
+@media (max-width: 480px) {
+  .stars-tabs {
+    gap: var(--space-8);
+  }
+
+  .tab-btn {
+    padding: var(--space-8) var(--space-16);
+    font-size: 11px;
+  }
+}
+
+/* Carousel Wrapper */
+.stars-carousel-wrapper {
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  position: relative;
+}
+
+.stars-carousel {
+  display: flex;
+  gap: var(--space-24);
+  padding: var(--space-16);
+  flex-wrap: nowrap;
+  width: max-content;
+
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* Prevent shrinking */
+.student-card {
+  flex: 0 0 auto;
+}
+
+.stars-carousel {
+  touch-action: pan-y;
+}
+
+
+/* Responsive gaps */
+@media (max-width: 768px) {
+  .stars-carousel {
+    gap: var(--space-16);
+  }
+}
+
+@media (max-width: 480px) {
+  .stars-carousel {
+    gap: var(--space-12);
+  }
+}
+
+
+
+/* Student Card */
+.student-card {
+  flex: 0 0 280px;
+  background: rgb(196, 165, 111);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: all var(--duration-normal) var(--ease-standard);
+  cursor: pointer;
+}
+
+.student-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+@media (max-width: 768px) {
+  .student-card {
+    flex: 0 0 240px;
+  }
+}
+
+@media (max-width: 480px) {
+  .student-card {
+    flex: 0 0 200px;
+  }
+}
+
+/* Student Image */
+.student-image {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+  background: #f0f0f0;
+}
+
+.student-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--duration-normal) var(--ease-standard);
+}
+
+.student-card:hover .student-image img {
+  transform: scale(1.08);
+}
+
+@media (max-width: 768px) {
+  .student-image {
+    height: 240px;
+  }
+}
+
+@media (max-width: 480px) {
+  .student-image {
+    height: 200px;
+  }
+}
+
+/* Exam Badge */
+.exam-badge {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(2, 1, 25, 0.85);
+  color: rgb(242, 242, 247);
+  padding: var(--space-8) var(--space-12);
+  text-align: center;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+}
+
+@media (max-width: 480px) {
+  .exam-badge {
+    font-size: 11px;
+    padding: var(--space-6) var(--space-8);
+  }
+}
+
+/* Student Info */
+.student-info {
+  padding: var(--space-16);
+}
+
+.student-info h4 {
+  margin: 0 0 var(--space-8) 0;
+  font-size: var(--font-size-md);
+  color: var(--color-text);
+  font-weight: var(--font-weight-semibold);
+}
+
+@media (max-width: 768px) {
+  .student-info h4 {
+    font-size: var(--font-size-base);
+  }
+}
+
+@media (max-width: 480px) {
+  .student-info h4 {
+    font-size: 14px;
+  }
+}
+
+.course-type {
+  margin: 0 0 var(--space-12) 0;
+  font-size: var(--font-size-sm);
+  color: #070707;
+}
+
+@media (max-width: 480px) {
+  .course-type {
+    font-size: 11px;
+  }
+}
+
+.achievement {
+  margin: 0;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: #023714;
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+}
+
+.achievement i {
+  font-size: var(--font-size-sm);
+  color: #1eaa50;
+}
+
+@media (max-width: 480px) {
+  .achievement {
+    font-size: 14px;
+  }
+
+  .achievement i {
+    font-size: 10px;
+  }
+}
+
+/* Hide cards based on filter */
+.student-card.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}

@@ -465,6 +465,30 @@ let raf;
 let paused = false;
 const speed = 0.6;
 
+function filterStudentsForCountry(country) {
+  if (!country || country === "all") return;
+
+  const carousel = document.querySelector(".stars-carousel");
+  const cards = Array.from(carousel.children);
+
+  // Remove clones (important)
+  cards.forEach(card => {
+    if (card.dataset.clone === "true") card.remove();
+  });
+
+  // Filter original cards
+  cards.forEach(card => {
+    if (card.dataset.category !== country) {
+      card.remove();
+    }
+  });
+
+  // Disable infinite animation
+  carousel.style.animation = "none";
+  carousel.style.justifyContent = "center";
+}
+
+
 // Build infinite carousel from visible cards
 function setupCarousel() {
   cancelAnimationFrame(raf);
@@ -661,3 +685,30 @@ form.addEventListener("submit", () => {
   }, 1200);
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const studentCards = document.querySelectorAll(".student-card");
+  const tabBtns = document.querySelectorAll(".tab-btn");
+
+  // Get country from URL hash
+  const countryFromURL = window.location.hash.replace("#", "");
+
+  if (!countryFromURL) return;
+
+  // Activate correct tab if exists
+  tabBtns.forEach(btn => {
+    btn.classList.remove("active");
+    if (btn.dataset.filter === countryFromURL) {
+      btn.classList.add("active");
+    }
+  });
+
+  // Filter cards
+  studentCards.forEach(card => {
+    const category = card.dataset.category;
+    if (category === countryFromURL) {
+      card.classList.remove("hidden");
+    } else {
+      card.classList.add("hidden");
+    }
+  });
+});

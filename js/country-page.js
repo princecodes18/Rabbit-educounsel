@@ -570,6 +570,17 @@ function setupResponsiveTables() {
 // Initialize responsive tables after content loads
 setTimeout(setupResponsiveTables, 500);
 
+
+document.addEventListener("DOMContentLoaded", () => {
+  const country = window.location.hash.replace("#", "");
+  filterStudentsForCountry(country);
+});
+
+const clone = card.cloneNode(true);
+clone.dataset.clone = "true";
+carousel.appendChild(clone);
+
+
 /* ============================================
    EXPORT FUNCTIONS FOR GLOBAL USE
    ============================================ */
