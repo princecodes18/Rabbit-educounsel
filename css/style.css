@@ -2302,7 +2302,7 @@ button {
    ============================================ */
 
 .footer {
-  background:linear-gradient(45deg, #d9d9d9 , #cce3de );
+  background:linear-gradient(135deg, #d9d9d9 25%, #cce3de);
   color: #0c0c0c;
   padding: 24px ;
 }
@@ -2344,12 +2344,23 @@ button {
 }
 
 .footer-section ul {
-  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px 20px; /* row gap | column gap */
+  padding: 0;
+  margin: 0;
 }
 
 .footer-section ul li {
-  margin-bottom: var(--space-16);
+  list-style: none;
 }
+@supports not ((backdrop-filter: blur(10px))) {
+    .country-flag {
+        background: rgba(255, 255, 255, 0.85);
+    }
+}
+
+
 
 .footer-section a {
   color: #000000;
