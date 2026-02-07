@@ -366,76 +366,147 @@ const COUNTRY_DATA = {
         icon: "💰",
         title: "Low Cost Education",
         description: "Complete MBBS at just 12-20 Lakhs INR with affordable living costs and no donation fees"
-      },
-      {
-        icon: "🌍",
-        title: "Global Recognition",
-        description: "Degrees recognized by WHO, WDOMS, ECFMG, and eligible for FMGE/NMC screening examination"
-      },
-      {
-        icon: "🏥",
-        title: "Practical Training",
-        description: "Early clinical exposure with modern simulation labs and access to well-equipped teaching hospitals"
-      },
-      {
-        icon: "🍽️",
-        title: "Indian Community",
-        description: "Large Indian student community with Indian mess facilities and familiar food options available"
-      },
-      {
-        icon: "✈️",
-        title: "Simple Admission",
-        description: "Direct admission without entrance exam, quick visa processing, and hassle-free documentation"
       }
     ],
 
-    universities: [
-      {
-        id: "uni-1",
-        name: "Al-Farabi Kazakh National University",
-        logo: "assets/images/universities/alfarabi-logo.png",
-        location: "Almaty, Kazakhstan",
-        fees: "15-18",
-        duration: "6 Years",
-        recognition: "WHO, MCI approved",
-        about: "Al-Farabi Kazakh National University is the leading higher education institution in Kazakhstan, offering comprehensive medical programs with modern teaching methodologies.",
-        faculty: "Highly qualified international faculty with vast experience in medical education and research, ensuring quality teaching and mentorship.",
-        campus: "Modern campus with advanced medical laboratories, digital library, simulation centers, and comfortable hostel facilities with Indian mess options.",
-        studentLife: "Multicultural environment with students from over 50 countries, active student clubs, sports facilities, and dedicated support for international students.",
-        website: "https://www.kaznu.kz/en",
-        brochure: "assets/brochures/alfarabi-brochure.pdf"
-      },
-      {
-        id: "uni-2",
-        name: "Kazakh National Medical University",
-        logo: "assets/images/universities/knmu-logo.png",
-        location: "Almaty, Kazakhstan",
-        fees: "14-17",
-        duration: "6 Years",
-        recognition: "WHO, MCI approved",
-        about: "Kazakh National Medical University is one of the oldest and most prestigious medical universities in Central Asia with strong academic reputation.",
-        faculty: "Experienced medical professionals and academicians committed to providing quality education through modern teaching techniques and practical training.",
-        campus: "Well-equipped campus with modern infrastructure, affiliated teaching hospitals, research laboratories, and student-friendly accommodation facilities.",
-        studentLife: "Vibrant campus life with cultural events, academic seminars, sports activities, and strong Indian student association providing home-like environment.",
-        website: "https://kaznmu.kz/eng/",
-        brochure: "assets/brochures/knmu-brochure.pdf"
-      },
-      {
-        id: "uni-3",
-        name: "South Kazakhstan Medical Academy",
-        logo: "assets/images/universities/skma-logo.png",
-        location: "Shymkent, Kazakhstan",
-        fees: "12-15",
-        duration: "6 Years",
-        recognition: "WHO, MCI approved",
-        about: "South Kazakhstan Medical Academy offers quality medical education with emphasis on practical skills and clinical training in a supportive environment.",
-        faculty: "Dedicated teaching staff with international qualifications, focused on student success through personalized attention and comprehensive curriculum.",
-        campus: "Modern facilities including simulation labs, digital classrooms, well-stocked library, and comfortable hostels with Indian food availability.",
-        studentLife: "Friendly atmosphere for international students with cultural exchange programs, extracurricular activities, and excellent support services.",
-        website: "https://ukma.edu.kz",
-        brochure: "assets/brochures/skma-brochure.pdf"
-      }
-    ],
+universities: [
+  {
+    id: "uni-13",
+    name: "West Kazakhstan Marat Ospanov Medical University",
+    logo: "assets/images/universities/zkmu-logo.png",
+    location: "Aktobe, Kazakhstan",
+    fees: "20-24",
+    duration: "5 Years + 1 Year Internship",
+    recognition: "WHO, NMC, WFME, FAIMER approved",
+    about: "West Kazakhstan Marat Ospanov Medical University (formerly Aktobe State Medical Institute) traces its history back to 1957, when it was opened to provide qualified medical personnel for Western and North-Western Kazakhstan in the specialty General Medicine.[file:10] The institute marked the beginning of the development of medical education and medical science in this region, with its first teachers coming from leading medical institutions of the former USSR and the early creation of strong departments like normal anatomy and an anatomical museum considered one of the best among medical universities in Kazakhstan.[file:10]",
+    faculty: "The university has a long-established academic tradition with multiple departments created since its foundation in 1957 and experienced teaching staff that includes professors, associate professors and specialists trained in leading Soviet and Kazakh medical institutions.[file:10] Faculty are involved in training general practitioners through a structured MBBS/MD curriculum aligned with international standards and recognition bodies such as WHO, NMC, WFME and FAIMER.[file:10]",
+    campus: "Located in Aktobe, one of Kazakhstan’s largest industrial, business and cultural centers in Western Kazakhstan, the campus includes academic buildings, clinical bases and student hostels.[file:10] The city itself sits near major oil and gas fields and on key transport corridors connecting Europe and Central Asia, giving the university a strong regional role.[file:10]",
+    studentLife: "Hostels are available separately for boys and girls at about 300 USD per year, with 3–4 students sharing fully furnished heated rooms.[file:10] Facilities include 24x7 CCTV and security, constant internet access, common kitchens with cooking equipment, spaces for outdoor activities and an Indian mess for students.[file:10]",
+    website: "https://www.zkmu.kz",
+    brochure: "assets/brochures/zkmu-brochure.pdf"
+  },
+  {
+    id: "uni-14",
+    name: "Sh. Ualikhanov Kokshetau State University",
+    logo: "assets/images/universities/kgu-logo.png",
+    location: "Kokshetau, Kazakhstan",
+    fees: "18-22",
+    duration: "5 Years + 1 Year Internship",
+    recognition: "WHO, NMC approved",
+    about: "Sh. Ualikhanov Kokshetau State University is a major regional public university in northern Kazakhstan, formed in 1996 on the basis of long-established institutions including the Kokchetav Pedagogical Institute, the agricultural institute, teacher training institutes and a branch of Karaganda Technical Institute.[file:8] The university’s roots go back to 1962, making it one of the oldest higher education institutions in the northern region, and it has steadily expanded programmes from philology and physics-mathematics to chemistry, biology, computing, engineering, economics and more.[file:8] Its mission is to train highly qualified multilingual specialists who are in demand on national and international labour markets.[file:8]",
+    faculty: "The university has multiple faculties including philology, physics and mathematics, foreign languages, chemistry and biology, engineering and agricultural disciplines, supported by a large corps of professors, associate professors and candidates of sciences.[file:8] Leadership has included experienced rectors with strong academic and administrative backgrounds, and the university has introduced a three-tier system of education, credit technology and a quality management system certified under ISO 9001.[file:8]",
+    campus: "Kokshetau State University has several teaching and laboratory buildings, including major expansions commissioned in the 1980s and later, with facilities such as classrooms, laboratories, auditoriums, selection and seed-growing labs, NMR spectroscopy labs and an energy-saving technologies lab.[file:8] The campus is located at 76 Abay Street in Kokshetau, an important industrial and rail junction city with a sharply continental climate and scenic surroundings.[file:8]",
+    studentLife: "Students study in spacious classrooms and auditoriums equipped for large events, with central air conditioning, projection systems and sound systems.[file:8] The university library system provides extensive access to books and rare materials, while an Indian mess arranged by the international representative offers Indian-style food including pulses, vegetables, chapati, salad and rice with menus adjustable to student preferences.[file:8]",
+    website: "https://www.kgu.kz",
+    brochure: "assets/brochures/kgu-brochure.pdf"
+  },
+  {
+    id: "uni-15",
+    name: "Kazakh-Russian Medical University",
+    logo: "assets/images/universities/krmu-logo.png",
+    location: "Almaty, Kazakhstan",
+    fees: "22-28",
+    duration: "5 Years + 1 Year Internship",
+    recognition: "WHO, NMC approved",
+    about: "Kazakh-Russian Medical University is a private medical university founded in 1992 in Almaty, Kazakhstan, and is recognized as an NMC-approved institution offering MBBS to international students.[file:9][file:7] It focuses strongly on the adaptation, psychological support and professional formation of first-year students through a structured programme that develops educational, intellectual and creative potential.[file:9] The university promotes a corporate culture, social cooperation and ethnic tolerance while preparing students for medical careers.[file:9]",
+    faculty: "The university’s academic and support staff implement multi-block programmes (psychological, information, social and academic), including trainings in adaptation, self-actualization, ethnic tolerance, and seminars to support students from high-risk groups such as orphans or disabled students.[file:9] Teachers and curators work closely with first-year students through surveys, meetings, and curated hours to introduce them to the university’s history, traditions, rules and scientific community.[file:9]",
+    campus: "The campus in Almaty includes academic buildings on Torekulova Street, with lecture halls, classrooms and facilities for psychological trainings, social events and research activities.[file:9] University communications and information support are provided through the website, social media, information panels and the journal “Actual problems of theoretical and clinical medicine”.[file:9]",
+    studentLife: "Student life emphasizes psychological, social and academic adaptation, including festivals like Knowledge Day, creative evenings, dedications to students, contests, festivals and city-level events.[file:9] Social and financial assistance is provided to students with specific needs, and many opportunities exist for participation in cultural, sports, volunteer and scientific activities that integrate first-year students into campus life.[file:9] Hostel and mess fees for MBBS students generally run around 1,000 USD per year for hostel and about 130 USD per month for food, according to consultancy fee tables.[file:7]",
+    website: "https://krmu.edu.kz",
+    brochure: "assets/brochures/krmu-brochure.pdf"
+  },
+  {
+    id: "uni-16",
+    name: "West Kazakhstan Marat Ospanov Medical University (Fee Structure)",
+    logo: "assets/images/universities/zkmu-logo.png",
+    location: "Aktobe, Kazakhstan",
+    fees: "20-24",
+    duration: "5 Years + 1 Year Internship",
+    recognition: "WHO, NMC approved",
+    about: "According to the 2025–26 international MBBS fee plan, West Kazakhstan State Medical University offers a consistent tuition fee of 4,100 USD per year (about 30,00,000 Tenge) across the 5 academic years of the MBBS course.[file:7] The programme follows the new NMC guideline which mandates one year of internship in the same institution where the student is pursuing MBBS, with fees applicable for internship as well.[file:7]",
+    faculty: "Teaching is delivered by qualified medical faculty in multiple departments as per Kazakh standards, with instruction in English for international MBBS students and structured clinical training integrated in later years.[file:7][file:10]",
+    campus: "International students stay in university hostels (around 350 USD per year) and study in main academic buildings and affiliated hospitals of the university.[file:7][file:10] Services included via the consultancy arrangement cover visa extension, admission and invitation letters, medical insurance, police registration, medical check-up, translation, apostille of documents and airport pickup.[file:7]",
+    studentLife: "Students can opt for mess facilities at about 120 USD per month, and live in shared hostel rooms with basic amenities.[file:7] The fee package also includes support services over the study period, making it easier for Indian students to settle and focus on academics.[file:7]",
+    website: "https://www.zkmu.kz",
+    brochure: "assets/brochures/zkmu-fee-2025-brochure.pdf"
+  },
+  {
+    id: "uni-17",
+    name: "Kazakh National Medical University",
+    logo: "assets/images/universities/kaznmu-logo.png",
+    location: "Almaty, Kazakhstan",
+    fees: "28-34",
+    duration: "5 Years + 1 Year Internship",
+    recognition: "WHO, NMC approved",
+    about: "Kazakh National Medical University is one of the leading medical universities in Kazakhstan and offers an MBBS programme for international students with tuition fees of 5,800 USD per year for all 5 years as per the 2025–26 fee structure.[file:7] Hostel fees are 1,000 USD per year, and a one-time charge of 1,200 USD applies in the first year for administrative and processing expenses.[file:7]",
+    faculty: "The university has a large, experienced faculty with multiple specialties and a strong reputation nationally, delivering medical education aligned to global standards.[file:7]",
+    campus: "Campus facilities include academic buildings, clinical training bases and hostels for international students in Almaty.[file:7] Consultancy-packaged services provide visa extension, admission and invitation letters, insurance, medical check-up, police registration and airport pickup.[file:7]",
+    studentLife: "Hostel stay is supported with mess facilities at around 130 USD per month, and students benefit from structured support for visa, travel and settlement.[file:7] The university environment in Almaty offers a major-city lifestyle with access to cultural and recreational activities.[file:7]",
+    website: "https://kaznmu.kz",
+    brochure: "assets/brochures/kaznmu-brochure.pdf"
+  },
+  {
+    id: "uni-18",
+    name: "Astana Medical University",
+    logo: "assets/images/universities/amu-logo.png",
+    location: "Astana, Kazakhstan",
+    fees: "24-30",
+    duration: "5 Years + 1 Year Internship",
+    recognition: "WHO, NMC approved",
+    about: "Astana Medical University in the capital city offers MBBS to international students with annual tuition of 5,300 USD for each of the 5 years in the 2025–26 intake.[file:7] Hostel fees are 1,000 USD per year and a one-time charge of 1,400 USD is payable in the first year, covering university and processing costs.[file:7]",
+    faculty: "The university employs qualified teaching staff in core clinical and pre-clinical departments and runs an English-medium MBBS curriculum for international students.[file:7]",
+    campus: "Students study in Astana’s medical campus with access to modern teaching facilities and affiliated hospitals, and reside in university hostels included in the fee tables.[file:7]",
+    studentLife: "Mess charges are around 130 USD per month, and services such as visa extension, insurance, airport pickup and document processing are packaged by the consultancy in the first-year costs.[file:7]",
+    website: "https://amu.kz",
+    brochure: "assets/brochures/amu-brochure.pdf"
+  },
+  {
+    id: "uni-19",
+    name: "Al-Farabi Kazakh National University (Faculty of Medicine & Health Care)",
+    logo: "assets/images/universities/alfarabi-kaznu-logo.png",
+    location: "Almaty, Kazakhstan",
+    fees: "22-28",
+    duration: "5 Years + 1 Year Internship",
+    recognition: "WHO, NMC approved",
+    about: "Al-Farabi Kazakh National University, through its medical and health-care faculty, offers an MBBS-equivalent programme with annual tuition of 4,900 USD as per the 2025–26 fee structure.[file:7] Hostel fees are 1,000 USD annually and a one-time charge of 1,400 USD applies in the first year for administrative services.[file:7]",
+    faculty: "The university is a flagship national institution with strong academic staff and research culture, extending its expertise into medical training for international students.[file:7]",
+    campus: "The large Al-Farabi campus in Almaty offers extensive academic, research and hostel infrastructure for international MBBS students.[file:7]",
+    studentLife: "Students typically pay about 130 USD per month for mess services and benefit from comprehensive support with visas, registration and local settlement during their studies.[file:7]",
+    website: "https://www.kaznu.kz",
+    brochure: "assets/brochures/alfarabi-med-brochure.pdf"
+  },
+  {
+    id: "uni-20",
+    name: "Semey Medical University",
+    logo: "assets/images/universities/semey-logo.png",
+    location: "Semey, Kazakhstan",
+    fees: "20-24",
+    duration: "5 Years + 1 Year Internship",
+    recognition: "WHO, NMC approved",
+    about: "Semey Medical University offers MBBS to international students with tuition of 4,100 USD per year across all 5 academic years.[file:7] Hostel fees are 800 USD annually and a one-time charge of 2,000 USD applies in the first year for administrative and processing services.[file:7]",
+    faculty: "Semey Medical University has an established teaching staff and provides structured medical education matching Kazakh national standards for physicians.[file:7]",
+    campus: "The campus in Semey includes teaching buildings, clinical bases and student hostels supported by consultancy services for foreign students.[file:7]",
+    studentLife: "Mess expenses are roughly 130 USD per month, and students receive assistance with visa extension, medical insurance, document translation and airport transfers as part of the first-year package.[file:7]",
+    website: "https://semeymedicaluniversity.kz",
+    brochure: "assets/brochures/semey-brochure.pdf"
+  },
+  {
+    id: "uni-21",
+    name: "South Kazakhstan Medical Academy",
+    logo: "assets/images/universities/skma-kz-logo.png",
+    location: "Shymkent, Kazakhstan",
+    fees: "20-24",
+    duration: "5 Years + 1 Year Internship",
+    recognition: "WHO, NMC approved",
+    about: "South Kazakhstan Medical Academy (SKMA) provides MBBS programmes with first-year tuition of 4,400 USD followed by 3,800 USD per year for years 2–5 according to the 2025–26 structure.[file:7] Hostel fees are 800 USD per year and a one-time charge of 1,200 USD is due in the first year for administrative and support services.[file:7]",
+    faculty: "The academy employs qualified specialists across clinical and pre-clinical departments and conducts MBBS in English for international students.[file:7]",
+    campus: "Located in Shymkent, SKMA has academic buildings and hostels used by foreign students, with services coordinated via consultancy partners.[file:7]",
+    studentLife: "Students pay about 120 USD per month for mess, and benefit from bundled services including visa extension, insurance, police registration, medical check-up and airport reception.[file:7]",
+    website: "https://skma.edu.kz",
+    brochure: "assets/brochures/skma-kz-brochure.pdf"
+  }
+],
+
 
     eligibility: [
       "Minimum 50% marks in PCB in 12th grade (40% for reserved categories)",
@@ -512,11 +583,11 @@ const COUNTRY_DATA = {
 
   kyrgyzstan: {
     name: "Kyrgyzstan",
-    flag: "assets/images/flags/kyrgyzstan-flag.png",
+    flag: "assets/images/flags/kyrgyzstan.jpg",
     heroTitle: "MBBS in Kyrgyzstan",
     heroDescription: "Budget-Friendly Medical Education with WHO Recognition and Quality Infrastructure",
 
-    backgroundImage: "assets/images/countries/kyrgyzstan-bg.jpg",
+    backgroundImage: "assets/images/monuments/kyrgyzstan.jpg",
     backgroundTitle: "Affordable Medical Education in Kyrgyzstan",
     backgroundDescription: "Study MBBS in the heart of Central Asia with low fees, English medium instruction, and beautiful mountain landscapes",
 
@@ -530,26 +601,6 @@ const COUNTRY_DATA = {
         icon: "💰",
         title: "Most Affordable",
         description: "Complete MBBS at just 10-18 Lakhs INR, one of the lowest fees globally for quality medical education"
-      },
-      {
-        icon: "🌍",
-        title: "International Recognition",
-        description: "Degrees recognized worldwide, eligible for FMGE/NMC screening and USMLE examinations"
-      },
-      {
-        icon: "🏥",
-        title: "Hands-on Training",
-        description: "Extensive clinical exposure from first year with modern laboratories and affiliated hospitals"
-      },
-      {
-        icon: "🍽️",
-        title: "Indian Friendly",
-        description: "Large Indian student population, Indian mess facilities, and vegetarian food easily available"
-      },
-      {
-        icon: "✈️",
-        title: "Easy Process",
-        description: "No entrance exam required, simple admission, quick visa processing, and direct university admission"
       }
     ],
 
@@ -570,35 +621,20 @@ const COUNTRY_DATA = {
   brochure: "assets/brochures/iusm-brochure.pdf"
 },
       {
-        id: "uni-2",
-        name: "Osh State University",
-        logo: "assets/images/universities/osu-logo.png",
-        location: "Osh, Kyrgyzstan",
-        fees: "11-14",
-        duration: "6 Years",
-        recognition: "WHO, MCI approved",
-        about: "Osh State University Medical Faculty offers quality medical education with focus on practical skills and affordable fees in a safe environment.",
-        faculty: "Qualified teaching staff dedicated to student success with emphasis on clinical training and evidence-based medical education.",
-        campus: "Well-maintained campus with modern facilities, teaching hospitals for clinical practice, library, and comfortable accommodation.",
-        studentLife: "Welcoming environment for international students with active student associations, cultural programs, and recreational facilities.",
-        website: "https://oshsu.kg/en",
-        brochure: "assets/brochures/osu-brochure.pdf"
-      },
-      {
-        id: "uni-3",
-        name: "Asian Medical Institute",
-        logo: "assets/images/universities/ami-logo.png",
-        location: "Kant, Kyrgyzstan",
-        fees: "10-13",
-        duration: "6 Years",
-        recognition: "WHO, MCI approved",
-        about: "Asian Medical Institute is a growing medical university offering modern medical education with international standards at very affordable fees.",
-        faculty: "Young and dynamic faculty with modern teaching approaches, committed to providing quality education and mentorship.",
-        campus: "New campus with contemporary facilities, advanced laboratories, modern hostels, and Indian food options readily available.",
-        studentLife: "Growing Indian student community with supportive environment, cultural activities, and peaceful surroundings for focused studies.",
-        website: "https://ami.kg",
-        brochure: "assets/brochures/ami-brochure.pdf"
-      }
+  id: "uni-23",
+  name: "Avicenna International Medical University (AIMU)",
+  logo: "assets/images/colleges/aimu-kyr.jpeg",
+  location: "Bishkek, Kyrgyzstan",
+  fees: "13-18",
+  duration: "5 Years (MBBS/MD) + Clinical Internship",
+  recognition: "WHO, WDOMS (as per NMC FMGL 2021), WFME, ECFMG, IFMSA, AMSE, Medical Councils of Canada, Pakistan & Bangladesh approved",
+  about: "Avicenna International Medical University is an international medical university in Bishkek registered with the Ministry of Justice, Ministry of Education, and Ministry of Health of the Kyrgyz Republic, holding a T‑license in higher professional education at Avenue Shabdan Batir 74.[file:12] It offers a 5‑year General Medicine (MBBS/MD) programme in English with over 2,000 international students from India, Pakistan, Nepal, Nigeria, Egypt, Turkey, the USA and other countries, and also runs colleges for Pharmacy, Nursing and Dentistry with more than 1,500 students.[file:12] AIMU provides full professional medical education so that graduates can continue into residency or master’s programmes in Kyrgyzstan or abroad and is increasingly popular due to competitive education quality and liberal study costs.[file:12]",
+  faculty: "AIMU’s teaching staff includes 89 Doctors of Science, 327 PhDs, a corresponding member of the Kyrgyz Academy of Medical Sciences, 2 honoured scientists, 7 honoured physicians, 38 holders of ‘excellent practical medicine’ awards, and 40 members of national and international academies.[file:12] Faculty achievements include over 5,500 research publications in the last 5 years, 94 monographs in 10 years, and multiple medals at international exhibitions, and many teachers are members of professional societies who actively participate in congresses and symposia.[file:12] Leadership includes Rector A.T. Baigazakov and Vice‑Rector Amirayev Ruslan, who emphasise whole‑person education, research, and strong academic support for students; the Dean, Madina Bardibekova, focuses on values like service, collaboration, excellence, compassion and equity.[file:12]",
+  campus: "The university has two campuses in Bishkek equipped with modern infrastructure, state‑of‑the‑art buildings, multimedia‑enabled classrooms, five IT classrooms, a mobile laptop classroom and library IT facilities.[file:12] Teaching facilities for the School of Medicine and Dental Medicine include seminar rooms with multimedia tools, modern labs and simulation resources, while the Avicenna Teaching Hospital and multiple attached hospitals support both fundamental and applied research and clinical training.[file:12] Attached hospitals for practical training include Issyk‑Ata Region Hospital, Traumatology & Orthopedic Hospital No. 4, Issyk‑Ata Central Hospital, Alamadin Hospital, City Clinical Hospital No. 6, Surgical Hospitals No. 1 and Mamakeeva, Obs & Gynae Hospital No. 2, Tentishev Memorial Polyclinic and the Department of Forensic Medicine.[file:12]",
+  studentLife: "AIMU hosts over 2,000 international students in a bright, vibrant environment with architecturally designed buildings and world‑class infrastructure across campuses and key sites in Bishkek.[file:12] Separate hostels for boys and girls provide ‘home away from home’ accommodation in a five‑storey complex with blocks containing toilets, wash basins, kitchens on each floor, plus Indian food options, ensuring comfort and safety for outstation students.[file:12] Students undergo extensive hospital practical practice from early years, annual winter and summer practicals, and a heavily clinical 6th year (8 weeks pre‑medicine, 28 weeks hospital medicine), helping them adapt to real‑world hospital settings and build confidence in diagnosis and treatment.[file:12] The university also runs in‑campus MCI/NEXT coaching with highly qualified Indian professors, and showcases many successful FMGE/NEXT first‑attempt passers and rich student life through events, official tours, freshers and graduation parties, and cultural activities.[file:12]",
+  website: "https://www.avicennaedu.kg",
+  brochure: "assets/brochures/aimu-avicenna-brochure.pdf"
+}
     ],
 
     eligibility: [
@@ -1192,15 +1228,15 @@ const COUNTRY_DATA = {
     }
   },
 
-  china: {
-    name: "China",
-    flag: "assets/images/flags/china-flag.png",
-    heroTitle: "MBBS in China",
+  georgia: {
+    name: "Georgia",
+    flag: "assets/images/flags/georgia.jpg",
+    heroTitle: "MBBS in Georgia",
     heroDescription: "World-Class Medical Education in Asia's Powerhouse with Modern Infrastructure and Global Recognition",
 
-    backgroundImage: "assets/images/countries/china-bg.jpg",
-    backgroundTitle: "Study MBBS in China",
-    backgroundDescription: "Experience cutting-edge medical education in China with WHO-approved universities, English medium teaching, and international exposure",
+    backgroundImage: "assets/images/monuments/georgia1.jpg",
+    backgroundTitle: "Study MBBS in Georgia",
+    backgroundDescription: "Experience cutting-edge medical education in Georgia with WHO-approved universities, English medium teaching, and international exposure",
 
     benefits: [
       {
@@ -1212,75 +1248,25 @@ const COUNTRY_DATA = {
         icon: "💰",
         title: "Competitive Fees",
         description: "Quality education at 20-40 Lakhs INR with excellent infrastructure and teaching facilities"
-      },
-      {
-        icon: "🌍",
-        title: "Global Exposure",
-        description: "International curriculum, students from 100+ countries, and opportunities for global medical practice"
-      },
-      {
-        icon: "🏥",
-        title: "Advanced Training",
-        description: "State-of-the-art simulation labs, modern teaching hospitals, and latest medical technology for training"
-      },
-      {
-        icon: "🍽️",
-        title: "International Environment",
-        description: "Indian and international cuisine available, diverse student community, and comfortable hostel living"
-      },
-      {
-        icon: "✈️",
-        title: "Scholarship Opportunities",
-        description: "Chinese Government Scholarships available for meritorious students, structured admission process"
       }
     ],
 
     universities: [
       {
-        id: "uni-1",
-        name: "Peking University Health Science Center",
-        logo: "assets/images/universities/puhsc-logo.png",
-        location: "Beijing, China",
-        fees: "35-40",
-        duration: "6 Years",
-        recognition: "WHO, WDOMS, ECFMG approved",
-        about: "Peking University Health Science Center is one of China's top medical schools, ranked among best in Asia with world-class facilities and research opportunities.",
-        faculty: "Internationally renowned faculty with extensive research publications, clinical expertise, and commitment to excellence in medical education.",
-        campus: "Outstanding infrastructure with cutting-edge research laboratories, comprehensive medical libraries, affiliated hospitals, and modern student accommodation.",
-        studentLife: "Vibrant international community with students from over 70 countries, cultural activities, sports facilities, and excellent support for international students.",
-        website: "https://english.bjmu.edu.cn",
-        brochure: "assets/brochures/puhsc-brochure.pdf"
-      },
-      {
-        id: "uni-2",
-        name: "Fudan University Shanghai Medical College",
-        logo: "assets/images/universities/fudan-logo.png",
-        location: "Shanghai, China",
-        fees: "32-38",
-        duration: "6 Years",
-        recognition: "WHO, WDOMS, ECFMG approved",
-        about: "Fudan University Shanghai Medical College is a prestigious institution offering comprehensive medical education with focus on research and clinical excellence.",
-        faculty: "Distinguished professors and clinicians with international training and recognition, dedicated to producing competent medical professionals.",
-        campus: "World-class facilities including advanced simulation centers, modern teaching hospitals, extensive library resources, and comfortable international student dormitories.",
-        studentLife: "Dynamic environment in cosmopolitan Shanghai with diverse student body, cultural exchange opportunities, and excellent amenities.",
-        website: "https://shmc.fudan.edu.cn/eng",
-        brochure: "assets/brochures/fudan-brochure.pdf"
-      },
-      {
-        id: "uni-3",
-        name: "China Medical University",
-        logo: "assets/images/universities/cmu-logo.png",
-        location: "Shenyang, China",
-        fees: "25-32",
-        duration: "6 Years",
-        recognition: "WHO, WDOMS, ECFMG approved",
-        about: "China Medical University is a well-established medical university with strong international program and good track record of training international doctors.",
-        faculty: "Experienced teaching staff with specialization in various medical fields, committed to quality education through English medium instruction.",
-        campus: "Comprehensive medical university with modern facilities, affiliated hospitals for clinical training, well-stocked library, and good hostel facilities.",
-        studentLife: "Large international student community with support services, cultural programs, and comfortable living environment conducive to studies.",
-        website: "http://www.cmu.edu.cn/en",
-        brochure: "assets/brochures/cmu-brochure.pdf"
-      }
+  id: "uni-22",
+  name: "East West University",
+  logo: "assets/images/colleges/georgia.jpeg",
+  location: "Tbilisi, Georgia",
+  fees: "18-25",
+  duration: "6 Years",
+  recognition: "WHO, NMC, WFME, FAIMER, ECFMG, ASME approved; listed in WDOMS",
+  about: "East West University in Tbilisi is an emerging choice for Indian students seeking a globally recognized MBBS/MD degree at affordable cost, combining modern infrastructure, student‑friendly environment, and transparent academic processes.[file:11] Located in the heart of Georgia’s capital, it offers a 6‑year English‑medium medical programme aligned with European standards and NMC guidelines, with its own teaching hospital and 15+ clinical tie‑ups across government and private hospitals in Georgia for early and intensive clinical exposure.[file:11] The university has already graduated multiple batches of Indian students, many of whom have cleared FMGE/MCI Screening Test in their first attempt, and provides structured support for licensing exams such as NEXT, USMLE and PLAB.[file:11]",
+  faculty: "Teaching is delivered by international expert faculties combining academic rigor with practical training and modern teaching methods in simulation labs and digital classrooms.[file:11] The President, Giorgi Khurodze, highlights a strong focus on integrating rigorous coursework with hands‑on clinical experience, supported by advanced simulation centres, university clinics, and a dedicated faculty and staff network aimed at academic excellence and personal growth.[file:11]",
+  campus: "The campus in central Tbilisi features state‑of‑the‑art laboratories, simulation rooms, and digital classrooms, along with a fully functional teaching hospital and official partnerships with more than 15 clinical sites across Georgia.[file:11] Facilities include a big library, spacious classrooms, world‑class infrastructure, quality accommodation and Indian mess, all within a safe urban environment that benefits from Georgia’s pleasant climate, affordable cost of living, and easy connectivity via Tbilisi International Airport.[file:11]",
+  studentLife: "Campus life is described as healthy, safe and vibrant, with numerous extracurricular options including sports events, multicultural and multinational events, student unions, and country‑based student groups.[file:11] Students enjoy a multicultural environment, opportunities for innovation and culture, easy access to Indian restaurants and mess, cheap public transport, and the general safety and friendliness of Georgia, which allows even part‑time work for students under local regulations.[file:11]",
+  website: "https://www.ewuni.ge",
+  brochure: "assets/brochures/ewu-georgia-brochure.pdf"
+}
     ],
 
     eligibility: [
@@ -1305,7 +1291,7 @@ const COUNTRY_DATA = {
         "Parents' Passport copies"
       ],
       additional: [
-        "Foreigner Physical Examination Form (completed in China)",
+        "Foreigner Physical Examination Form (completed in Georgia)",
         "No Criminal Record Certificate",
         "Financial Guarantee/Bank Statement",
         "COVID-19 Vaccination Certificate",
