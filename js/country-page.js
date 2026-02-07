@@ -8,25 +8,25 @@ console.log("script loaded");
 
 let currentCountryData = null;
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Get country from URL parameter
     const urlParams = new URLSearchParams(window.location.search);
     const countryKey = urlParams.get('country');
-    
+
     if (countryKey && COUNTRY_DATA[countryKey]) {
         currentCountryData = COUNTRY_DATA[countryKey];
         // Breadcrumb update
-const breadcrumbCountry = document.getElementById('breadcrumb-country');
-if (breadcrumbCountry && currentCountryData) {
-  breadcrumbCountry.textContent = currentCountryData.name;
-}
+        const breadcrumbCountry = document.getElementById('breadcrumb-country');
+        if (breadcrumbCountry && currentCountryData) {
+            breadcrumbCountry.textContent = currentCountryData.name;
+        }
 
         loadCountryPage();
     } else {
         // No country specified → go to all countries page
-    window.location.href = "allcountry.html";
+        window.location.href = "allcountry.html";
     }
-    
+
     // Initialize other features
     initializeModalHandlers();
     initializeScrollAnimations();
@@ -38,10 +38,10 @@ if (breadcrumbCountry && currentCountryData) {
 
 function loadCountryPage() {
     if (!currentCountryData) return;
-    
+
     // Update page title
     document.title = currentCountryData.heroTitle + " - Rabbit Educounsel";
-    
+
     // Load all sections
     loadHeroSection();
     loadBenefitsSection();
@@ -52,7 +52,7 @@ function loadCountryPage() {
     loadAdmissionProcessSection();
     loadFeeComparisonSection();
     loadCTASection();
-    
+
     console.log('Country page loaded for:', currentCountryData.name);
 }
 
@@ -80,10 +80,10 @@ heroSection.style.backgroundImage = `
 
 function loadBenefitsSection() {
     document.getElementById('why-study-title').textContent = `Why Study MBBS in ${currentCountryData.name}?`;
-    
+
     const container = document.getElementById('benefits-container');
     container.innerHTML = '';
-    
+
     currentCountryData.benefits.forEach(benefit => {
         const card = document.createElement('div');
         card.className = 'benefit-card';
@@ -102,7 +102,7 @@ function loadBenefitsSection() {
 function loadBackgroundSection() {
     const section = document.getElementById('country-bg-section');
     section.style.backgroundImage = `linear-gradient(135deg, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('${currentCountryData.backgroundImage}')`;
-    
+
     document.getElementById('bg-title').textContent = currentCountryData.backgroundTitle;
     document.getElementById('bg-description').textContent = currentCountryData.backgroundDescription;
 }
@@ -113,13 +113,13 @@ function loadBackgroundSection() {
 
 function loadUniversitiesSection() {
     document.getElementById('universities-title').textContent = `Top Medical Universities in ${currentCountryData.name}`;
-    
+
     // Load filter buttons
     loadUniversityFilters();
-    
+
     // Load university cards
     loadUniversityCards();
-    
+
     // Load university modals
     loadUniversityModals();
 }
@@ -127,7 +127,7 @@ function loadUniversitiesSection() {
 function loadUniversityFilters() {
     const filtersContainer = document.getElementById('universityFilters');
     filtersContainer.innerHTML = '';
-    
+
     currentCountryData.universities.forEach(uni => {
         const btn = document.createElement('button');
         btn.className = 'uni-filter-btn';
@@ -140,7 +140,7 @@ function loadUniversityFilters() {
 function loadUniversityCards() {
     const container = document.getElementById('universities-container');
     container.innerHTML = '';
-    
+
     currentCountryData.universities.forEach((uni, index) => {
         const card = document.createElement('div');
         card.className = 'university-card';
@@ -168,7 +168,7 @@ function loadUniversityCards() {
 function loadUniversityModals() {
     const container = document.getElementById('modals-container');
     container.innerHTML = '';
-    
+
     currentCountryData.universities.forEach((uni, index) => {
         const modal = document.createElement('div');
         modal.id = `modal-${index}`;
@@ -219,7 +219,7 @@ function loadUniversityModals() {
 function loadEligibilitySection() {
     const list = document.getElementById('eligibility-list');
     list.innerHTML = '';
-    
+
     currentCountryData.eligibility.forEach(item => {
         const li = document.createElement('li');
         li.textContent = '✓ ' + item;
@@ -234,22 +234,22 @@ function loadEligibilitySection() {
 function loadDocumentsSection() {
     const container = document.getElementById('documents-container');
     container.innerHTML = '';
-    
+
     const documentTypes = [
         { key: 'academic', icon: 'fa-graduation-cap', title: 'Academic' },
         { key: 'identity', icon: 'fa-passport', title: 'Identity' },
         { key: 'additional', icon: 'fa-file-alt', title: 'Additional' }
     ];
-    
+
     documentTypes.forEach(type => {
         const card = document.createElement('div');
         card.className = 'document-card';
-        
+
         let docList = '';
         currentCountryData.documents[type.key].forEach(doc => {
             docList += `<li>${doc}</li>`;
         });
-        
+
         card.innerHTML = `
             <i class="fas ${type.icon}"></i>
             <h3>${type.title}</h3>
@@ -266,7 +266,7 @@ function loadDocumentsSection() {
 function loadAdmissionProcessSection() {
     const container = document.getElementById('process-container');
     container.innerHTML = '';
-    
+
     currentCountryData.admissionProcess.forEach(step => {
         const stepDiv = document.createElement('div');
         stepDiv.className = 'process-step';
@@ -286,45 +286,45 @@ function loadAdmissionProcessSection() {
 function loadFeeComparisonSection() {
     document.getElementById('fee-title').textContent = 'Fee Structure & Comparison';
     document.getElementById('country-column-header').textContent = `MBBS in ${currentCountryData.name}`;
-    
+
     const tbody = document.getElementById('fee-comparison-body');
     tbody.innerHTML = '';
-    
+
     const comparison = currentCountryData.feeComparison;
-    
+
     const rows = [
-        { 
-            label: 'Total Course Cost', 
-            country: `INR ${comparison.totalCost} Lakhs`, 
-            india: 'INR 25-100 Lakhs' 
+        {
+            label: 'Total Course Cost',
+            country: `INR ${comparison.totalCost} Lakhs`,
+            india: 'INR 25-100 Lakhs'
         },
-        { 
-            label: 'Medium of Teaching', 
-            country: comparison.mediumOfTeaching, 
-            india: 'English + Regional' 
+        {
+            label: 'Medium of Teaching',
+            country: comparison.mediumOfTeaching,
+            india: 'English + Regional'
         },
-        { 
-            label: 'Practical Training', 
-            country: comparison.practicalTraining, 
-            india: 'Later in course' 
+        {
+            label: 'Practical Training',
+            country: comparison.practicalTraining,
+            india: 'Later in course'
         },
-        { 
-            label: 'Living Cost/Month', 
-            country: `INR ${comparison.livingCost}`, 
-            india: 'INR 10,000-25,000' 
+        {
+            label: 'Living Cost/Month',
+            country: `INR ${comparison.livingCost}`,
+            india: 'INR 10,000-25,000'
         },
-        { 
-            label: 'Global Recognition', 
-            country: comparison.globalRecognition, 
-            india: 'Limited recognition' 
+        {
+            label: 'Global Recognition',
+            country: comparison.globalRecognition,
+            india: 'Limited recognition'
         },
-        { 
-            label: 'Hostel & Mess', 
-            country: comparison.hostelMess, 
-            india: 'Varies by college' 
+        {
+            label: 'Hostel & Mess',
+            country: comparison.hostelMess,
+            india: 'Varies by college'
         }
     ];
-    
+
     rows.forEach(row => {
         const tr = document.createElement('tr');
         tr.innerHTML = `
@@ -341,7 +341,7 @@ function loadFeeComparisonSection() {
    ============================================ */
 
 function loadCTASection() {
-    document.getElementById('cta-description').textContent = 
+    document.getElementById('cta-description').textContent =
         `Get free expert counseling and begin your path to studying MBBS in ${currentCountryData.name} today`;
 }
 
@@ -351,7 +351,7 @@ function loadCTASection() {
 
 function scrollToUniversity(uniId, btnElement) {
     const uniCard = document.getElementById(uniId);
-    
+
     if (!uniCard) {
         console.warn(`University card with id "${uniId}" not found`);
         return;
@@ -360,7 +360,7 @@ function scrollToUniversity(uniId, btnElement) {
     // Get navbar height to account for fixed positioning
     const navbar = document.querySelector('.rabbit-navbar');
     const navbarHeight = navbar ? navbar.offsetHeight : 70;
-    
+
     // Calculate position
     const cardPosition = uniCard.getBoundingClientRect().top + window.pageYOffset;
     const scrollPosition = cardPosition - navbarHeight - 20;
@@ -399,7 +399,7 @@ function updateActiveFilterButton(activeBtn) {
 function highlightCard(card) {
     card.style.transform = 'scale(1.03)';
     card.style.boxShadow = '0 12px 30px rgba(33, 128, 141, 0.3)';
-    
+
     setTimeout(() => {
         card.style.transform = '';
         card.style.boxShadow = '';
@@ -411,13 +411,13 @@ function highlightCard(card) {
    ============================================ */
 
 function initializeModalHandlers() {
-    window.onclick = function(event) {
+    window.onclick = function (event) {
         if (event.target.classList.contains('modal')) {
             closeModal(event.target.id);
         }
     };
 
-    document.addEventListener('keydown', function(event) {
+    document.addEventListener('keydown', function (event) {
         if (event.key === 'Escape') {
             closeAllModals();
         }
@@ -426,7 +426,7 @@ function initializeModalHandlers() {
 
 function openModal(modalId) {
     const modal = document.getElementById(modalId);
-    
+
     if (!modal) {
         console.warn(`Modal with id "${modalId}" not found`);
         return;
@@ -438,7 +438,7 @@ function openModal(modalId) {
 
 function closeModal(modalId) {
     const modal = document.getElementById(modalId);
-    
+
     if (!modal) {
         console.warn(`Modal with id "${modalId}" not found`);
         return;
@@ -460,57 +460,57 @@ function closeAllModals() {
    OPEN INTEREST FORM (GOOGLE FORM)
    ============================================ */
 function openInterestForm(uniName) {
-  const modal = document.getElementById("interestModal");
-  modal.classList.add("show");
-  document.getElementById("uniField").value = uniName;
+    const modal = document.getElementById("interestModal");
+    modal.classList.add("show");
+    document.getElementById("uniField").value = uniName;
 
-  if (typeof gtag !== 'undefined') {
-    gtag('event', 'interest_form_click', {
-      university_name: uniName,
-      country: currentCountryData.name
-    });
-  }
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'interest_form_click', {
+            university_name: uniName,
+            country: currentCountryData.name
+        });
+    }
 }
 
 function closeInterestForm() {
-  document.getElementById("interestModal").classList.remove("show");
+    document.getElementById("interestModal").classList.remove("show");
 }
 document.getElementById("interestModal").addEventListener("click", e => {
-  if (e.target.id === "interestModal") closeInterestForm();
+    if (e.target.id === "interestModal") closeInterestForm();
 });
 
 
 document.addEventListener("keydown", e => {
-  if (e.key === "Escape") closeInterestForm();
+    if (e.key === "Escape") closeInterestForm();
 });
 
-document.getElementById("interestForm").addEventListener("submit", function(e) {
-  e.preventDefault();
+document.getElementById("interestForm").addEventListener("submit", function (e) {
+    e.preventDefault();
 
-  const btn = document.getElementById("interestSubmit");
-  const success = document.querySelector(".form-success");
+    const btn = document.getElementById("interestSubmit");
+    const success = document.querySelector(".form-success");
 
-  btn.classList.add("loading");
-  btn.disabled = true;
+    btn.classList.add("loading");
+    btn.disabled = true;
 
-  fetch("https://docs.google.com/forms/d/e/YOUR_FORM_ID/formResponse", {
-    method: "POST",
-    mode: "no-cors",
-    body: new FormData(this)
-  });
-
-  setTimeout(() => {
-    btn.classList.remove("loading");
-    success.style.display = "block";
-    this.reset();
+    fetch("https://docs.google.com/forms/d/e/YOUR_FORM_ID/formResponse", {
+        method: "POST",
+        mode: "no-cors",
+        body: new FormData(this)
+    });
 
     setTimeout(() => {
-      closeInterestForm();
-      success.style.display = "none";
-      btn.disabled = false;
-    }, 2000);
+        btn.classList.remove("loading");
+        success.style.display = "block";
+        this.reset();
 
-  }, 1200);
+        setTimeout(() => {
+            closeInterestForm();
+            success.style.display = "none";
+            btn.disabled = false;
+        }, 2000);
+
+    }, 1200);
 });
 
 
@@ -530,7 +530,7 @@ function toggleDropdown(dropdownId) {
     if (dropdown) {
         const isVisible = dropdown.style.display === 'block';
         dropdown.style.display = isVisible ? 'none' : 'block';
-        
+
         const header = dropdown.previousElementSibling;
         const caret = header.querySelector('.caret');
         if (caret) {
@@ -545,12 +545,12 @@ function toggleDropdown(dropdownId) {
 
 function setupResponsiveTables() {
     const tables = document.querySelectorAll('.comparison-table');
-    
+
     tables.forEach(table => {
         if (window.innerWidth < 768) {
             const wrapper = table.parentElement;
             wrapper.style.position = 'relative';
-            
+
             const scrollHint = document.createElement('div');
             scrollHint.textContent = '← Scroll to see more →';
             scrollHint.style.cssText = `
@@ -563,8 +563,8 @@ function setupResponsiveTables() {
                 margin-top: 10px;
             `;
             wrapper.appendChild(scrollHint);
-            
-            wrapper.addEventListener('scroll', function() {
+
+            wrapper.addEventListener('scroll', function () {
                 scrollHint.style.opacity = '0';
                 setTimeout(() => scrollHint.remove(), 300);
             }, { once: true });
@@ -577,8 +577,8 @@ setTimeout(setupResponsiveTables, 500);
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  const country = window.location.hash.replace("#", "");
-  filterStudentsForCountry(country);
+    const country = window.location.hash.replace("#", "");
+    filterStudentsForCountry(country);
 });
 
 const clone = card.cloneNode(true);

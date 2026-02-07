@@ -109,7 +109,7 @@ class FormValidator {
 
     setFieldError(field, message) {
         field.classList.add('field-error');
-        
+
         // Remove existing error message
         const existingError = field.parentNode.querySelector('.field-error-message');
         if (existingError) {
@@ -136,7 +136,7 @@ class FormValidator {
 
     clearFieldError(field) {
         field.classList.remove('field-error');
-        
+
         const errorEl = field.parentNode.querySelector('.field-error-message');
         if (errorEl) {
             errorEl.remove();
@@ -323,17 +323,17 @@ function sanitizeInput(input) {
    4. INITIALIZE ON LOAD
    ============================================ */
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Initialize form validator
     const counsellingForm = new FormValidator('counsellingForm');
-    
+
     // Make available globally for debugging
     window.formValidator = counsellingForm;
 
     // Add custom validation if needed
     const countrySelect = document.querySelector('select');
     if (countrySelect) {
-        countrySelect.addEventListener('change', function() {
+        countrySelect.addEventListener('change', function () {
             counsellingForm.validateField(this);
         });
     }
@@ -347,7 +347,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function formatPhoneNumber(phone) {
     const cleaned = phone.replace(/\D/g, '');
     const match = cleaned.match(/^(\d{0,3})(\d{0,3})(\d{0,4})$/);
-    
+
     if (!match) return phone;
 
     const [, area, prefix, line] = match;
@@ -358,10 +358,10 @@ function formatPhoneNumber(phone) {
 }
 
 // Apply phone formatting
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const phoneInputs = document.querySelectorAll('input[placeholder*="Phone"]');
     phoneInputs.forEach(input => {
-        input.addEventListener('input', function() {
+        input.addEventListener('input', function () {
             this.value = formatPhoneNumber(this.value);
         });
     });
@@ -372,13 +372,13 @@ document.addEventListener('DOMContentLoaded', function() {
    ============================================ */
 
 // Improve form accessibility
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const formGroups = document.querySelectorAll('.form-group');
-    
+
     formGroups.forEach((group, index) => {
         const input = group.querySelector('input, select, textarea');
         const placeholder = input?.getAttribute('placeholder');
-        
+
         if (placeholder && !input.hasAttribute('aria-label')) {
             input.setAttribute('aria-label', placeholder);
         }

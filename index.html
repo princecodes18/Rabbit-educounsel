@@ -1,654 +1,666 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rabbit educounsel - MBBS Abroad Admissionss</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <script src="js/country-data.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rabbit educounsel - MBBS Abroad Admissionss</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="js/country-data.js"></script>
 </head>
+
 <body>
- <nav class="rabbit-navbar">
-        <div class="rabbit-container">
-             <a href="index.html" class="rabbit-logo">
-                <img src="assets/images/logo.png" alt="Rabbit Educounsel Logo">
-            </a>
+  <nav class="rabbit-navbar">
+    <div class="rabbit-container">
+      <a href="index.html" class="rabbit-logo">
+        <img src="assets/images/logo.png" alt="Rabbit Educounsel Logo">
+      </a>
 
-            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            
-            <ul class="rabbit-nav">
-                <button class="rabbit-link"><li><a href="index.html" class="rabbit-link">Home</a></li>
-                </button>
-                <li class="rabbit-dropdown">
-                    <button class="rabbit-link">
-                        Countries
-                        <span class="caret">▼</span>
-                    </button>
-                    <div class="dropdown-menu">
-                        <a href="country.html?country=russia">Russia</a>
-                        <a href="country.html?country=georgia">Georgia</a>
-                        <a href="country.html?country=kazakhstan">Kazakhstan</a>
-                        <a href="country.html?country=kyrgyzstan">Kyrgyzstan</a>
-                        <a href="country.html?country=uzbekistan">Uzbekistan</a>
-                        <a href="country.html?country=nepal">Nepal</a>
-                        <a href="country.html?country=bangladesh">Bangladesh</a>
-                        <a href="country.html?country=india">India</a>
-                        <hr>
-                        <a href="allcountry.html">View All Countries</a>
-                    </div>
-                </li>
-                
-                <li class="rabbit-dropdown">
-                    <button class="rabbit-link">
-                        Services
-                        <span class="caret">▼</span>
-                    </button>
-                    <div class="dropdown-menu">
-                        <a href="#admission">Admission Guidance</a>
-                        <a href="#visa">Visa Assistance</a>
-                        <a href="#scholarship">Scholarship Support</a>
-                        <a href="#accommodation">Accommodation Help</a>
-                        <hr>
-                        <a href="allcountry.html">View All Services</a>
-                    </div>
-                </li>
-                <button class="rabbit-link">
-                <li><a href="#" class="rabbit-link">Contact</a></li></button>
-            </ul>
-            <a href="#" class="rabbit-login">Get A Call</a>
-        </div>
+      <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-        <!-- Mobile Menu -->
-        <div class="mobile-menu" id="mobileMenu">
-            <div class="mobile-menu-item">
-                <a href="index.html" class="mobile-menu-link">Home</a>
-            </div>
-            
-            <div class="mobile-menu-item">
-                <div class="mobile-menu-header" onclick="toggleDropdown('countries')">
-                    <span class="mobile-menu-link">Countries</span>
-                    <span class="caret"></span>
-                </div>
-                <div class="mobile-dropdown" id="countriesDropdown" style="display: none;">
-                        <a href="country.html?country=russia">Russia</a>
-                        <a href="country.html?country=georgia">Georgia</a>
-                        <a href="country.html?country=kazakhstan">Kazakhstan</a>
-                        <a href="country.html?country=kyrgyzstan">Kyrgyzstan</a>
-                        <a href="country.html?country=uzbekistan">Uzbekistan</a>
-                        <a href="country.html?country=nepal">Nepal</a>
-                        <a href="country.html?country=bangladesh">Bangladesh</a>
-                        <a href="country.html?country=india">India</a>
-                        <a href="allcountry.html">View All Countries</a>
-                </div>
-            </div>
-            
-            <div class="mobile-menu-item">
-                <div class="mobile-menu-header" onclick="toggleDropdown('services')">
-                    <span class="mobile-menu-link">Services</span>
-                    <span class="caret"></span>
-                </div>
-                <div class="mobile-dropdown" id="servicesDropdown" style="display: none;">
-                    <a href="#admission">Admission Guidance</a>
-                    <a href="#visa">Visa Assistance</a>
-                    <a href="#scholarship">Scholarship Support</a>
-                    <a href="#accommodation">Accommodation Help</a>
-                    <a href="allcountry.html">View All Services</a>
-                </div>
-            </div>
-            
-            <div class="mobile-menu-item">
-                <a href="#" class="mobile-menu-link">Contact</a>
-            </div>
-            
-            <div class="mobile-menu-item">
-                <a href="#" class="mobile-menu-link" style="color: #6b5bff; font-weight: 600;">Get A Call</a>
-            </div>
-        </div>
-    </nav>
+      <ul class="rabbit-nav">
+        <button class="rabbit-link">
+          <li><a href="index.html" class="rabbit-link">Home</a></li>
+        </button>
+        <li class="rabbit-dropdown">
+          <button class="rabbit-link">
+            Countries
+            <span class="caret">▼</span>
+          </button>
+          <div class="dropdown-menu">
+            <a href="country.html?country=russia">Russia</a>
+            <a href="country.html?country=georgia">Georgia</a>
+            <a href="country.html?country=kazakhstan">Kazakhstan</a>
+            <a href="country.html?country=kyrgyzstan">Kyrgyzstan</a>
+            <a href="country.html?country=uzbekistan">Uzbekistan</a>
+            <a href="country.html?country=nepal">Nepal</a>
+            <a href="country.html?country=bangladesh">Bangladesh</a>
+            <a href="country.html?country=india">India</a>
+            <hr>
+            <a href="allcountry.html">View All Countries</a>
+          </div>
+        </li>
 
-    <!-- HERO SECTION (REPLACEMENT) -->
-<section class="hero-section">
-  <div class="hero-inner container">
-    <!-- LEFT: headline + CTA -->
-    <div class="hero-left">
-      <div class="kicker">Trusted by aspiring students</div>
-      <h1 class="hero-heading">
-        Specializing in <span class="accent">MBBS Abroad</span> Admissions.
-      </h1>
-      <p class="hero-sub">
-        Secure your dream education abroad with expert guidance and proven success.
-      </p>
-
-      <div class="hero-ctas">
-        <a href="https://wa.me/919773650085" class="btn btn--primary btn--lg">Contact →</a>
-        <a href="#offers" class="btn btn--outline btn--lg">Explore Countries</a>
-      </div>
-
-      <div class="hero-stats">
-        <div class="stat"><strong>10+</strong><span>Partner Universities</span></div>
-        <div class="stat"><strong>5+</strong><span>Countries</span></div>
-        <div class="stat"><strong>100%</strong><span>Success Rate</span></div>
-      </div>
+        <li class="rabbit-dropdown">
+          <button class="rabbit-link">
+            Services
+            <span class="caret">▼</span>
+          </button>
+          <div class="dropdown-menu">
+            <a href="#admission">Admission Guidance</a>
+            <a href="#visa">Visa Assistance</a>
+            <a href="#scholarship">Scholarship Support</a>
+            <a href="#accommodation">Accommodation Help</a>
+            <hr>
+            <a href="allcountry.html">View All Services</a>
+          </div>
+        </li>
+        <button class="rabbit-link">
+          <li><a href="#" class="rabbit-link">Contact</a></li>
+        </button>
+      </ul>
+      <a href="#" class="rabbit-login">Get A Call</a>
     </div>
 
-    <!-- RIGHT: floating form card -->
-    <aside class="hero-form-wrapper" aria-label="Free counselling form">
-      <form class="hero-form" id="heroContactForm" action="https://docs.google.com/forms/d/e/1FAIpQLScN69bIZzetFXwM7BORhLQ7qWyrc1wCIBFrt9FffF_QpapBEg/formResponse" method="POST">
-        <div class="hero-form-header">
-          <h3>Get Free Counselling</h3>
-          <p>Fill the form below to get started</p>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu-item">
+        <a href="index.html" class="mobile-menu-link">Home</a>
+      </div>
+
+      <div class="mobile-menu-item">
+        <div class="mobile-menu-header" onclick="toggleDropdown('countries')">
+          <span class="mobile-menu-link">Countries</span>
+          <span class="caret"></span>
+        </div>
+        <div class="mobile-dropdown" id="countriesDropdown" style="display: none;">
+          <a href="country.html?country=russia">Russia</a>
+          <a href="country.html?country=georgia">Georgia</a>
+          <a href="country.html?country=kazakhstan">Kazakhstan</a>
+          <a href="country.html?country=kyrgyzstan">Kyrgyzstan</a>
+          <a href="country.html?country=uzbekistan">Uzbekistan</a>
+          <a href="country.html?country=nepal">Nepal</a>
+          <a href="country.html?country=bangladesh">Bangladesh</a>
+          <a href="country.html?country=india">India</a>
+          <a href="allcountry.html">View All Countries</a>
+        </div>
+      </div>
+
+      <div class="mobile-menu-item">
+        <div class="mobile-menu-header" onclick="toggleDropdown('services')">
+          <span class="mobile-menu-link">Services</span>
+          <span class="caret"></span>
+        </div>
+        <div class="mobile-dropdown" id="servicesDropdown" style="display: none;">
+          <a href="#admission">Admission Guidance</a>
+          <a href="#visa">Visa Assistance</a>
+          <a href="#scholarship">Scholarship Support</a>
+          <a href="#accommodation">Accommodation Help</a>
+          <a href="allcountry.html">View All Services</a>
+        </div>
+      </div>
+
+      <div class="mobile-menu-item">
+        <a href="#" class="mobile-menu-link">Contact</a>
+      </div>
+
+      <div class="mobile-menu-item">
+        <a href="#" class="mobile-menu-link" style="color: #6b5bff; font-weight: 600;">Get A Call</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION (REPLACEMENT) -->
+  <section class="hero-section">
+    <div class="hero-inner container">
+      <!-- LEFT: headline + CTA -->
+      <div class="hero-left">
+        <div class="kicker">Trusted by aspiring students</div>
+        <h1 class="hero-heading">
+          Specializing in <span class="accent">MBBS Abroad</span> Admissions.
+        </h1>
+        <p class="hero-sub">
+          Secure your dream education abroad with expert guidance and proven success.
+        </p>
+
+        <div class="hero-ctas">
+          <a href="https://wa.me/919773650085" class="btn btn--primary btn--lg">Contact →</a>
+          <a href="#offers" class="btn btn--outline btn--lg">Explore Countries</a>
         </div>
 
-        <div class="form-body">
-          <label class="sr-only" for="name">Full name</label>
-          <input id="name" name="entry.525221255" class="form-control" placeholder="Full Name" required>
-
-          <label class="sr-only" for="contact">Mobile / Email</label>
-          <input id="contact" name="entry.895727355" class="form-control" placeholder="Mobile / Email" required>
-
-          <label class="sr-only" for="state">State</label>
-          <input id="state" name="entry.1569258537" class="form-control" placeholder="State">
-
-          <select name="entry.1314939498" class="form-control" aria-label="Preferred country">
-            <option value="">Preferred Country</option>
-            <option>Russia</option>
-            <option>India</option>
-            <option>Kazakhstan</option>
-            <option>Kyrgyzstan</option>
-            <option>Uzbekistan</option>
-            <option>Nepal</option>
-            <option>Bangladesh</option>
-            <option>China</option>
-          </select>
-
-          <button id="heroSubmitBtn" type="submit" class="btn btn--primary btn--full-width">
-            <span class="btn-text">Submit Inquiry</span>
-            <span class="spinner" aria-hidden="true"></span>
-          </button>
-
-          <p class="form-success" style="display:none;">✅ Thank you — We will contact you shortly.</p>
+        <div class="hero-stats">
+          <div class="stat"><strong>10+</strong><span>Partner Universities</span></div>
+          <div class="stat"><strong>5+</strong><span>Countries</span></div>
+          <div class="stat"><strong>100%</strong><span>Success Rate</span></div>
         </div>
-      </form>
-      <iframe name="hidden_iframe" style="display:none;"></iframe>
-    </aside>
+      </div>
+
+      <!-- RIGHT: floating form card -->
+      <aside class="hero-form-wrapper" aria-label="Free counselling form">
+        <form class="hero-form" id="heroContactForm"
+          action="https://docs.google.com/forms/d/e/1FAIpQLScN69bIZzetFXwM7BORhLQ7qWyrc1wCIBFrt9FffF_QpapBEg/formResponse"
+          method="POST">
+          <div class="hero-form-header">
+            <h3>Get Free Counselling</h3>
+            <p>Fill the form below to get started</p>
+          </div>
+
+          <div class="form-body">
+            <label class="sr-only" for="name">Full name</label>
+            <input id="name" name="entry.525221255" class="form-control" placeholder="Full Name" required>
+
+            <label class="sr-only" for="contact">Mobile / Email</label>
+            <input id="contact" name="entry.895727355" class="form-control" placeholder="Mobile / Email" required>
+
+            <label class="sr-only" for="state">State</label>
+            <input id="state" name="entry.1569258537" class="form-control" placeholder="State">
+
+            <select name="entry.1314939498" class="form-control" aria-label="Preferred country">
+              <option value="">Preferred Country</option>
+              <option>Russia</option>
+              <option>India</option>
+              <option>Kazakhstan</option>
+              <option>Kyrgyzstan</option>
+              <option>Uzbekistan</option>
+              <option>Nepal</option>
+              <option>Bangladesh</option>
+              <option>China</option>
+            </select>
+
+            <button id="heroSubmitBtn" type="submit" class="btn btn--primary btn--full-width">
+              <span class="btn-text">Submit Inquiry</span>
+              <span class="spinner" aria-hidden="true"></span>
+            </button>
+
+            <p class="form-success" style="display:none;">✅ Thank you — We will contact you shortly.</p>
+          </div>
+        </form>
+        <iframe name="hidden_iframe" style="display:none;"></iframe>
+      </aside>
+    </div>
+  </section>
+  <!-- END HERO SECTION -->
+
+
+  <!-- Floating Social Sidebar -->
+  <div class="social-sidebar">
+    <a href="https://www.instagram.com/rabbit_educounsel?igsh=MWJ4MWhrM2lzbWF2Yg==" target="_blank"
+      class="social-icon instagram" title="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://youtube.com/@rabbiteducounsel?si=Z91piGpZ_l69DYkX" target="_blank" class="social-icon youtube"
+      title="YouTube">
+      <i class="fab fa-youtube"></i>
+    </a>
+    <a href="https://wa.me/message/TSIR7MA7456RI1" target="_blank" class="social-icon whatsapp" title="WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
   </div>
-</section>
-<!-- END HERO SECTION -->
 
-
-<!-- Floating Social Sidebar -->
-<div class="social-sidebar">
-    <a href="https://www.instagram.com/rabbit_educounsel?igsh=MWJ4MWhrM2lzbWF2Yg==" target="_blank" class="social-icon instagram" title="Instagram">
-  <i class="fab fa-instagram"></i>
-  </a>
-  <a href="https://youtube.com/@rabbiteducounsel?si=Z91piGpZ_l69DYkX" target="_blank" class="social-icon youtube" title="YouTube">
-    <i class="fab fa-youtube"></i>
-  </a>
-  <a href="https://wa.me/message/TSIR7MA7456RI1" target="_blank" class="social-icon whatsapp" title="WhatsApp">
-    <i class="fab fa-whatsapp"></i>
-  </a>
-</div>
-
-<!-- ============================================
+  <!-- ============================================
      SPECIAL OFFERS SECTION (9 Cards with Show More)
      ============================================ -->
-<section id="offers" class="offers-section">
-  <div class="container">
-    <h2>Explore MBBS Destinations</h2>
-    <p class="section-subtitle">Choose from top medical universities across 10+ countries with affordable fees and world-class education</p>
+  <section id="offers" class="offers-section">
+    <div class="container">
+      <h2>Explore MBBS Destinations</h2>
+      <p class="section-subtitle">Choose from top medical universities across 10+ countries with affordable fees and
+        world-class education</p>
 
-    <!-- Offers Grid -->
-    <div class="offers-grid">
-      <!-- Card 1: India -->
-      <div class="offer-card">
-        <div class="offer-flag">
-          <img src="assets/images/flags/india.png" alt="India Flag">
-        </div>
-        <h3>India</h3>
-        <p class="offer-text">Explore India</p>
-        <a href="country.html?country=india" class="know-more-btn">Know More →</a>
-      </div>
-
-      <!-- Card 2: Russia -->
-      <div class="offer-card">
-        <div class="offer-flag">
-          <img src="assets/images/flags/russia.png" alt="Russia Flag">
-        </div>
-        <h3>Russia</h3>
-        <p class="offer-text">The most affordable place for your MBBS option</p>
-        <a href="country.html?country=russia" class="know-more-btn">Know More →</a>
-      </div>
-
-      <!-- Card 3: Kazakhstan -->
-      <div class="offer-card">
-        <div class="offer-flag">
-          <img src="assets/images/flags/kazakhstan.png" alt="Kazakhstan Flag">
-        </div>
-        <h3>Kazakhstan</h3>
-        <p class="offer-text">Explore Kazakhstan</p>
-        <a href="country.html?country=kazakhstan" class="know-more-btn">Know More →</a>
-      </div>
-
-      <!-- Hidden Cards (shown on "Show More") -->
-      <!-- Card 4: Kyrgyzstan -->
-      <div class="offer-card">
-        <div class="offer-flag">
-          <img src="assets/images/flags/kyrgyzstan.jpg" alt="Kyrgyzstan Flag">
-        </div>
-        <h3>Kyrgyzstan</h3>
-        <p class="offer-text">Explore Kyrgyzstan</p>
-        <a href="country.html?country=kyrgyzstan" class="know-more-btn">Know More →</a>
-      </div>
-
-      <!-- Card 5: Uzbekistan -->
-      <div class="offer-card hidden-offer">
-        <div class="offer-flag">
-          <img src="assets/images/flags/uzbekistan.jpg" alt="Uzbekistan Flag">
-        </div>
-        <h3>Uzbekistan</h3>
-        <p class="offer-text">Explore Uzbekistan</p>
-        <a href="country.html?country=uzbekistan" class="know-more-btn">Know More →</a>
-      </div>
-
-      <!-- Card 6: Nepal -->
-      <div class="offer-card hidden-offer">
-        <div class="offer-flag">
-          <img src="assets/images/flags/nepal.jpg" alt="Nepal Flag">
-        </div>
-        <h3>Nepal</h3>
-        <p class="offer-text">Explore Nepal</p>
-        <a href="country.html?country=nepal" class="know-more-btn">Know More →</a>
-      </div>
-
-      <!-- Card 7: Bangladesh -->
-      <div class="offer-card hidden-offer">
-        <div class="offer-flag">
-          <img src="assets/images/flags/bangladesh.jpg" alt="Bangladesh Flag">
-        </div>
-        <h3>Bangladesh</h3>
-        <p class="offer-text">Explore Bangladesh</p>
-        <a href="country.html?country=bangladesh" class="know-more-btn">Know More →</a>
-      </div>
-
-      <!-- Card 8: Georgia -->
-      <div class="offer-card hidden-offer">
-        <div class="offer-flag">
-          <img src="assets/images/flags/georgia.jpg" alt="georgia Flag">
-        </div>
-        <h3>Georgia</h3>
-        <p class="offer-text">Explore Georgia</p>
-        <a href="country.html?country=georgia" class="know-more-btn">Know More →</a>
-      </div>
-
-
-    <!-- Show More Button -->
-    <button class="show-more-offers-btn">Show More</button>
-  </div>
-</section>
-
-<section class="student-life-section">
-  <h2 class="section-title">Life of Our Students ✨</h2>
-
-  <div class="student-life-grid">
-    <div class="life-card"><img src="assets/images/image1.jpg" /></div>
-    <div class="life-card"><img src="assets/images/image2.jpg" /></div>
-    <div class="life-card"><img src="assets/images/image3.jpg" /></div>
-    <div class="life-card"><img src="assets/images/image4.jpg" /></div>
-  </div>
-</section>
-
-<!-- Services Section -->
-<section class="services">
-  <div class="container">
-    <h2 class="section-title">Our Services</h2>
-
-    <div class="services-grid">
-
-      <!-- Service Card 1 -->
-      <div class="service-card">
-        <div class="service-item">
-          <div class="service-icon">
-            <img src="assets/images/icons/counselling.jpg" alt="MBBS Counseling">
+      <!-- Offers Grid -->
+      <div class="offers-grid">
+        <!-- Card 1: India -->
+        <div class="offer-card">
+          <div class="offer-flag">
+            <img src="assets/images/flags/india.png" alt="India Flag">
           </div>
-          <h3>MBBS Counseling</h3>
-          <p>
-            Expert guidance and personalized counseling for aspiring MBBS students to choose the right path.
-          </p>
-
-          <a href="#" class="service-btn">Know more →</a>
+          <h3>India</h3>
+          <p class="offer-text">Explore India</p>
+          <a href="country.html?country=india" class="know-more-btn">Know More →</a>
         </div>
-      </div>
 
-      <!-- Service Card 2 -->
-      <div class="service-card">
-        <div class="service-item">
-          <div class="service-icon">
-            <img src="assets/images/icons/admission.jpg" alt="Admission Guidance">
+        <!-- Card 2: Russia -->
+        <div class="offer-card">
+          <div class="offer-flag">
+            <img src="assets/images/flags/russia.png" alt="Russia Flag">
           </div>
-          <h3>Admission Guidance</h3>
-          <p>
-            Complete admission support from application to enrollment at top medical universities.
-          </p>
-
-          <a href="#" class="service-btn">Know more →</a>
+          <h3>Russia</h3>
+          <p class="offer-text">The most affordable place for your MBBS option</p>
+          <a href="country.html?country=russia" class="know-more-btn">Know More →</a>
         </div>
-      </div>
 
-      <!-- Service Card 3 -->
-      <div class="service-card">
-        <div class="service-item">
-          <div class="service-icon">
-            <img src="assets/images/icons/visa.jpg" alt="Visa Assistance">
+        <!-- Card 3: Kazakhstan -->
+        <div class="offer-card">
+          <div class="offer-flag">
+            <img src="assets/images/flags/kazakhstan.png" alt="Kazakhstan Flag">
           </div>
-          <h3>Visa Assistance</h3>
-          <p>
-            Step-by-step visa assistance including documentation,
-            interview preparation, and embassy requirements.
-          </p>
-
-          <a href="#" class="service-btn">Know more →</a>
+          <h3>Kazakhstan</h3>
+          <p class="offer-text">Explore Kazakhstan</p>
+          <a href="country.html?country=kazakhstan" class="know-more-btn">Know More →</a>
         </div>
-      </div>
 
-      <!-- Service Card 4 -->
-      <div class="service-card">
-        <div class="service-item">
-          <div class="service-icon">
-            <img src="assets/images/icons/departure.jpg" alt="Pre-Departure Support">
+        <!-- Hidden Cards (shown on "Show More") -->
+        <!-- Card 4: Kyrgyzstan -->
+        <div class="offer-card">
+          <div class="offer-flag">
+            <img src="assets/images/flags/kyrgyzstan.jpg" alt="Kyrgyzstan Flag">
           </div>
-          <h3>Pre-Departure Support</h3>
-          <p>
-            Guidance on accommodation, travel planning,
-            forex, insurance, and cultural orientation.
-          </p>
-
-          <a href="#" class="service-btn">Know more →</a>
+          <h3>Kyrgyzstan</h3>
+          <p class="offer-text">Explore Kyrgyzstan</p>
+          <a href="country.html?country=kyrgyzstan" class="know-more-btn">Know More →</a>
         </div>
-      </div>
 
+        <!-- Card 5: Uzbekistan -->
+        <div class="offer-card hidden-offer">
+          <div class="offer-flag">
+            <img src="assets/images/flags/uzbekistan.jpg" alt="Uzbekistan Flag">
+          </div>
+          <h3>Uzbekistan</h3>
+          <p class="offer-text">Explore Uzbekistan</p>
+          <a href="country.html?country=uzbekistan" class="know-more-btn">Know More →</a>
+        </div>
+
+        <!-- Card 6: Nepal -->
+        <div class="offer-card hidden-offer">
+          <div class="offer-flag">
+            <img src="assets/images/flags/nepal.jpg" alt="Nepal Flag">
+          </div>
+          <h3>Nepal</h3>
+          <p class="offer-text">Explore Nepal</p>
+          <a href="country.html?country=nepal" class="know-more-btn">Know More →</a>
+        </div>
+
+        <!-- Card 7: Bangladesh -->
+        <div class="offer-card hidden-offer">
+          <div class="offer-flag">
+            <img src="assets/images/flags/bangladesh.jpg" alt="Bangladesh Flag">
+          </div>
+          <h3>Bangladesh</h3>
+          <p class="offer-text">Explore Bangladesh</p>
+          <a href="country.html?country=bangladesh" class="know-more-btn">Know More →</a>
+        </div>
+
+        <!-- Card 8: Georgia -->
+        <div class="offer-card hidden-offer">
+          <div class="offer-flag">
+            <img src="assets/images/flags/georgia.jpg" alt="georgia Flag">
+          </div>
+          <h3>Georgia</h3>
+          <p class="offer-text">Explore Georgia</p>
+          <a href="country.html?country=georgia" class="know-more-btn">Know More →</a>
+        </div>
+
+
+        <!-- Show More Button -->
+        <button class="show-more-offers-btn">Show More</button>
+      </div>
+  </section>
+
+  <section class="student-life-section">
+    <h2 class="section-title">Life of Our Students ✨</h2>
+
+    <div class="student-life-grid">
+      <div class="life-card"><img src="assets/images/image1.jpg" /></div>
+      <div class="life-card"><img src="assets/images/image2.jpg" /></div>
+      <div class="life-card"><img src="assets/images/image3.jpg" /></div>
+      <div class="life-card"><img src="assets/images/image4.jpg" /></div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services">
+    <div class="container">
+      <h2 class="section-title">Our Services</h2>
+
+      <div class="services-grid">
+
+        <!-- Service Card 1 -->
+        <div class="service-card">
+          <div class="service-item">
+            <div class="service-icon">
+              <img src="assets/images/icons/counselling.jpg" alt="MBBS Counseling">
+            </div>
+            <h3>MBBS Counseling</h3>
+            <p>
+              Expert guidance and personalized counseling for aspiring MBBS students to choose the right path.
+            </p>
+
+            <a href="#" class="service-btn">Know more →</a>
+          </div>
+        </div>
+
+        <!-- Service Card 2 -->
+        <div class="service-card">
+          <div class="service-item">
+            <div class="service-icon">
+              <img src="assets/images/icons/admission.jpg" alt="Admission Guidance">
+            </div>
+            <h3>Admission Guidance</h3>
+            <p>
+              Complete admission support from application to enrollment at top medical universities.
+            </p>
+
+            <a href="#" class="service-btn">Know more →</a>
+          </div>
+        </div>
+
+        <!-- Service Card 3 -->
+        <div class="service-card">
+          <div class="service-item">
+            <div class="service-icon">
+              <img src="assets/images/icons/visa.jpg" alt="Visa Assistance">
+            </div>
+            <h3>Visa Assistance</h3>
+            <p>
+              Step-by-step visa assistance including documentation,
+              interview preparation, and embassy requirements.
+            </p>
+
+            <a href="#" class="service-btn">Know more →</a>
+          </div>
+        </div>
+
+        <!-- Service Card 4 -->
+        <div class="service-card">
+          <div class="service-item">
+            <div class="service-icon">
+              <img src="assets/images/icons/departure.jpg" alt="Pre-Departure Support">
+            </div>
+            <h3>Pre-Departure Support</h3>
+            <p>
+              Guidance on accommodation, travel planning,
+              forex, insurance, and cultural orientation.
+            </p>
+
+            <a href="#" class="service-btn">Know more →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
 
 
-<!-- ============================================
+  <!-- ============================================
      MEET OUR STARS SECTION (Infinite Carousel)
      ============================================ -->
-<section class="stars-section">
-  <div class="container">
-    <h2>Meet our students ✨</h2>
+  <section class="stars-section">
+    <div class="container">
+      <h2>Meet our students ✨</h2>
 
-    <!-- Filter Tabs -->
-    <div class="stars-tabs">
-      <button class="tab-btn active" data-filter="all">ALL</button>
-      <button class="tab-btn" data-filter="india">India</button>
-      <button class="tab-btn" data-filter="russia">Russia</button>
-      <button class="tab-btn" data-filter="kazhak">Kazakhstan</button>
-    </div>
+      <!-- Filter Tabs -->
+      <div class="stars-tabs">
+        <button class="tab-btn active" data-filter="all">ALL</button>
+        <button class="tab-btn" data-filter="india">India</button>
+        <button class="tab-btn" data-filter="russia">Russia</button>
+        <button class="tab-btn" data-filter="kazhak">Kazakhstan</button>
+      </div>
 
-    <!-- Carousel Container -->
-    <div class="stars-carousel-wrapper">
-      <div class="stars-carousel">
-        <!-- Student Card 1 -->
-        <div class="student-card" data-category="russia">
-          <div class="student-image">
-            <img src="assets/images/students/aishwarya.jpeg" alt="Aishwarya Da">
-            <div class="exam-badge">Russia</div>
+      <!-- Carousel Container -->
+      <div class="stars-carousel-wrapper">
+        <div class="stars-carousel">
+          <!-- Student Card 1 -->
+          <div class="student-card" data-category="russia">
+            <div class="student-image">
+              <img src="assets/images/students/aishwarya.jpeg" alt="Aishwarya Da">
+              <div class="exam-badge">Russia</div>
+            </div>
+            <div class="student-info">
+              <h4>Aishwarya Das</h4>
+              <p class="course-type">North Ossetian State Medical Academy (NOSMA)</p>
+              <p class="achievement">MBBS-2025</p>
+            </div>
           </div>
-          <div class="student-info">
-            <h4>Aishwarya Das</h4>
-            <p class="course-type">North Ossetian State Medical Academy (NOSMA)</p>
-            <p class="achievement">MBBS-2025</p>
+
+          <!-- Student Card 2 -->
+          <div class="student-card" data-category="russia">
+            <div class="student-image">
+              <img src="assets/images/students/Srikanth.jpeg" alt="Aritro Ray">
+              <div class="exam-badge">Russia</div>
+            </div>
+            <div class="student-info">
+              <h4>Srikanth Kumar</h4>
+              <p class="course-type">North Ossetian State Medical Academy (NOSMA)</p>
+              <p class="achievement">MBBS-2025</p>
+            </div>
           </div>
+
+          <!-- Student Card 3 -->
+          <div class="student-card" data-category="russia">
+            <div class="student-image">
+              <img src="assets/images/students/arpita.jpeg" alt="Charuvrat Bains">
+              <div class="exam-badge">Russia</div>
+            </div>
+            <div class="student-info">
+              <h4>Arpita Ray</h4>
+              <p class="course-type">North Ossetian State Medical Academy (NOSMA)</p>
+              <p class="achievement">MBBS-2025</p>
+            </div>
+          </div>
+
+          <!-- Student Card 4 -->
+          <div class="student-card" data-category="russia">
+            <div class="student-image">
+              <img src="assets/images/students/nishant.jpeg" alt="Aabhineet Patn">
+              <div class="exam-badge">Russia</div>
+            </div>
+            <div class="student-info">
+              <h4>Nishant Arya</h4>
+              <p class="course-type">North Ossetian State Medical Academy (NOSMA)</p>
+              <p class="achievement">MBBS-2025</p>
+            </div>
+          </div>
+
+          <!-- Student Card 5 -->
+          <div class="student-card" data-category="russia">
+            <div class="student-image">
+              <img src="assets/images/students/anurag.jpeg" alt="Pragya Poonia">
+              <div class="exam-badge">Russia</div>
+            </div>
+            <div class="student-info">
+              <h4>Anurag Harsh</h4>
+              <p class="course-type">North Ossetian State Medical Academy (NOSMA)</p>
+              <p class="achievement">MBBS-2025</p>
+            </div>
+          </div>
+
+          <!-- Student Card 6 -->
+          <div class="student-card" data-category="russia">
+            <div class="student-image">
+              <img src="assets/images/students/rishant.jpeg" alt="Arka Banerjee">
+              <div class="exam-badge">Russia</div>
+            </div>
+            <div class="student-info">
+              <h4>Rishant Raj</h4>
+              <p class="course-type">North Ossetian State Medical Academy (NOSMA)</p>
+              <p class="achievement">MBBS-2025</p>
+            </div>
+          </div>
+
+          <!-- Student Card 7 -->
+          <div class="student-card" data-category="india">
+            <div class="student-image">
+              <img src="assets/images/students/vickey.jpeg" alt="Arka Banerjee">
+              <div class="exam-badge">India</div>
+            </div>
+            <div class="student-info">
+              <h4>Vicky Kumar, AIR-9115</h4>
+              <p class="course-type">Nalanda Medical College & Hospital, Patna | Bihar Rank-364</p>
+              <p class="achievement">MBBS-2024</p>
+            </div>
+          </div>
+
+          <!-- Student Card 8 -->
+          <div class="student-card" data-category="india">
+            <div class="student-image">
+              <img src="assets/images/students/sarabjit.jpeg" alt="Arka Banerjee">
+              <div class="exam-badge">India</div>
+            </div>
+            <div class="student-info">
+              <h4>Sarabjit Raj</h4>
+              <p class="course-type">Narayana Medical College & Hospital, Sasaram, Bihar</p>
+              <p class="achievement">MBBS-2025</p>
+            </div>
+          </div>
+
+          <!-- Student Card 8 -->
+          <div class="student-card" data-category="russia">
+            <div class="student-image">
+              <img src="assets/images/students/meet.png" alt="Arka Banerjee">
+              <div class="exam-badge">RUSSIA</div>
+            </div>
+            <div class="student-info">
+              <h4>Meet Parmar</h4>
+              <p class="course-type">Kabardino-Balkarian State University (KBSU)</p>
+              <p class="achievement">MBBS-2024</p>
+            </div>
+          </div>
+
+          <!-- Student Card 9 -->
+          <div class="student-card" data-category="russia">
+            <div class="student-image">
+              <img src="assets/images/students/priyanshu.jpeg" alt="Arka Banerjee">
+              <div class="exam-badge">RUSSIA</div>
+            </div>
+            <div class="student-info">
+              <h4>Priyanshu Chauhan</h4>
+              <p class="course-type">Kabardino-Balkarian State University (KBSU)</p>
+              <p class="achievement">MBBS-2023</p>
+            </div>
+          </div>
+
+
+
+          <!-- Student Card 10 -->
+          <div class="student-card" data-category="russia">
+            <div class="student-image">
+              <img src="assets/images/students/ranveer.png" alt="Arka Banerjee">
+              <div class="exam-badge">RUSSIA</div>
+            </div>
+            <div class="student-info">
+              <h4>Ranveer Chaudhry</h4>
+              <p class="course-type">Kabardino-Balkarian State University (KBSU)</p>
+              <p class="achievement">MBBS-2023</p>
+            </div>
+          </div>
+
+          <!-- Student Card 11 -->
+          <div class="student-card" data-category="russia">
+            <div class="student-image">
+              <img src="assets/images/students/jogdaand.png" alt="Arka Banerjee">
+              <div class="exam-badge">RUSSIA</div>
+            </div>
+            <div class="student-info">
+              <h4>Jogdand Akshay Rajesh</h4>
+              <p class="course-type">Kabardino-Balkarian State University (KBSU)</p>
+              <p class="achievement">MBBS-2023<!-- <i class="fas fa-play-circle"></i> --></p>
+            </div>
+          </div>
+
+          <!-- Student Card 12 -->
+          <div class="student-card" data-category="russia">
+            <div class="student-image">
+              <img src="assets/images/students/raviranjan.jpeg" alt="Arka Banerjee">
+              <div class="exam-badge">RUSSIA</div>
+            </div>
+            <div class="student-info">
+              <h4>Raviranjan Kumar</h4>
+              <p class="course-type">Chuwas<br>Russia</br></p>
+              <p class="achievement">MBBS-2023<!-- <i class="fas fa-play-circle"></i> --></p>
+            </div>
+          </div>
+
+          <!-- Student Card 13 -->
+          <div class="student-card" data-category="russia">
+            <div class="student-image">
+              <img src="assets/images/students/umesh.png" alt="Arka Banerjee">
+              <div class="exam-badge">RUSSIA</div>
+            </div>
+            <div class="student-info">
+              <h4>Umesh Yadav</h4>
+              <p class="course-type">Kabardino-Balkarian State University (KBSU)</p>
+              <p class="achievement">MBBS-2023<!-- <i class="fas fa-play-circle"></i --></p>
+            </div>
+          </div>
+
+          <!-- Student Card 13 -->
+          <div class="student-card" data-category="russia">
+            <div class="student-image">
+              <img src="assets/images/students/akash.png" alt="Arka Banerjee">
+              <div class="exam-badge">RUSSIA</div>
+            </div>
+            <div class="student-info">
+              <h4>Akash Yadav</h4>
+              <p class="course-type">Kabardino-Balkarian State University (KBSU)</p>
+              <p class="achievement">MBBS-2023<!-- <i class="fas fa-play-circle"></i> --></p>
+            </div>
+          </div>
+
+
+
         </div>
-
-        <!-- Student Card 2 -->
-        <div class="student-card" data-category="russia">
-          <div class="student-image">
-            <img src="assets/images/students/Srikanth.jpeg" alt="Aritro Ray">
-            <div class="exam-badge">Russia</div>
-          </div>
-          <div class="student-info">
-            <h4>Srikanth Kumar</h4>
-            <p class="course-type">North Ossetian State Medical Academy (NOSMA)</p>
-            <p class="achievement">MBBS-2025</p>
-          </div>
-        </div>
-
-        <!-- Student Card 3 -->
-        <div class="student-card" data-category="russia">
-          <div class="student-image">
-            <img src="assets/images/students/arpita.jpeg" alt="Charuvrat Bains">
-            <div class="exam-badge">Russia</div>
-          </div>
-          <div class="student-info">
-            <h4>Arpita Ray</h4>
-            <p class="course-type">North Ossetian State Medical Academy (NOSMA)</p>
-            <p class="achievement">MBBS-2025</p>
-          </div>
-        </div>
-
-        <!-- Student Card 4 -->
-        <div class="student-card" data-category="russia">
-          <div class="student-image">
-            <img src="assets/images/students/nishant.jpeg" alt="Aabhineet Patn">
-            <div class="exam-badge">Russia</div>
-          </div>
-          <div class="student-info">
-            <h4>Nishant Arya</h4>
-            <p class="course-type">North Ossetian State Medical Academy (NOSMA)</p>
-            <p class="achievement">MBBS-2025</p>
-          </div>
-        </div>
-
-        <!-- Student Card 5 -->
-        <div class="student-card" data-category="russia">
-          <div class="student-image">
-            <img src="assets/images/students/anurag.jpeg" alt="Pragya Poonia">
-            <div class="exam-badge">Russia</div>
-          </div>
-          <div class="student-info">
-            <h4>Anurag Harsh</h4>
-            <p class="course-type">North Ossetian State Medical Academy (NOSMA)</p>
-            <p class="achievement">MBBS-2025</p>
-          </div>
-        </div>
-
-        <!-- Student Card 6 -->
-        <div class="student-card" data-category="russia">
-          <div class="student-image">
-            <img src="assets/images/students/rishant.jpeg" alt="Arka Banerjee">
-            <div class="exam-badge">Russia</div>
-          </div>
-          <div class="student-info">
-            <h4>Rishant Raj</h4>
-            <p class="course-type">North Ossetian State Medical Academy (NOSMA)</p>
-            <p class="achievement">MBBS-2025</p>
-          </div>
-        </div>
-
-        <!-- Student Card 7 -->
-        <div class="student-card" data-category="india">
-          <div class="student-image">
-            <img src="assets/images/students/vickey.jpeg" alt="Arka Banerjee">
-            <div class="exam-badge">India</div>
-          </div>
-          <div class="student-info">
-            <h4>Vicky Kumar, AIR-9115</h4>
-            <p class="course-type">Nalanda Medical College & Hospital, Patna | Bihar Rank-364</p>
-            <p class="achievement">MBBS-2024</p>
-          </div>
-        </div>
-
-        <!-- Student Card 8 -->
-        <div class="student-card" data-category="india">
-          <div class="student-image">
-            <img src="assets/images/students/sarabjit.jpeg" alt="Arka Banerjee">
-            <div class="exam-badge">India</div>
-          </div>
-          <div class="student-info">
-            <h4>Sarabjit Raj</h4>
-            <p class="course-type">Narayana Medical College & Hospital, Sasaram, Bihar</p>
-            <p class="achievement">MBBS-2025</p>
-          </div>
-        </div>
-
-        <!-- Student Card 8 -->
-        <div class="student-card" data-category="russia">
-          <div class="student-image">
-            <img src="assets/images/students/meet.png" alt="Arka Banerjee">
-            <div class="exam-badge">RUSSIA</div>
-          </div>
-          <div class="student-info">
-            <h4>Meet Parmar</h4>
-            <p class="course-type">Kabardino-Balkarian State University (KBSU)</p>
-            <p class="achievement">MBBS-2024</p>
-          </div>
-        </div>
-
-        <!-- Student Card 9 -->
-        <div class="student-card" data-category="russia">
-          <div class="student-image">
-            <img src="assets/images/students/priyanshu.jpeg" alt="Arka Banerjee">
-            <div class="exam-badge">RUSSIA</div>
-          </div>
-          <div class="student-info">
-            <h4>Priyanshu Chauhan</h4>
-            <p class="course-type">Kabardino-Balkarian State University (KBSU)</p>
-            <p class="achievement">MBBS-2023</p>
-          </div>
-        </div>
-
-        
-
-        <!-- Student Card 10 -->
-        <div class="student-card" data-category="russia">
-          <div class="student-image">
-            <img src="assets/images/students/ranveer.png" alt="Arka Banerjee">
-            <div class="exam-badge">RUSSIA</div>
-          </div>
-          <div class="student-info">
-            <h4>Ranveer Chaudhry</h4>
-            <p class="course-type">Kabardino-Balkarian State University (KBSU)</p>
-            <p class="achievement">MBBS-2023</p>
-          </div>
-        </div>
-
-        <!-- Student Card 11 -->
-        <div class="student-card" data-category="russia">
-          <div class="student-image">
-            <img src="assets/images/students/jogdaand.png" alt="Arka Banerjee">
-            <div class="exam-badge">RUSSIA</div>
-          </div>
-          <div class="student-info">
-            <h4>Jogdand Akshay Rajesh</h4>
-            <p class="course-type">Kabardino-Balkarian State University (KBSU)</p>
-            <p class="achievement">MBBS-2023<!-- <i class="fas fa-play-circle"></i> --></p>
-          </div>
-        </div>
-
-        <!-- Student Card 12 -->
-        <div class="student-card" data-category="russia">
-          <div class="student-image">
-            <img src="assets/images/students/raviranjan.jpeg" alt="Arka Banerjee">
-            <div class="exam-badge">RUSSIA</div>
-          </div>
-          <div class="student-info">
-            <h4>Raviranjan Kumar</h4>
-            <p class="course-type">Chuwas<br>Russia</br></p>
-            <p class="achievement">MBBS-2023<!-- <i class="fas fa-play-circle"></i> --></p>
-          </div>
-        </div>
-
-        <!-- Student Card 13 -->
-        <div class="student-card" data-category="russia">
-          <div class="student-image">
-            <img src="assets/images/students/umesh.png" alt="Arka Banerjee">
-            <div class="exam-badge">RUSSIA</div>
-          </div>
-          <div class="student-info">
-            <h4>Umesh Yadav</h4>
-            <p class="course-type">Kabardino-Balkarian State University (KBSU)</p>
-            <p class="achievement">MBBS-2023<!-- <i class="fas fa-play-circle"></i --></p>
-          </div>
-        </div>
-
-        <!-- Student Card 13 -->
-        <div class="student-card" data-category="russia">
-          <div class="student-image">
-            <img src="assets/images/students/akash.png" alt="Arka Banerjee">
-            <div class="exam-badge">RUSSIA</div>
-          </div>
-          <div class="student-info">
-            <h4>Akash Yadav</h4>
-            <p class="course-type">Kabardino-Balkarian State University (KBSU)</p>
-            <p class="achievement">MBBS-2023<!-- <i class="fas fa-play-circle"></i> --></p>
-          </div>
-        </div>
-
-        
-        
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
-    <!-- CTA Section -->
-    <section class="cta-final">
-        <div class="container">
-            <h2>Ready to Start Your Medical Journey?</h2>
-            <p>Get free counseling from our experts and take the first step towards your dream of becoming a doctor.</p>
-            <div class="cta-buttons">
-                <button class="cta-button primary">Get Free Counselling</button>
-                <button class="cta-button secondary">View All Services</button>
-            </div>
+  <!-- CTA Section -->
+  <section class="cta-final">
+    <div class="container">
+      <h2>Ready to Start Your Medical Journey?</h2>
+      <p>Get free counseling from our experts and take the first step towards your dream of becoming a doctor.</p>
+      <div class="cta-buttons">
+        <button class="cta-button primary">Get Free Counselling</button>
+        <button class="cta-button secondary">View All Services</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact" class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Rabbit educounsel</h4>
+          <p>Your partner in MBBS abroad admissions</p>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer id="contact" class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>Rabbit educounsel</h4>
-                    <p>Your partner in MBBS abroad admissions</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="country.html?country=russia">Russia</a></li>
-                        <li><a href="country.html?country=georgia">Georgia</a></li>
-                        <li><a href="country.html?country=kazakhstan">Kazakhstan</a></li>
-                        <li><a href="country.html?country=kyrgyzstan">Kyrgyzstan</a></li>
-                        <li><a href="country.html?country=uzbekistan">Uzbekistan</a></li>
-                        <li><a href="country.html?country=nepal">Nepal</a></li>
-                        <li><a href="country.html?country=bangladesh">Bangladesh</a></li>
-                        <li><a href="country.html?country=india">India</a></li>  
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Contact Us</h4>
-                    <p>Email: rabbiteducounsel@gmail.com</p>
-                    <p>Phone: +91 9773650085</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p><h2>&copy; 2026 Rabbit educounsel. All rights reserved.</h2></p>
-            </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="country.html?country=russia">Russia</a></li>
+            <li><a href="country.html?country=georgia">Georgia</a></li>
+            <li><a href="country.html?country=kazakhstan">Kazakhstan</a></li>
+            <li><a href="country.html?country=kyrgyzstan">Kyrgyzstan</a></li>
+            <li><a href="country.html?country=uzbekistan">Uzbekistan</a></li>
+            <li><a href="country.html?country=nepal">Nepal</a></li>
+            <li><a href="country.html?country=bangladesh">Bangladesh</a></li>
+            <li><a href="country.html?country=india">India</a></li>
+          </ul>
         </div>
-    </footer>
+        <div class="footer-section">
+          <h4>Contact Us</h4>
+          <p>Email: rabbiteducounsel@gmail.com</p>
+          <p>Phone: +91 9773650085</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+        <h2>&copy; 2026 Rabbit educounsel. All rights reserved.</h2>
+        </p>
+      </div>
+    </div>
+  </footer>
 
-    <script src="js/script.js"></script>
-    <script src="js/form-validation.js"></script>
-    <script src="js/animations.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/form-validation.js"></script>
+  <script src="js/animations.js"></script>
 </body>
+
 </html>
