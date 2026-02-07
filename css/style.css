@@ -2042,7 +2042,7 @@ a:hover {
 .services .section-title {
   text-align: center;
   font-size: 32px;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   color: #333;
 }
 
@@ -2148,6 +2148,32 @@ a:hover {
 
   .service-card {
     padding: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-btn {
+    font-size: 13.5px;
+    padding: 8px 18px;
+    border-width: 1.5px;
+
+    /* Better tap area */
+    min-height: 36px;
+
+    /* Slightly more breathing room */
+    margin-top: 16px;
+  }
+
+  /* Remove hover jump on touch devices */
+  .service-btn:hover {
+    transform: none;
+  }
+
+  /* Add subtle press feedback instead */
+  .service-btn:active {
+    transform: scale(0.96);
+    background: #21808d;
+    color: #ffffff;
   }
 }
 
