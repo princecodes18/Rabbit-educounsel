@@ -2363,8 +2363,8 @@ body {
    ============================================ */
 
 .footer {
-  background: linear-gradient(135deg, #d9d9d9 25%, #cce3de);
-  color: #0c0c0c;
+  background: linear-gradient(135deg, #142952 25%, #23365c);
+  color: #f5f2f2;
   padding: 24px;
 }
 
@@ -2399,7 +2399,7 @@ body {
 }
 
 .footer-section p {
-  color: #000000;
+  color: #cfc5c5;
   margin-bottom: var(--space-16);
   font-size: var(--font-size-sm);
 }
@@ -2426,7 +2426,7 @@ body {
 
 
 .footer-section a {
-  color: #000000;
+  color: #cfc5c5;
   transition: color var(--duration-fast) var(--ease-standard);
   font-size: var(--font-size-sm);
 }
@@ -2436,17 +2436,17 @@ body {
 }
 
 .footer-bottom {
-  border-top: 1px solid rgba(7, 7, 7, 0.1);
+  border-top: 1px solid rgba(125, 121, 121, 0.1);
   padding-top: 10px;
   text-align: center;
-  color: rgba(3, 3, 3, 0.5);
+  color: rgba(232, 227, 227, 0.5);
   font-size: var(--font-size-sm);
   max-width: var(--container-xl);
   margin: 0 auto;
 }
 
 .footer-bottom h2 {
-  color: #393434;
+  color: #cfc8c8;
   text-align: center;
   font-size: var(--font-size-sm);
   max-width: var(--container-xl);
