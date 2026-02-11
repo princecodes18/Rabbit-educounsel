@@ -1051,11 +1051,11 @@ const COUNTRY_DATA = {
 
   bangladesh: {
     name: "Bangladesh",
-    flag: "assets/images/flags/bangladesh-flag.png",
+    flag: "assets/images/flags/bangladesh.jpg",
     heroTitle: "MBBS in Bangladesh",
     heroDescription: "Pursue Medical Education in Bangladesh with NMC Recognition and Affordable Fees",
 
-    backgroundImage: "assets/images/countries/bangladesh-bg.jpg",
+    backgroundImage: "assets/images/co2.jpg",
     backgroundTitle: "Quality Medical Education in Bangladesh",
     backgroundDescription: "Study MBBS in neighboring Bangladesh with similar culture, English medium teaching, and NMC-approved medical colleges",
 
@@ -1096,7 +1096,7 @@ const COUNTRY_DATA = {
       {
         id: "uni-1",
         name: "Dhaka Medical College",
-        logo: "assets/images/universities/dmc-logo.png",
+        logo: "assets/images/logo_white.png",
         location: "Dhaka, Bangladesh",
         fees: "25-30",
         duration: "5 Years",
@@ -1111,7 +1111,7 @@ const COUNTRY_DATA = {
       {
         id: "uni-2",
         name: "Chittagong Medical College",
-        logo: "assets/images/universities/cmc-logo.png",
+        logo: "assets/images/logo_white.png",
         location: "Chittagong, Bangladesh",
         fees: "25-30",
         duration: "5 Years",
@@ -1126,7 +1126,7 @@ const COUNTRY_DATA = {
       {
         id: "uni-3",
         name: "Anwer Khan Modern Medical College",
-        logo: "assets/images/universities/akmmc-logo.png",
+        logo: "assets/images/logo_white.png",
         location: "Dhaka, Bangladesh",
         fees: "40-50",
         duration: "5 Years",
