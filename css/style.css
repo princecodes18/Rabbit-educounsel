@@ -1755,7 +1755,7 @@ body {
    ============================================ */
 
 .offers-section {
-  padding: 25px 10px 5px 10px;
+  padding: 15px 5px 1px 5px;
   background: #ffffff
     /*linear-gradient(90deg, #03045e 0%, #0096c7 100%);*/
 }
@@ -3363,7 +3363,7 @@ body {
 
 /* Section wrapper */
 .exam-info-section {
-  padding: 60px 20px;
+  padding: 5px 5px 5px 5px;
   background: #ffffff;
 }
 
