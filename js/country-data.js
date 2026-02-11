@@ -184,11 +184,11 @@ const COUNTRY_DATA = {
 
   india: {
     name: "India",
-    flag: "assets/images/flags/india-flag.png",
+    flag: "assets/images/logo.png",
     heroTitle: "MBBS in India",
     heroDescription: "Pursue Medical Education in Premier Indian Medical Colleges and AIIMS Institutions",
 
-    backgroundImage: "assets/images/countries/india-bg.jpg",
+    backgroundImage: "assets/images/co2.jpg",
     backgroundTitle: "Excellence in Indian Medical Education",
     backgroundDescription: "Study at prestigious AIIMS and government medical colleges with world-class faculty and comprehensive training",
 
@@ -229,7 +229,7 @@ const COUNTRY_DATA = {
       {
         id: "uni-1",
         name: "AIIMS Delhi",
-        logo: "assets/images/universities/aiims-delhi-logo.png",
+        logo: "assets/images/logo_white.png",
         location: "New Delhi, India",
         fees: "1-2",
         duration: "5.5 Years",
@@ -244,7 +244,7 @@ const COUNTRY_DATA = {
       {
         id: "uni-2",
         name: "Maulana Azad Medical College",
-        logo: "assets/images/universities/mamc-logo.png",
+        logo: "assets/images/logo_white.png",
         location: "New Delhi, India",
         fees: "0.5-1",
         duration: "5.5 Years",
@@ -259,7 +259,7 @@ const COUNTRY_DATA = {
       {
         id: "uni-3",
         name: "Armed Forces Medical College",
-        logo: "assets/images/universities/afmc-logo.png",
+        logo: "assets/images/logo_white.png",
         location: "Pune, Maharashtra",
         fees: "0.5-1",
         duration: "5.5 Years",
@@ -888,11 +888,11 @@ const COUNTRY_DATA = {
 
   nepal: {
     name: "Nepal",
-    flag: "assets/images/flags/nepal-flag.png",
+    flag: "assets/images/flags/nepal.jpg",
     heroTitle: "MBBS in Nepal",
     heroDescription: "Study Medicine in Your Neighboring Country with Cultural Similarity and Quality Education",
 
-    backgroundImage: "assets/images/countries/nepal-bg.jpg",
+    backgroundImage: "assets/images/co2.jpg",
     backgroundTitle: "Medical Education in Nepal",
     backgroundDescription: "Experience quality medical education close to home with similar culture, no language barrier, and NMC-approved universities",
 
@@ -933,7 +933,7 @@ const COUNTRY_DATA = {
       {
         id: "uni-1",
         name: "Kathmandu Medical College",
-        logo: "assets/images/universities/kmc-logo.png",
+        logo: "assets/images/logo_white.png",
         location: "Kathmandu, Nepal",
         fees: "45-55",
         duration: "5.5 Years",
@@ -948,7 +948,7 @@ const COUNTRY_DATA = {
       {
         id: "uni-2",
         name: "Manipal College of Medical Sciences",
-        logo: "assets/images/universities/mcoms-logo.png",
+        logo: "assets/images/universities/logo_white.png",
         location: "Pokhara, Nepal",
         fees: "50-60",
         duration: "5.5 Years",
@@ -963,7 +963,7 @@ const COUNTRY_DATA = {
       {
         id: "uni-3",
         name: "KIST Medical College",
-        logo: "assets/images/universities/kist-logo.png",
+        logo: "assets/images/universities/logo_white.png",
         location: "Lalitpur, Nepal",
         fees: "40-50",
         duration: "5.5 Years",
