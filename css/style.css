@@ -2059,7 +2059,7 @@ body {
 }
 
 .offer-card:nth-child(6)::before {
-  background-image: url("../assets/images/monuments/Egypt.jpg");
+  background-image: url("../assets/images/monuments/egypt.jpg");
 }
 
 .offer-card:nth-child(7)::before {
@@ -3444,7 +3444,7 @@ body {
 .egypt-universities {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 10px;
   overflow-x: auto;
   scroll-behavior: smooth;
 }
