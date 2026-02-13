@@ -2059,7 +2059,7 @@ body {
 }
 
 .offer-card:nth-child(6)::before {
-  background-image: url("../assets/images/monuments/egypt.jpg");
+  background-image: url("../assets/images/flags/egypt.jpg");
 }
 
 .offer-card:nth-child(7)::before {
