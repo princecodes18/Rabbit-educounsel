@@ -9,26 +9,26 @@
 ```
 alpha-eduworld/
 │
-├── index.html                 # Main landing page
+├── index.html                
 ├── css/
-│   ├── style.css             # Main stylesheet (1000+ lines)
-│   └── responsive.css        # Mobile/tablet/desktop responsive styles
+│   ├── style.css             
+│   └── responsive.css   
 │
 ├── js/
-│   ├── script.js             # Core JavaScript functionality
-│   ├── form-validation.js    # Advanced form handling
-│   └── animations.js         # Scroll animations & effects
+│   ├── script.js        
+│   ├── form-validation.js   
+│   └── animations.js        
 │
 ├── assets/
-│   ├── images/               # (To be added)
+│   ├── images/             
 │   │   ├── hero-bg.jpg
 │   │   ├── logo.png
 │   │   └── countries/
-│   └── fonts/                # (Optional for custom fonts)
+│   └── fonts/                
 │
-├── README.md                 # This file
-├── package.json              # (Optional) NPM configuration
-└── .gitignore               # Git ignore file
+├── README.md                
+├── package.json            
+└── .gitignore              
 ```
 
 ---
