@@ -45,6 +45,7 @@ const COUNTRY_DATA = {
         faculty: "More than 999 academic staff including Doctors and Professors of Medical Sciences. The academy offers education through 6 major medical faculties and provides instruction across 51 clinical specialties with annual specialization and advanced training in about 25 disciplines.",
         campus: "NOSMA has its own clinic and stomatological polyclinic, access to over 6300 hospital beds, modern laboratories, biomedical research centers, a large library with nearly half a million books, electronic reading rooms, simulation labs with phantoms and clinical equipment, hostels within walking distance, cafeteria, sports complexes, fitness centers, museums, and secure campus facilities.",
         studentLife: "Students enjoy a vibrant campus life with sports clubs, fitness centers, shooting gallery, cultural programs, scientific societies, conferences, workshops, and international exchange opportunities. Accommodation is available in international hostels, and students participate in extracurricular, research, and cultural activities.",
+        fee_details: "Tuition fees for MBBS at NOSMA are approximately 15-25 Lakhs INR for the entire course, with additional costs for hostel accommodation and living expenses. The academy offers affordable education compared to private medical colleges in India, and there are no donation fees. Indian mess facilities are available on campus.",
         website: "http://sogma.ru",
         brochure: "assets/brochures/nosma-russia.pdf"
       },
@@ -60,6 +61,7 @@ const COUNTRY_DATA = {
         faculty: "KBSU is supported by a highly qualified teaching staff and academic researchers. The university integrates classic and modern teaching methods, with experienced professors across medical and scientific disciplines, ensuring strong theoretical knowledge combined with practical exposure.",
         campus: "The university offers state-of-the-art classrooms, lecture halls, specialized research laboratories, digital libraries, academic databases, computer labs, and language labs. KBSU has 11 dormitories, well-equipped libraries, modern infrastructure, and comprehensive academic facilities designed to support both education and personal growth.",
         studentLife: "Students enjoy vibrant campus life with clubs, organizations, sports facilities, cultural festivals, international food events, leadership programs, and volunteer opportunities. KBSU promotes multicultural exchange and provides strong student support through extracurricular activities and campus-wide events.",
+        fee_details: "Tuition fees for MBBS at KBSU are approximately 14,95,200 RUB (total 6 years), with additional costs for hostel accommodation and living expenses. The university offers affordable education compared to private medical colleges in India, and there are no donation fees. Indian mess facilities are available on campus.",
         website: "https://eng.kbsu.ru/",
         brochure: "assets/brochures/kbsu-nalchik-russia.pdf"
       },

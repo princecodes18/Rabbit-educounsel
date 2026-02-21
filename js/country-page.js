@@ -194,6 +194,11 @@ function loadUniversityModals() {
                     <h3>Campus & Facilities</h3>
                     <p>${uni.campus}</p>
                 </div>
+
+                <div class="modal-section">
+                    <h3>Fee Details</h3>
+                    <p>${uni.fee_details}</p>
+                </div>
                 
                 <div class="modal-section">
                     <h3>Student Life</h3>
