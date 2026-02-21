@@ -1,0 +1,909 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery - Rabbit Edu Counsel</title>
+    <meta
+      name="description"
+      content="Explore moments from student life, cultural celebrations, campus tours and more at Rabbit Edu Counsel partner universities."
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=DM+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* ===== RESET & BASE ===== */
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "DM Sans", sans-serif;
+        background: #f8f9fb;
+        color: #1a1d2e;
+        -webkit-font-smoothing: antialiased;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Poppins", sans-serif;
+      }
+      img {
+        display: block;
+        max-width: 100%;
+      }
+      button {
+        cursor: pointer;
+        border: none;
+        background: none;
+        font-family: inherit;
+      }
+
+      /* ===== HERO ===== */
+      .gallery-hero {
+        background: linear-gradient(135deg, #0fb5c8, #3b82d6);
+        padding: 80px 20px 70px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .gallery-hero::before {
+        content: "";
+        position: absolute;
+        top: -150px;
+        right: -150px;
+        width: 350px;
+        height: 350px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.06);
+      }
+      .gallery-hero::after {
+        content: "";
+        position: absolute;
+        bottom: -80px;
+        left: -80px;
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.06);
+      }
+      .gallery-hero .back-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        color: rgba(255, 255, 255, 0.8);
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+        margin-bottom: 24px;
+        transition: color 0.3s;
+      }
+      .gallery-hero .back-link:hover {
+        color: #fff;
+      }
+      .gallery-hero h1 {
+        font-size: clamp(2rem, 5vw, 3.5rem);
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 16px;
+      }
+      .gallery-hero p {
+        font-size: clamp(1rem, 2vw, 1.2rem);
+        color: rgba(255, 255, 255, 0.85);
+        max-width: 640px;
+        margin: 0 auto 28px;
+        line-height: 1.6;
+      }
+      .hero-stats {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+      .hero-stat {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(255, 255, 255, 0.12);
+        backdrop-filter: blur(8px);
+        border-radius: 50px;
+        padding: 8px 18px;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 500;
+      }
+      .hero-stat svg {
+        width: 16px;
+        height: 16px;
+      }
+
+      /* ===== FILTERS ===== */
+      .filter-bar {
+        padding: 24px 20px;
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid #e5e8ee;
+        position: sticky;
+        top: 0;
+        z-index: 30;
+      }
+      .filter-bar-inner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+      .filter-btn {
+        padding: 10px 22px;
+        border-radius: 50px;
+        font-size: 14px;
+        font-weight: 500;
+        border: 1px solid #dde1e8;
+        background: #fff;
+        color: #6b7280;
+        transition: all 0.3s ease;
+      }
+      .filter-btn:hover {
+        border-color: rgba(15, 181, 200, 0.5);
+        color: #0fb5c8;
+      }
+      .filter-btn.active {
+        background: linear-gradient(135deg, #0fb5c8, #3b82d6);
+        color: #fff;
+        border-color: transparent;
+        box-shadow: 0 4px 16px rgba(15, 181, 200, 0.3);
+      }
+
+      /* ===== GALLERY GRID ===== */
+      .gallery-section {
+        padding: 48px 20px 64px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .gallery-grid {
+        columns: 3;
+        column-gap: 16px;
+      }
+      @media (max-width: 1024px) {
+        .gallery-grid {
+          columns: 2;
+        }
+      }
+      @media (max-width: 640px) {
+        .gallery-grid {
+          columns: 1;
+        }
+      }
+
+      .gallery-card {
+        break-inside: avoid;
+        margin-bottom: 16px;
+        border-radius: 14px;
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+        background: #fff;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        transition:
+          transform 0.5s ease,
+          box-shadow 0.5s ease;
+        opacity: 0;
+        transform: translateY(24px);
+        animation: cardFadeIn 0.5s ease-out forwards;
+      }
+      .gallery-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 20px 50px rgba(15, 181, 200, 0.2);
+      }
+      .gallery-card img {
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: transform 0.7s ease;
+      }
+      .gallery-card:hover img {
+        transform: scale(1.06);
+      }
+
+      .card-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.65) 0%,
+          rgba(0, 0, 0, 0.05) 50%,
+          transparent 100%
+        );
+        opacity: 0;
+        transition: opacity 0.4s ease;
+        display: flex;
+        align-items: flex-end;
+        padding: 16px;
+      }
+      .gallery-card:hover .card-overlay {
+        opacity: 1;
+      }
+      .card-overlay h3 {
+        color: #fff;
+        font-size: 14px;
+        font-weight: 600;
+      }
+      .card-overlay p {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 12px;
+        margin-top: 4px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+      .card-overlay .category-tag {
+        display: inline-block;
+        margin-top: 8px;
+        padding: 3px 10px;
+        border-radius: 50px;
+        font-size: 11px;
+        font-weight: 500;
+        background: rgba(255, 255, 255, 0.2);
+        color: #fff;
+        backdrop-filter: blur(4px);
+      }
+
+      /* Video play icon */
+      .video-play {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #0fb5c8, #3b82d6);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 20px rgba(15, 181, 200, 0.4);
+        transition: transform 0.3s ease;
+        z-index: 2;
+      }
+      .gallery-card:hover .video-play {
+        transform: translate(-50%, -50%) scale(1.12);
+      }
+      .video-play svg {
+        width: 24px;
+        height: 24px;
+        color: #fff;
+        margin-left: 3px;
+      }
+
+      /* Error fallback */
+      .card-fallback {
+        width: 100%;
+        min-height: 200px;
+        background: #f1f3f6;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 24px;
+      }
+      .card-fallback p {
+        color: #9ca3af;
+        font-size: 13px;
+        font-weight: 500;
+      }
+      .card-fallback small {
+        color: #c5c9d2;
+        font-size: 11px;
+        margin-top: 4px;
+      }
+
+      /* Card animation */
+      @keyframes cardFadeIn {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Empty state */
+      .empty-state {
+        text-align: center;
+        padding: 80px 20px;
+        color: #9ca3af;
+      }
+      .empty-state svg {
+        width: 56px;
+        height: 56px;
+        margin: 0 auto 16px;
+        opacity: 0.3;
+      }
+      .empty-state p {
+        font-size: 18px;
+      }
+
+      /* ===== LIGHTBOX ===== */
+      .lightbox {
+        position: fixed;
+        inset: 0;
+        z-index: 100;
+        background: rgba(0, 0, 0, 0.92);
+        backdrop-filter: blur(16px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        opacity: 0;
+        visibility: hidden;
+        transition:
+          opacity 0.3s,
+          visibility 0.3s;
+      }
+      .lightbox.open {
+        opacity: 1;
+        visibility: visible;
+      }
+      .lightbox-content {
+        max-width: 900px;
+        width: 100%;
+        text-align: center;
+        transform: scale(0.92);
+        transition: transform 0.35s ease;
+      }
+      .lightbox.open .lightbox-content {
+        transform: scale(1);
+      }
+      .lightbox-content img {
+        max-height: 75vh;
+        width: auto;
+        max-width: 100%;
+        margin: 0 auto;
+        border-radius: 12px;
+      }
+      .lightbox-content iframe {
+        width: 100%;
+        aspect-ratio: 16/9;
+        border-radius: 12px;
+        border: none;
+      }
+      .lightbox-caption {
+        margin-top: 16px;
+      }
+      .lightbox-caption h3 {
+        color: #fff;
+        font-size: 18px;
+        font-weight: 600;
+      }
+      .lightbox-caption p {
+        color: rgba(255, 255, 255, 0.65);
+        font-size: 14px;
+        margin-top: 4px;
+      }
+
+      .lightbox-btn {
+        position: absolute;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.12);
+        backdrop-filter: blur(8px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        transition: background 0.3s;
+      }
+      .lightbox-btn:hover {
+        background: rgba(255, 255, 255, 0.25);
+      }
+      .lightbox-btn svg {
+        width: 20px;
+        height: 20px;
+      }
+      .lightbox-close {
+        top: 16px;
+        right: 16px;
+      }
+      .lightbox-prev {
+        left: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      .lightbox-next {
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      /* ===== HOW-TO SECTION ===== */
+      .howto-section {
+        padding: 48px 20px 64px;
+        background: rgba(210, 220, 235, 0.25);
+      }
+      .howto-card {
+        max-width: 700px;
+        margin: 0 auto;
+        background: #fff;
+        border-radius: 18px;
+        padding: 36px;
+        box-shadow: 0 2px 16px rgba(0, 0, 0, 0.05);
+        border: 1px solid #e9ecf0;
+      }
+      .howto-card h2 {
+        font-size: 22px;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+      .howto-card ol {
+        list-style: none;
+        counter-reset: steps;
+      }
+      .howto-card li {
+        display: flex;
+        gap: 14px;
+        align-items: flex-start;
+        color: #6b7280;
+        font-size: 15px;
+        line-height: 1.5;
+        margin-bottom: 14px;
+      }
+      .howto-card li strong {
+        color: #1a1d2e;
+      }
+      .step-num {
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #0fb5c8, #3b82d6);
+        color: #fff;
+        font-size: 13px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+
+      /* ===== FOOTER ===== */
+      .gallery-footer {
+        text-align: center;
+        padding: 28px 20px;
+        border-top: 1px solid #e5e8ee;
+        color: #9ca3af;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- HERO -->
+    <section class="gallery-hero">
+      <a href="index.html" class="back-link">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          width="16"
+          height="16"
+        >
+          <path d="M19 12H5" />
+          <path d="m12 19-7-7 7-7" />
+        </svg>
+        Back to Home
+      </a>
+      <h1>Our Gallery</h1>
+      <p>
+        Explore moments from student life, cultural celebrations, campus tours,
+        and unforgettable experiences across our partner universities.
+      </p>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"
+            />
+            <circle cx="12" cy="13" r="3" />
+          </svg>
+          <span id="photoCount">0</span> Photos
+        </div>
+        <div class="hero-stat">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18" />
+            <line x1="7" y1="2" x2="7" y2="22" />
+            <line x1="17" y1="2" x2="17" y2="22" />
+            <line x1="2" y1="12" x2="22" y2="12" />
+            <line x1="2" y1="7" x2="7" y2="7" />
+            <line x1="2" y1="17" x2="7" y2="17" />
+            <line x1="17" y1="17" x2="22" y2="17" />
+            <line x1="17" y1="7" x2="22" y2="7" />
+          </svg>
+          <span id="videoCount">0</span> Videos
+        </div>
+      </div>
+    </section>
+
+    <!-- FILTERS -->
+    <div class="filter-bar">
+      <div class="filter-bar-inner" id="filterBar"></div>
+    </div>
+
+    <!-- GALLERY -->
+    <section class="gallery-section">
+      <div class="gallery-grid" id="galleryGrid"></div>
+      <div class="empty-state" id="emptyState" style="display: none">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path
+            d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"
+          />
+          <circle cx="12" cy="13" r="3" />
+        </svg>
+        <p>No items found in this category.</p>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="gallery-footer">
+      © <span id="year"></span> Rabbit Edu Counsel. All rights reserved.
+    </footer>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox">
+      <button class="lightbox-btn lightbox-close" onclick="closeLightbox()">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+      <button class="lightbox-btn lightbox-prev" onclick="prevItem()">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="m15 18-6-6 6-6" />
+        </svg>
+      </button>
+      <button class="lightbox-btn lightbox-next" onclick="nextItem()">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="m9 18 6-6-6-6" />
+        </svg>
+      </button>
+      <div class="lightbox-content" id="lightboxContent"></div>
+    </div>
+
+    <script>
+      // =====================================================
+      // GALLERY DATA — Replace driveFileId with your real IDs
+      // HOW TO GET A FILE ID:
+      //   1. Upload to Google Drive
+      //   2. Right-click → "Get link" → "Anyone with the link"
+      //   3. Copy ID from: https://drive.google.com/file/d/THIS_IS_THE_ID/view
+      // =====================================================
+      const galleryData = [
+        {
+          id: "1",
+          title: "Tour",
+          category: "Student Life",
+          type: "image",
+          driveFileId: "1RFC5huk_0N8tc-Qdt3b0fR42s1sWNeMb",
+          /*description:
+            "Students celebrating the freshers party with joy and enthusiasm",*/
+        },
+        {
+          id: "2",
+          title: "Holi",
+          category: "Celebrations",
+          type: "image",
+          driveFileId: "1EyiBeU6AdS0JOYARxvMjlAbDnHqj27Aq",
+          description: "Playig with colors on the festival of Holi, spreading happiness and unity",
+        },
+        {
+          id: "3",
+          title: "Pooja",
+          category: "Cultural Events",
+          type: "video",
+          driveFileId: "1B0hh84zN9HYAssOMgW2nnXiPycVCgrJU",
+          description:
+            "Traditional",
+        },
+        {
+          id: "4",
+          title: "Exploring",
+          category: "Student Life",
+          type: "image",
+          driveFileId: "1OAHeGfjucpj25faX4DlmtGZZppu3HlPE",
+          description: "Enjoying Freedom and exploring the campus with friends, creating unforgettable memories together",
+        },
+        {
+          id: "5",
+          title: "Landscape",
+          category: "Nature & Campus",
+          type: "image",
+          driveFileId: "1GBDQnh0gWddrNYHjX7kpgqF7JHTxxFcR",
+          description: "Beautiful landscape of our campus",
+        },
+        {
+          id: "6",
+          title: "Tour",
+          category: "Nature & Campus",
+          type: "image",
+          driveFileId: "1HAVcnUfuswVOPejZJvu09y0T2AznSVdj",
+          description: "Exploring the campus and enjoying the scenic beauty, creating unforgettable memories together",
+        },
+        {
+          id: "7",
+          title: "Saraswati Pooja",
+          category: "Celebrations",
+          type: "video",
+          driveFileId: "1itog_mF09CfncAp0-xcQQ1foQCRL3e35",
+          description: "Traditional Saraswati Puja ceremony",
+        },
+        {
+          id: "8",
+          title: "Holi Celebration",
+          category: "Celebrations",
+          type: "image",
+          driveFileId: "1MZ7LXl6BZbIoUniHIJhtTnFr4VJZdHtn",
+          description: "Students celebrating the festival of colors",
+        },
+        {
+          id: "9",
+          title: "Enjoying Life",
+          category: "Student Life",
+          type: "image",
+          driveFileId: "1CwSP0YWN52vZnKJH09T3GW9G-xWraRJD",
+          description: "Enjoying the nature's beauty",
+        },
+        {
+          id: "10",
+          title: "Scenic Beauty",
+          category: "Nature & Campus",
+          type: "image",
+          driveFileId: "1fERRExJu6kTo8-d4B9iuMgORLSiyynf_",
+          description: "Beautiful scenery around",
+        },
+      ];
+
+      // ===== HELPERS =====
+      const getDriveImageUrl = (id) =>
+        `https://drive.google.com/uc?export=view&id=${id}`;
+      const getDriveVideoEmbed = (id) =>
+        `https://drive.google.com/file/d/${id}/preview`;
+      const categories = [
+        "All",
+        ...new Set(galleryData.map((i) => i.category)),
+      ];
+
+      let activeCategory = "All";
+      let currentFiltered = [];
+      let currentLightboxIndex = -1;
+
+      // ===== INIT =====
+      document.getElementById("year").textContent = new Date().getFullYear();
+      document.getElementById("photoCount").textContent = galleryData.filter(
+        (i) => i.type === "image",
+      ).length;
+      document.getElementById("videoCount").textContent = galleryData.filter(
+        (i) => i.type === "video",
+      ).length;
+
+      // ===== RENDER FILTERS =====
+      const filterBar = document.getElementById("filterBar");
+      categories.forEach((cat) => {
+        const btn = document.createElement("button");
+        btn.className = "filter-btn" + (cat === "All" ? " active" : "");
+        btn.textContent = cat;
+        btn.addEventListener("click", () => {
+          activeCategory = cat;
+          document
+            .querySelectorAll(".filter-btn")
+            .forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+          renderGallery();
+        });
+        filterBar.appendChild(btn);
+      });
+
+      // ===== RENDER GALLERY =====
+      function renderGallery() {
+        const grid = document.getElementById("galleryGrid");
+        const empty = document.getElementById("emptyState");
+        grid.innerHTML = "";
+
+        currentFiltered =
+          activeCategory === "All"
+            ? galleryData
+            : galleryData.filter((i) => i.category === activeCategory);
+
+        if (currentFiltered.length === 0) {
+          empty.style.display = "block";
+          return;
+        }
+        empty.style.display = "none";
+
+        currentFiltered.forEach((item, index) => {
+          const card = document.createElement("div");
+          card.className = "gallery-card";
+          card.style.animationDelay = `${index * 0.06}s`;
+          card.addEventListener("click", () => openLightbox(index));
+
+          if (item.type === "image") {
+            const img = document.createElement("img");
+            img.src = `https://drive.google.com/thumbnail?id=${item.driveFileId}&sz=w1000`;
+            img.alt = item.title;
+            img.loading = "lazy";
+
+            img.onerror = function () {
+              this.style.display = "none";
+              const fb = document.createElement("div");
+              fb.className = "card-fallback";
+              fb.innerHTML = `<p>${item.title}</p><small>Image failed to load</small>`;
+              card.insertBefore(fb, card.firstChild);
+            };
+
+            card.appendChild(img);
+          } else {
+            const wrapper = document.createElement("div");
+            wrapper.style.cssText =
+              "position:relative;min-height:200px;background:#f1f3f6;display:flex;align-items:center;justify-content:center;";
+            const thumb = document.createElement("img");
+            thumb.src = `https://drive.google.com/thumbnail?id=${item.driveFileId}&sz=w800`;
+            thumb.alt = item.title;
+            thumb.loading = "lazy";
+            thumb.style.cssText = "width:100%;height:auto;object-fit:cover;";
+            thumb.onerror = function () {
+              this.style.display = "none";
+              const fb = document.createElement("div");
+              fb.className = "card-fallback";
+              fb.innerHTML = `<p>${item.title}</p><small>Video thumbnail</small>`;
+              wrapper.appendChild(fb);
+            };
+            wrapper.appendChild(thumb);
+            const playBtn = document.createElement("div");
+            playBtn.className = "video-play";
+            playBtn.innerHTML =
+              '<svg viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg>';
+            wrapper.appendChild(playBtn);
+            card.appendChild(wrapper);
+          }
+
+          // Overlay
+          const overlay = document.createElement("div");
+          overlay.className = "card-overlay";
+          overlay.innerHTML = `
+          <div>
+            <h3>${item.title}</h3>
+            ${item.description ? `<p>${item.description}</p>` : ""}
+            <span class="category-tag">${item.category}</span>
+          </div>
+        `;
+          card.appendChild(overlay);
+          grid.appendChild(card);
+        });
+      }
+
+      // ===== LIGHTBOX =====
+      function openLightbox(index) {
+        currentLightboxIndex = index;
+        renderLightboxContent();
+        document.getElementById("lightbox").classList.add("open");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeLightbox() {
+        document.getElementById("lightbox").classList.remove("open");
+        document.body.style.overflow = "";
+        // Clear iframe to stop video
+        setTimeout(() => {
+          document.getElementById("lightboxContent").innerHTML = "";
+        }, 300);
+      }
+
+      function prevItem() {
+        currentLightboxIndex =
+          currentLightboxIndex <= 0
+            ? currentFiltered.length - 1
+            : currentLightboxIndex - 1;
+        renderLightboxContent();
+      }
+
+      function nextItem() {
+        currentLightboxIndex =
+          currentLightboxIndex >= currentFiltered.length - 1
+            ? 0
+            : currentLightboxIndex + 1;
+        renderLightboxContent();
+      }
+
+      function renderLightboxContent() {
+        const item = currentFiltered[currentLightboxIndex];
+        if (!item) return;
+        const container = document.getElementById("lightboxContent");
+
+        if (item.type === "image") {
+          container.innerHTML = `
+          <img src="${getDriveImageUrl(item.driveFileId)}" alt="${item.title}" />
+          <div class="lightbox-caption">
+            <h3>${item.title}</h3>
+            ${item.description ? `<p>${item.description}</p>` : ""}
+          </div>
+        `;
+        } else {
+          container.innerHTML = `
+          <iframe src="${getDriveVideoEmbed(item.driveFileId)}" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <div class="lightbox-caption">
+            <h3>${item.title}</h3>
+            ${item.description ? `<p>${item.description}</p>` : ""}
+          </div>
+        `;
+        }
+      }
+
+      // Keyboard nav
+      document.addEventListener("keydown", (e) => {
+        if (!document.getElementById("lightbox").classList.contains("open"))
+          return;
+        if (e.key === "Escape") closeLightbox();
+        if (e.key === "ArrowLeft") prevItem();
+        if (e.key === "ArrowRight") nextItem();
+      });
+
+      // Close on backdrop click
+      document.getElementById("lightbox").addEventListener("click", (e) => {
+        if (e.target === document.getElementById("lightbox")) closeLightbox();
+      });
+
+      // Initial render
+      renderGallery();
+    </script>
+  </body>
+</html>
