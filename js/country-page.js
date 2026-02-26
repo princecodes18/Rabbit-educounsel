@@ -301,7 +301,7 @@ function loadFeeComparisonSection() {
         {
             label: 'Total Course Cost',
             country: `INR ${comparison.totalCost} Lakhs`,
-            india: 'INR 25-100 Lakhs'
+            india: 'INR 25 lakhs(Min) to 1.5 crores(Max)'
         },
         {
             label: 'Medium of Teaching',
