@@ -31,6 +31,7 @@ const COUNTRY_DATA = {
       },
     ],
 
+
 universities: [
 
 {
@@ -38,7 +39,7 @@ id: "uni-ivanovo",
 name: "Ivanovo State Medical University",
 logo: "assets/images/colleges/nosma-russia.jpg",
 location: "Ivanovo Oblast, Russia",
-fees: "Not specified",
+fees: "Download brochure for details",
 duration: "6 Years",
 recognition: "WHO, NMC approved",
 about:
@@ -51,7 +52,7 @@ studentLife:
 "Multicultural environment with students from more than 40 countries and affordable living conditions.",
 fee_details:
 "Fee details not specified in brochure.",
-website: "#",
+website: "https://ivgmu.ru/",
 brochure: "https://drive.google.com/file/d/15Vb8qaNUd7KFST-YTGsVnpNkO-r4Bgnq/view?usp=drive_link"
 },
 
@@ -60,7 +61,7 @@ id: "uni-kbsu",
 name: "Kabardino-Balkarian State University",
 logo: "assets/images/colleges/nosma-russia.jpg",
 location: "Nalchik, Russia",
-fees: "Not specified",
+fees: "Download brochure for details",
 duration: "6 Years",
 recognition: "WHO, NMC approved",
 about:
@@ -73,7 +74,7 @@ studentLife:
 "Students from over 40 countries participate in cultural, scientific and sports activities.",
 fee_details:
 "Fee details not specified in brochure.",
-website: "#",
+website: "https://pk.kbsu.ru/",
 brochure: "https://drive.google.com/file/d/1OiKm35lM79kHWvQ1KwNIU7ZKA2RroUb7/view?usp=drive_link"
 },
 
@@ -82,7 +83,7 @@ id: "uni-nwsmu",
 name: "North-Western State Medical University",
 logo: "assets/images/colleges/nosma-russia.jpg",
 location: "Saint Petersburg, Russia",
-fees: "Not specified",
+fees: "Download brochure for details",
 duration: "6 Years",
 recognition: "WHO, NMC approved",
 about:
@@ -95,7 +96,7 @@ studentLife:
 "Saint Petersburg offers a vibrant cultural atmosphere and excellent infrastructure for students.",
 fee_details:
 "Fee details not specified in brochure.",
-website: "#",
+website: "https://szgmu.ru/eng/",
 brochure: "https://drive.google.com/file/d/1uqe7G6nTNI8lgRczJx5pk3Vpbo2UXMWN/view?usp=drive_link"
 },
 
@@ -104,7 +105,7 @@ id: "uni-sevastopol",
 name: "Sevastopol State University",
 logo: "assets/images/colleges/nosma-russia.jpg",
 location: "Sevastopol, Russia",
-fees: "Not specified",
+fees: "Download brochure for details",
 duration: "6 Years",
 recognition: "WHO, NMC approved",
 about:
@@ -117,7 +118,7 @@ studentLife:
 "Students enjoy a safe coastal city with affordable living and cultural activities.",
 fee_details:
 "Fee details not specified in brochure.",
-website: "#",
+website: "https://www.sevsu.ru/",
 brochure: "https://drive.google.com/file/d/1URhYAZJvD3VdIGv8fnoSCMXBGi8yQlEy/view?usp=drive_link"
 },
 
@@ -126,7 +127,7 @@ id: "uni-chita",
 name: "Chita State Medical Academy",
 logo: "assets/images/colleges/nosma-russia.jpg",
 location: "Chita, Zabaykalsky Krai, Russia",
-fees: "Not specified",
+fees: "Download brochure for details",
 duration: "6 Years",
 recognition: "WHO, NMC approved",
 about:
@@ -139,7 +140,7 @@ studentLife:
 "Peaceful student-friendly environment suitable for international students.",
 fee_details:
 "Fee details not specified in brochure.",
-website: "#",
+website: "https://chitgma.ru/english",
 brochure: "https://drive.google.com/file/d/1LvyuBKQcxPfLtr1UNVnNzClIX04ybcZo/view?usp=drive_link"
 },
 
@@ -148,7 +149,7 @@ id: "uni-tver",
 name: "Tver State Medical University",
 logo: "assets/images/colleges/nosma-russia.jpg",
 location: "Tver, Russia",
-fees: "Not specified",
+fees: "Download brochure for details",
 duration: "6 Years",
 recognition: "WHO, NMC approved",
 about:
@@ -161,7 +162,7 @@ studentLife:
 "Students benefit from a comfortable environment located between Moscow and Saint Petersburg.",
 fee_details:
 "Fee details not specified in brochure.",
-website: "#",
+website: "https://tvgmu.ru/",
 brochure: "https://drive.google.com/file/d/10nH_j0LbhZj0ohOcRvfT4rxTbaR3xwlo/view?usp=drive_link"
 },
 
@@ -170,7 +171,7 @@ id: "uni-lobachevsky",
 name: "Lobachevsky State University",
 logo: "assets/images/colleges/nosma-russia.jpg",
 location: "Nizhny Novgorod, Russia",
-fees: "Not specified",
+fees: "Download brochure for details",
 duration: "6 Years",
 recognition: "WHO, NMC approved",
 about:
@@ -183,7 +184,7 @@ studentLife:
 "Students experience life in one of Russia's major educational and cultural centers.",
 fee_details:
 "Fee details not specified in brochure.",
-website: "#",
+website: "https://tvgmu.ru/",
 brochure: "https://drive.google.com/file/d/1UgEAEarVbWan4rYCPcZavBQhgVXrusMI/view?usp=drive_link"
 },
 
@@ -192,7 +193,7 @@ id: "uni-chechen",
 name: "Chechen State University",
 logo: "assets/images/colleges/nosma-russia.jpg",
 location: "Grozny, Chechnya, Russia",
-fees: "Not specified",
+fees: "Download brochure for details",
 duration: "6 Years",
 recognition: "WHO, NMC approved",
 about:
@@ -205,7 +206,7 @@ studentLife:
 "Grozny offers a secure and developing environment for international students.",
 fee_details:
 "Fee details not specified in brochure.",
-website: "#",
+website: "https://chechsu.com/index.html",
 brochure: "https://drive.google.com/file/d/1CGDEFWlXt3n3K5v1cXdIheSasEfEeAj_/view?usp=drive_link"
 },
 
@@ -214,7 +215,7 @@ id: "uni-chuvash",
 name: "Chuvash State Medical University",
 logo: "assets/images/colleges/nosma-russia.jpg",
 location: "Cheboksary, Russia",
-fees: "Not specified",
+fees: "Download brochure for details",
 duration: "6 Years",
 recognition: "WHO, NMC, ECFMG approved",
 about:
@@ -227,7 +228,7 @@ studentLife:
 "Large international student community with strong Indian student presence.",
 fee_details:
 "Fee details not specified in brochure.",
-website: "#",
+website: "https://www.chuvsu.ru/",
 brochure: "https://drive.google.com/file/d/1oZE08Xg8ai60r1BgPa7-udDu6pjQpZzF/view?usp=drive_link"
 },
 
@@ -236,7 +237,7 @@ id: "uni-nosmu",
 name: "North-Ossetian State Medical University",
 logo: "assets/images/colleges/nosma-russia.jpg",
 location: "Vladikavkaz, Russia",
-fees: "Not specified",
+fees: "Download brochure for details",
 duration: "6 Years",
 recognition: "WHO, NMC approved",
 about:
@@ -249,7 +250,7 @@ studentLife:
 "Indian students benefit from multicultural exposure, affordable living and Indian mess facilities.",
 fee_details:
 "Fee details not specified in brochure.",
-website: "#",
+website: "https://eng.nosu.ru/",
 brochure: "https://drive.google.com/file/d/14SMHJvFEY-jNUCbNtPvnc-6gftRhh9oB/view?usp=drive_link"
 }
 

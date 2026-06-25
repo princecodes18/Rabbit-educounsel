@@ -3475,3 +3475,237 @@ body {
   filter: grayscale(0%);
   transform: scale(1.05);
 }
+
+/* ========================================
+   Posters Sections
+======================================== */
+
+.updates-section,
+.destination-banners,
+.guidance-section{
+
+    padding:80px 0;
+
+    background:#f8fafc;
+
+}
+
+.destination-banners{
+
+    background:#ffffff;
+
+}
+
+
+
+/* ========================================
+   Section Titles
+======================================== */
+
+.updates-section h2,
+.destination-banners h2,
+.guidance-section h2{
+
+    text-align:center;
+
+    font-size:2.5rem;
+
+    font-weight:700;
+
+    color:#111827;
+
+    margin-bottom:12px;
+
+}
+
+
+
+.updates-section p{
+
+    text-align:center;
+
+    max-width:700px;
+
+    margin:0 auto 50px;
+
+    color:#64748b;
+
+    font-size:1rem;
+
+}
+
+
+
+/* ========================================
+   Posters Grid
+======================================== */
+
+.banner-grid{
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(auto-fit,minmax(350px,1fr));
+
+    gap:32px;
+
+    align-items:start;
+
+}
+
+
+
+/* ========================================
+   Individual Poster
+======================================== */
+
+.banner-card{
+
+    background:transparent;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+}
+
+
+
+.banner-card img{
+
+    width:100%;
+
+    height:auto;
+
+    display:block;
+
+    border-radius:18px;
+
+    box-shadow:
+
+    0 8px 25px rgba(0,0,0,.08);
+
+    transition:all .35s ease;
+
+}
+
+
+
+.banner-card:hover img{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+
+    0 15px 35px rgba(0,0,0,.12);
+
+}
+
+
+
+/* ========================================
+   Container Width
+======================================== */
+
+.updates-section .container,
+.destination-banners .container,
+.guidance-section .container{
+
+    max-width:1300px;
+
+    margin:auto;
+
+    padding:0 20px;
+
+}
+
+
+
+/* ========================================
+   Mobile
+======================================== */
+
+@media(max-width:992px){
+
+.banner-grid{
+
+grid-template-columns:
+
+repeat(2,1fr);
+
+gap:24px;
+
+}
+
+}
+
+
+
+@media(max-width:768px){
+
+.updates-section,
+.destination-banners,
+.guidance-section{
+
+padding:60px 0;
+
+}
+
+
+
+.updates-section h2,
+.destination-banners h2,
+.guidance-section h2{
+
+font-size:2rem;
+
+}
+
+
+
+.updates-section p{
+
+font-size:15px;
+
+padding:0 15px;
+
+margin-bottom:35px;
+
+}
+
+
+
+.banner-grid{
+
+grid-template-columns:1fr;
+
+gap:22px;
+
+}
+
+
+
+.banner-card img{
+
+border-radius:14px;
+
+box-shadow:
+
+0 5px 18px rgba(0,0,0,.08);
+
+}
+
+
+
+.banner-card:hover img{
+
+transform:none;
+
+box-shadow:
+
+0 5px 18px rgba(0,0,0,.08);
+
+}
+
+}
