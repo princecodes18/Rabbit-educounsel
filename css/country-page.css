@@ -438,12 +438,25 @@ body {
 }
 
 .university-card {
-  background: #ffffff;
-  border-radius: 24px;
-  overflow: hidden;
-  box-shadow: var(--shadow-md);
-  transition: all var(--transition-normal);
-  border: 1px solid rgba(0, 0, 0, 0.05);
+
+background:#ffffff;
+
+border-radius:24px;
+
+overflow:hidden;
+
+box-shadow:var(--shadow-md);
+
+transition:all var(--transition-normal);
+
+border:1px solid rgba(0,0,0,.05);
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:space-between;
+
 }
 
 .university-card:hover {
@@ -513,46 +526,171 @@ body {
 }
 
 .university-actions {
-  padding: 0 1.75rem 1.75rem;
-  display: flex;
-  gap: 1rem;
+
+padding:0 1.75rem 1.75rem;
+
+display:flex;
+
+flex-direction:column;
+
+gap:14px;
+
+margin-top:15px;
+
 }
 
-.btn-details,
-.btn-interest {
-  flex: 1;
-  padding: 0.875rem 1.25rem;
-  border: none;
-  border-radius: 12px;
-  font-size: 0.95rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all var(--transition-normal);
-  font-family: var(--font-primary);
+.top-buttons{
+
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:12px;
+
 }
 
-.btn-details {
-  background: linear-gradient(135deg, #f5f7fa 0%, #e4e9f2 100%);
-  color: #667eea;
-  border: 2px solid #667eea;
+
+
+.btn-brochure,
+.btn-website{
+
+
+height:50px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+text-decoration:none;
+
+border-radius:12px;
+
+font-size:15px;
+
+font-weight:600;
+
+transition:all .3s ease;
+
 }
 
-.btn-details:hover {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
+
+
+.btn-brochure{
+
+
+background:white;
+
+color:#667eea;
+
+border:2px solid #667eea;
+
 }
 
-.btn-interest {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+
+
+.btn-brochure:hover{
+
+
+background:var(--primary-gradient);
+
+color:white;
+
+transform:translateY(-2px);
+
 }
 
-.btn-interest:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
-  filter: brightness(1.1);
+
+
+.btn-website{
+
+
+background:var(--primary-gradient);
+
+color:white;
+
+border:none;
+
+}
+
+
+
+.btn-website:hover{
+
+
+transform:translateY(-2px);
+
+
+box-shadow:var(--shadow-lg);
+
+
+filter:brightness(1.05);
+
+}
+
+
+
+.btn-interest{
+
+
+width:100%;
+
+
+height:54px;
+
+
+border:none;
+
+
+border-radius:12px;
+
+
+font-size:16px;
+
+
+font-weight:700;
+
+
+cursor:pointer;
+
+
+background:var(--primary-gradient);
+
+
+color:white;
+
+
+transition:all .3s ease;
+
+}
+
+
+
+.btn-interest:hover{
+
+
+transform:translateY(-2px);
+
+
+box-shadow:var(--shadow-lg);
+
+}
+
+
+
+.btn-website.disabled{
+
+
+opacity:.55;
+
+
+pointer-events:none;
+
+
+cursor:not-allowed;
+
 }
 
 /* ============================================
@@ -836,166 +974,7 @@ body {
   background: linear-gradient(90deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
 }
 
-/* ============================================
-   MODAL STYLES - Modern Design
-   ============================================ */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 10000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(8px);
-  opacity: 0;
-  transition: opacity var(--transition-normal);
-}
 
-.modal.show {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 1;
-}
-
-.modal-content {
-  background-color: white;
-  margin: 2rem;
-  padding: 0;
-  border-radius: 24px;
-  max-width: 750px;
-  width: 90%;
-  max-height: 85vh;
-  overflow-y: auto;
-  box-shadow: 0 20px 80px rgba(0, 0, 0, 0.4);
-  animation: modalSlideIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-@keyframes modalSlideIn {
-  from {
-    transform: translateY(-50px) scale(0.95);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0) scale(1);
-    opacity: 1;
-  }
-}
-
-.modal-header {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  padding: 2rem 2.5rem;
-  border-radius: 24px 24px 0 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.modal-header h2 {
-  margin: 0;
-  font-size: 1.75rem;
-  font-weight: 700;
-}
-
-.close-btn {
-  background: rgba(255, 255, 255, 0.2);
-  border: none;
-  color: white;
-  font-size: 1.75rem;
-  cursor: pointer;
-  padding: 0;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  transition: all var(--transition-normal);
-}
-
-.close-btn:hover {
-  background: rgba(255, 255, 255, 0.3);
-  transform: rotate(90deg);
-}
-
-.modal-section {
-  padding: 2rem 2.5rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-}
-
-.modal-section:last-of-type {
-  border-bottom: none;
-}
-
-.modal-section h3 {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  margin-bottom: 1rem;
-  font-size: 1.35rem;
-  font-weight: 700;
-}
-
-.modal-section p {
-  color: #4a5568;
-  line-height: 1.8;
-  font-size: 0.95rem;
-}
-
-.modal-links {
-  padding: 2rem 2.5rem;
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.modal-link-btn {
-  flex: 1;
-  min-width: 150px;
-  padding: 0.875rem 1.5rem;
-  background: linear-gradient(135deg, #f5f7fa 0%, #e4e9f2 100%);
-  color: #667eea;
-  border: 2px solid #667eea;
-  border-radius: 12px;
-  text-decoration: none;
-  text-align: center;
-  font-weight: 600;
-  transition: all var(--transition-normal);
-  font-family: var(--font-primary);
-}
-
-.modal-link-btn:hover {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
-}
-
-.interest-btn {
-  width: calc(100% - 5rem);
-  margin: 0 2.5rem 2rem;
-  padding: 1rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  border: none;
-  border-radius: 12px;
-  font-size: 1.05rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all var(--transition-normal);
-  font-family: var(--font-primary);
-}
-
-.interest-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
-  filter: brightness(1.1);
-}
 
 /* ============================================
    INTEREST MODAL - Modern Form Design
@@ -1472,21 +1451,6 @@ body {
   }
 
   .university-actions {
-    flex-direction: column;
-  }
-
-  .modal-content {
-    width: 95%;
-    margin: 1rem;
-  }
-
-  .modal-header,
-  .modal-section,
-  .modal-links {
-    padding: 1.5rem;
-  }
-
-  .modal-links {
     flex-direction: column;
   }
 

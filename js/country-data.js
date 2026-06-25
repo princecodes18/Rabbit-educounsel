@@ -31,107 +31,229 @@ const COUNTRY_DATA = {
       },
     ],
 
-    universities: [
-      {
-        id: "uni-nosma",
-        name: "North Ossetian State Medical Academy",
-        logo: "assets/images/colleges/nosma-russia.webp",
-        location: "Vladikavkaz, North Ossetia–Alania, Russia",
-        fees: "Not specified",
-        duration: "6 Years",
-        recognition: "Listed in WHO World Directory of Medical Schools",
-        about:
-          "North Ossetian State Medical Academy (NOSMA), established in 1939, is a public medical institution located in Vladikavkaz, Russia. It is one of the leading higher education institutions in the North Caucasus and has been training international students since 1991. Graduates successfully work across Russia and many other countries including India, Egypt, Morocco, Syria, Lebanon, Sudan, Zimbabwe, Greece, and the USA.",
-        faculty:
-          "More than 999 academic staff including Doctors and Professors of Medical Sciences. The academy offers education through 6 major medical faculties and provides instruction across 51 clinical specialties with annual specialization and advanced training in about 25 disciplines.",
-        campus:
-          "NOSMA has its own clinic and stomatological polyclinic, access to over 6300 hospital beds, modern laboratories, biomedical research centers, a large library with nearly half a million books, electronic reading rooms, simulation labs with phantoms and clinical equipment, hostels within walking distance, cafeteria, sports complexes, fitness centers, museums, and secure campus facilities.",
-        studentLife:
-          "Students enjoy a vibrant campus life with sports clubs, fitness centers, shooting gallery, cultural programs, scientific societies, conferences, workshops, and international exchange opportunities. Accommodation is available in international hostels, and students participate in extracurricular, research, and cultural activities.",
-        fee_details:
-          "Tuition fees for MBBS at NOSMA are approximately 15-25 Lakhs INR for the entire course, with additional costs for hostel accommodation and living expenses. The academy offers affordable education compared to private medical colleges in India, and there are no donation fees. Indian mess facilities are available on campus.",
-        website: "http://sogma.ru",
-        brochure: "assets/brochures/nosma-russia.pdf",
-      },
-      {
-        id: "uni-kbsu",
-        name: "Kabardino-Balkarian State University",
-        logo: "assets/images/colleges/kbsu-russia.jpeg",
-        location: "Nalchik, Kabardino-Balkarian Republic, Russia",
-        fees: "Approx. 14,95,200 RUB (total 6 years)",
-        duration: "6 Years",
-        recognition: "Ministry of Health of Russian Federation, WHO listed",
-        about:
-          "Kabardino-Balkarian State University (KBSU), established in 1957, is a leading scientific, educational, informational, social, and cultural university located in Nalchik, Russia. The university has trained over 14,500 students and is recognized for its strong academic foundation, international collaborations, and modern teaching methodologies. KBSU has received multiple awards including recognition among Russia’s top universities and global aggregated rankings.",
-        faculty:
-          "KBSU is supported by a highly qualified teaching staff and academic researchers. The university integrates classic and modern teaching methods, with experienced professors across medical and scientific disciplines, ensuring strong theoretical knowledge combined with practical exposure.",
-        campus:
-          "The university offers state-of-the-art classrooms, lecture halls, specialized research laboratories, digital libraries, academic databases, computer labs, and language labs. KBSU has 11 dormitories, well-equipped libraries, modern infrastructure, and comprehensive academic facilities designed to support both education and personal growth.",
-        studentLife:
-          "Students enjoy vibrant campus life with clubs, organizations, sports facilities, cultural festivals, international food events, leadership programs, and volunteer opportunities. KBSU promotes multicultural exchange and provides strong student support through extracurricular activities and campus-wide events.",
-        fee_details:
-          "Tuition fees for MBBS at KBSU are approximately 14,95,200 RUB (total 6 years), with additional costs for hostel accommodation and living expenses. The university offers affordable education compared to private medical colleges in India, and there are no donation fees. Indian mess facilities are available on campus.",
-        website: "https://eng.kbsu.ru/",
-        brochure: "assets/brochures/kbsu-nalchik-russia.pdf",
-      },
-      {
-        id: "uni-osmu",
-        name: "Orenburg State Medical University",
-        logo: "assets/images/colleges/osmu-russia.jpeg",
-        location: "Orenburg, Russia",
-        fees: "Not specified",
-        duration: "6 Years",
-        recognition: "WHO, MCI (NMC) approved, recognized in USA and Canada",
-        about:
-          "Founded in 1944, Orenburg State Medical University (OrSMU) is one of the oldest and most globally recognized medical universities in Russia. It is consistently ranked among the top medical universities in Russia, recently securing the 2nd position in a top 100 ranking.",
-        faculty:
-          "The university features 47 departments staffed by approximately 300 professors, associate professors, and doctors. The faculty provides high-quality medical education with a balance of experience and expertise.",
-        campus:
-          "The campus offers updated infrastructure and modern equipment, including a Center of Simulation and various teaching hospitals and clinics. Students are provided with extensive opportunities for practical learning and experiments beyond traditional classrooms.",
-        studentLife:
-          "Student life includes a vibrant community with various societies and clubs for sports, culture, languages, dance, music, and photography. The university also provides a fully equipped gymnasium and celebrates traditional Indian functions like Diwali and Navaratri.",
-        website: "https://www.orgma.ru",
-        brochure: "assets/brochures/osmu-brochure.pdf",
-      },
-      {
-        id: "uni-isu",
-        name: "Ingush State University",
-        logo: "assets/images/colleges/isu-russia.png",
-        location: "Magas, Republic of Ingushetia, Russia",
-        fees: "2.5-5",
-        duration: "5.8 Years",
-        recognition: "NMC & WHO approved",
-        about:
-          "Ingush State University is the first university in the history of Ingushetia, founded in 1994. It is one of the youngest universities in the Russian Federation with 7 faculties including medical, and 26 departments. The university has 5,327 students and 315 teachers including 34 professors and 124 associate professors. The Faculty of Medicine was founded in 1997 and provides training in General Medicine with DOCTOR (M.D PHYSICIAN) qualification.",
-        faculty:
-          "Highly qualified teaching staff of 508 teachers serving 8,978 students. Faculty includes renowned scientists like Dr. M.B. Bolgucheva (Head of Human Anatomy), PHD Associate Professor Dr. R.T. DIDIGOVA (Pathological Anatomy), Dr. Z.M. GATAGAZHEVA (Obstetrics and Gynecology), and many other experienced professors. Professional development takes place at the first medical academy named after IM Sechenov, Moscow. Department staff are full-time and freelance chief specialists of the Ministry of Health.",
-        campus:
-          "Modern educational infrastructure with laboratory and experimental complexes, editorial and publishing center, and comprehensive library facilities. The main building is located in Magas city. The university has modern educational technologies with Internet center and research facilities. Campus features state-of-the-art medical facilities for practical training and clinical disciplines. Students have access to advanced teaching aids and methodological resources.",
-        studentLife:
-          "Ingush residence hall accommodates 1,500 students in shared single-double rooms (2, 3, 4-seater). Facilities include biometric attendance, CCTV surveillance, separate kitchens, washrooms with single cabinet showers, laundry room, reading rooms, TV/DVD room, library, canteen, computer rooms, study rooms with Wi-Fi, guest hotel, gym, and sports complex with swimming, volleyball, basketball, wrestling, taekwondo, martial arts sections. Indian mess facilities and restaurants available within walking distance. Cultural events, festivals, and extracurricular activities organized regularly. Multicultural environment with strong support for international students.",
-        website: "https://www.inggu.ru",
-        brochure: "assets/brochures/isu-brochure.pdf",
-      },
-      {
-        id: "uni-ssmu",
-        name: "Samara State Medical University (SamSMU)",
-        logo: "assets/images/colleges/ssmu-russia.jpeg",
-        location: "Samara, Samara Oblast, Russia",
-        fees: "16-22",
-        duration: "6 Years",
-        recognition: "WHO, NMC approved, IAAR International Accreditation",
-        about:
-          "Samara State Medical University has been following an innovative path of development for over 100 years and is currently one of the leading medical universities in Russia. Winner of the federal Priority 2030 competition for strategic academic leadership. The university is ranked in Top-200 universities worldwide by THE, 4th position among medical universities in Russia (RAEX), and Top 10% of best universities in the world. Students from 34 regions of Russian Federation and 32 countries study at the university. General Medicine specialty is taught in English with international accreditation.",
-        faculty:
-          "Over 750 highly qualified teachers including 1 Academician of the Russian Academy of Sciences, 1 Corresponding Member of the Russian Academy of Sciences, 1 Professor of the Russian Academy of Sciences, 180 Doctors of Sciences, and 461 Candidates of Sciences. 85% of academic staff have academic degrees. Led by Professor Alexander V. Kolsanov (Rector, Doctor of Medical Sciences) and Academician Gennady P. Kotelnikov (President and Honorary Rector, winner of Russia's State Prize). Century-old teaching traditions with leading scientific-pedagogical schools.",
-        campus:
-          "Modern educational complex with 7 academic buildings and 80 departments spread across the campus. State-of-the-art facilities including 24 clinical bases in leading medical institutions of Samara and region. Advanced infrastructure featuring Laboratory for synthesis of metal-organic matrix polymers, Biotech Center, Molecular genetic biology lab, Research Institutes of Cardiology, Neuroscience, Bionics, Hematology. Library with unique collection of specialized medical literature. Sports facilities including sports hall, gym, and two outdoor sports grounds. Own SamSMU Clinics comprising 57 medical units providing care in 50+ specialized areas.",
-        studentLife:
-          "Vibrant campus life with over 6,000 students, more than 500 cultural, creative, scientific, sports and social events annually. 4 comfortable dormitories accommodating 2,500 students. 10 athletic societies, 20 creative teams, 9 student societies for extracurricular activities. 'Medic' food hall with dining facilities. Library access, social support services. Volunteering Center 'Medical Volunteers'. More than 60 student scientific societies with 700+ students participating in Olympiads and 800+ publications yearly. Multicultural environment with international students. Student welfare includes comfortable accommodation with all necessary amenities.",
-        website: "https://samarastatemeduniversity.com",
-        brochure: "assets/brochures/samsmu-brochure.pdf",
-      },
-    ],
+universities: [
+
+{
+id: "uni-ivanovo",
+name: "Ivanovo State Medical University",
+logo: "assets/images/colleges/nosma-russia.jpg",
+location: "Ivanovo Oblast, Russia",
+fees: "Not specified",
+duration: "6 Years",
+recognition: "WHO, NMC approved",
+about:
+"Founded in 1930, Ivanovo State Medical University is one of Russia's trusted medical institutions offering globally recognized medical education.",
+faculty:
+"Experienced professors and researchers provide quality medical education through modern teaching methods.",
+campus:
+"Modern laboratories, simulation centers, libraries and student hostels support academic and practical learning.",
+studentLife:
+"Multicultural environment with students from more than 40 countries and affordable living conditions.",
+fee_details:
+"Fee details not specified in brochure.",
+website: "#",
+brochure: "https://drive.google.com/file/d/15Vb8qaNUd7KFST-YTGsVnpNkO-r4Bgnq/view?usp=drive_link"
+},
+
+{
+id: "uni-kbsu",
+name: "Kabardino-Balkarian State University",
+logo: "assets/images/colleges/nosma-russia.jpg",
+location: "Nalchik, Russia",
+fees: "Not specified",
+duration: "6 Years",
+recognition: "WHO, NMC approved",
+about:
+"Established in 1957, KBSU is among the top universities in Russia with a strong focus on medical education and research.",
+faculty:
+"Qualified faculty members with extensive experience in medicine and scientific research.",
+campus:
+"Large university complex with laboratories, libraries, hospitals and modern educational facilities.",
+studentLife:
+"Students from over 40 countries participate in cultural, scientific and sports activities.",
+fee_details:
+"Fee details not specified in brochure.",
+website: "#",
+brochure: "https://drive.google.com/file/d/1OiKm35lM79kHWvQ1KwNIU7ZKA2RroUb7/view?usp=drive_link"
+},
+
+{
+id: "uni-nwsmu",
+name: "North-Western State Medical University",
+logo: "assets/images/colleges/nosma-russia.jpg",
+location: "Saint Petersburg, Russia",
+fees: "Not specified",
+duration: "6 Years",
+recognition: "WHO, NMC approved",
+about:
+"Founded in 1925, North-Western State Medical University is known for advanced clinical education and modern medical training.",
+faculty:
+"Highly experienced medical professionals and researchers teach international students.",
+campus:
+"Simulation centers, modern laboratories and teaching hospitals provide practical exposure.",
+studentLife:
+"Saint Petersburg offers a vibrant cultural atmosphere and excellent infrastructure for students.",
+fee_details:
+"Fee details not specified in brochure.",
+website: "#",
+brochure: "https://drive.google.com/file/d/1uqe7G6nTNI8lgRczJx5pk3Vpbo2UXMWN/view?usp=drive_link"
+},
+
+{
+id: "uni-sevastopol",
+name: "Sevastopol State University",
+logo: "assets/images/colleges/nosma-russia.jpg",
+location: "Sevastopol, Russia",
+fees: "Not specified",
+duration: "6 Years",
+recognition: "WHO, NMC approved",
+about:
+"Established in 1952, Sevastopol State University provides modern medical education with international recognition.",
+faculty:
+"Dedicated faculty members deliver theoretical and practical medical education.",
+campus:
+"Well-equipped laboratories, libraries and simulation centers support student learning.",
+studentLife:
+"Students enjoy a safe coastal city with affordable living and cultural activities.",
+fee_details:
+"Fee details not specified in brochure.",
+website: "#",
+brochure: "https://drive.google.com/file/d/1URhYAZJvD3VdIGv8fnoSCMXBGi8yQlEy/view?usp=drive_link"
+},
+
+{
+id: "uni-chita",
+name: "Chita State Medical Academy",
+logo: "assets/images/colleges/nosma-russia.jpg",
+location: "Chita, Zabaykalsky Krai, Russia",
+fees: "Not specified",
+duration: "6 Years",
+recognition: "WHO, NMC approved",
+about:
+"Founded in 1953, Chita State Medical Academy is one of Eastern Russia's prominent medical institutions.",
+faculty:
+"Faculty members focus on practical clinical exposure and modern teaching methods.",
+campus:
+"Modern infrastructure includes research laboratories and medical training facilities.",
+studentLife:
+"Peaceful student-friendly environment suitable for international students.",
+fee_details:
+"Fee details not specified in brochure.",
+website: "#",
+brochure: "https://drive.google.com/file/d/1LvyuBKQcxPfLtr1UNVnNzClIX04ybcZo/view?usp=drive_link"
+},
+
+{
+id: "uni-tver",
+name: "Tver State Medical University",
+logo: "assets/images/colleges/nosma-russia.jpg",
+location: "Tver, Russia",
+fees: "Not specified",
+duration: "6 Years",
+recognition: "WHO, NMC approved",
+about:
+"Tver State Medical University was established in 1936 and is among Russia's oldest medical universities.",
+faculty:
+"Experienced academic staff provide internationally recognized medical education.",
+campus:
+"Teaching hospitals, laboratories and digital learning facilities support medical studies.",
+studentLife:
+"Students benefit from a comfortable environment located between Moscow and Saint Petersburg.",
+fee_details:
+"Fee details not specified in brochure.",
+website: "#",
+brochure: "https://drive.google.com/file/d/10nH_j0LbhZj0ohOcRvfT4rxTbaR3xwlo/view?usp=drive_link"
+},
+
+{
+id: "uni-lobachevsky",
+name: "Lobachevsky State University",
+logo: "assets/images/colleges/nosma-russia.jpg",
+location: "Nizhny Novgorod, Russia",
+fees: "Not specified",
+duration: "6 Years",
+recognition: "WHO, NMC approved",
+about:
+"Established in 1916, Lobachevsky State University is among Russia's oldest higher educational institutions.",
+faculty:
+"Qualified professors and researchers provide modern medical education.",
+campus:
+"Advanced laboratories, libraries and clinical facilities help students gain practical knowledge.",
+studentLife:
+"Students experience life in one of Russia's major educational and cultural centers.",
+fee_details:
+"Fee details not specified in brochure.",
+website: "#",
+brochure: "https://drive.google.com/file/d/1UgEAEarVbWan4rYCPcZavBQhgVXrusMI/view?usp=drive_link"
+},
+
+{
+id: "uni-chechen",
+name: "Chechen State University",
+logo: "assets/images/colleges/nosma-russia.jpg",
+location: "Grozny, Chechnya, Russia",
+fees: "Not specified",
+duration: "6 Years",
+recognition: "WHO, NMC approved",
+about:
+"Founded in 1938, Chechen State University has become a rapidly growing institution with modern infrastructure.",
+faculty:
+"Experienced faculty members emphasize practical medical training and innovation.",
+campus:
+"Contemporary classrooms, laboratories and hospitals support academic excellence.",
+studentLife:
+"Grozny offers a secure and developing environment for international students.",
+fee_details:
+"Fee details not specified in brochure.",
+website: "#",
+brochure: "https://drive.google.com/file/d/1CGDEFWlXt3n3K5v1cXdIheSasEfEeAj_/view?usp=drive_link"
+},
+
+{
+id: "uni-chuvash",
+name: "Chuvash State Medical University",
+logo: "assets/images/colleges/nosma-russia.jpg",
+location: "Cheboksary, Russia",
+fees: "Not specified",
+duration: "6 Years",
+recognition: "WHO, NMC, ECFMG approved",
+about:
+"Established in 1967, Chuvash State Medical University is among Russia's most sought-after institutions for international MBBS students.",
+faculty:
+"Faculty members deliver globally recognized education with emphasis on practical training.",
+campus:
+"Modern facilities include laboratories, teaching hospitals and comfortable hostels.",
+studentLife:
+"Large international student community with strong Indian student presence.",
+fee_details:
+"Fee details not specified in brochure.",
+website: "#",
+brochure: "https://drive.google.com/file/d/1oZE08Xg8ai60r1BgPa7-udDu6pjQpZzF/view?usp=drive_link"
+},
+
+{
+id: "uni-nosmu",
+name: "North-Ossetian State Medical University",
+logo: "assets/images/colleges/nosma-russia.jpg",
+location: "Vladikavkaz, Russia",
+fees: "Not specified",
+duration: "6 Years",
+recognition: "WHO, NMC approved",
+about:
+"North-Ossetian State Medical University is known for affordable medical education, modern facilities and global recognition.",
+faculty:
+"Experienced professors and clinicians provide strong academic and practical training.",
+campus:
+"Modern laboratories, affiliated hospitals, simulation centers and hostel facilities are available.",
+studentLife:
+"Indian students benefit from multicultural exposure, affordable living and Indian mess facilities.",
+fee_details:
+"Fee details not specified in brochure.",
+website: "#",
+brochure: "https://drive.google.com/file/d/14SMHJvFEY-jNUCbNtPvnc-6gftRhh9oB/view?usp=drive_link"
+}
+
+],
 
     eligibility: [
       "Minimum 50% marks in Physics, Chemistry, and Biology in 12th grade (40% for reserved categories)",

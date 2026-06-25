@@ -112,16 +112,17 @@ function loadBackgroundSection() {
    ============================================ */
 
 function loadUniversitiesSection() {
-    document.getElementById('universities-title').textContent = `Top Medical Universities in ${currentCountryData.name}`;
 
-    // Load filter buttons
-    loadUniversityFilters();
+document.getElementById('universities-title').textContent =
+`Top Medical Universities in ${currentCountryData.name}`;
 
-    // Load university cards
-    loadUniversityCards();
+loadUniversityFilters();
 
-    // Load university modals
-    loadUniversityModals();
+loadUniversityCards();
+
+/* keep modal code for future use */
+/* loadUniversityModals(); */
+
 }
 
 function loadUniversityFilters() {
@@ -138,31 +139,151 @@ function loadUniversityFilters() {
 }
 
 function loadUniversityCards() {
-    const container = document.getElementById('universities-container');
-    container.innerHTML = '';
 
-    currentCountryData.universities.forEach((uni, index) => {
-        const card = document.createElement('div');
-        card.className = 'university-card';
-        card.id = uni.id;
-        card.innerHTML = `
-            <div class="university-header">
-                <img src="${uni.logo}" alt="${uni.name}" class="university-logo" onerror="this.src='assets/images/universities/default-logo.png'">
-                <h3>${uni.name}</h3>
-            </div>
-            <div class="university-info">
-                <p><strong>📍 Location:</strong> ${uni.location}</p>
-                <p><strong>💵 Fees:</strong>${uni.fees}</p>
-                <p><strong>⏱️ Duration:</strong> ${uni.duration}</p>
-                <p><strong>🌐 Recognition:</strong> ${uni.recognition}</p>
-            </div>
-            <div class="university-actions">
-                <button class="btn-details" onclick="openModal('modal-${index}')">View Details</button>
-                <button class="btn-interest" onclick="openInterestForm('${uni.name}')">Get Free Counselling</button>
-            </div>
-        `;
-        container.appendChild(card);
-    });
+const container =
+document.getElementById('universities-container');
+
+container.innerHTML='';
+
+
+currentCountryData.universities.forEach((uni)=>{
+
+
+const card=document.createElement('div');
+
+card.className='university-card';
+
+card.id=uni.id;
+
+
+card.innerHTML=`
+
+<div class="university-header">
+
+<img src="${uni.logo}"
+
+alt="${uni.name}"
+
+class="university-logo"
+
+onerror="this.src='assets/images/universities/default-logo.png'">
+
+
+<h3>${uni.name}</h3>
+
+</div>
+
+
+
+<div class="university-info">
+
+<p><strong>📍 Location:</strong> ${uni.location}</p>
+
+<p><strong>💵 Fees:</strong> ${uni.fees}</p>
+
+<p><strong>⏱️ Duration:</strong> ${uni.duration}</p>
+
+<p><strong>🌐 Recognition:</strong> ${uni.recognition}</p>
+
+</div>
+
+
+
+<div class="university-actions">
+
+
+
+<div class="top-buttons">
+
+
+
+<a
+
+href="${uni.brochure}"
+
+target="_blank"
+
+class="btn-brochure"
+
+>
+
+Download Brochure
+
+</a>
+
+
+
+${uni.website ?
+
+`
+
+<a
+
+href="${uni.website}"
+
+target="_blank"
+
+class="btn-website"
+
+>
+
+Visit Website
+
+</a>
+
+`
+
+:
+
+`
+
+<button
+
+class="btn-website disabled">
+
+Website Soon
+
+</button>
+
+`
+
+}
+
+
+
+</div>
+
+
+
+<button
+
+
+class="btn-interest"
+
+
+
+onclick="openInterestForm('${uni.name}')">
+
+
+Get Free Counselling
+
+
+</button>
+
+
+
+</div>
+
+`;
+
+
+
+container.appendChild(card);
+
+
+});
+
+
 }
 
 function loadUniversityModals() {
